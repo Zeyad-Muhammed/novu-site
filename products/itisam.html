@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#051b14" />
+  <title>Itisam — اعتصام | A NOVU Product</title>
+  <meta name="description" content="Itisam (اعتصام) — a Muslim companion app: the full Quran in Uthmani script with tafsir, daily athkar, digital tasbih, the 99 Names, prayer times and a qibla compass. Designed & built by NOVU." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NOVU" />
+  <meta property="og:title" content="Itisam — اعتصام | A NOVU Product" />
+  <meta property="og:description" content="The full Quran with tafsir, daily athkar, digital tasbih, the 99 Names and a qibla compass. A NOVU product." />
+  <meta property="og:image" content="../assets/products/itisam/icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Itisam — اعتصام | A NOVU Product" />
+  <meta name="twitter:description" content="The full Quran, athkar, tasbih, the 99 Names and a qibla compass. A NOVU product." />
+  <script>
+    (function () {
+      var l;
+      try { l = localStorage.getItem('hf-lang'); } catch (e) { l = null; }
+      l = (l === 'en') ? 'en' : 'ar';
+      document.documentElement.setAttribute('lang', l);
+      document.documentElement.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="icon" type="image/png" href="../assets/products/itisam/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/product-itisam.css" />
+  <script>
+    /* Page dictionary — overrides the engine default (Habit Flow) dict. */
+    window.PF_I18N = {
+      en: {
+        'meta.title': 'Itisam — اعتصام | A NOVU Product',
+        'nav.tour': 'Tour', 'nav.levels': 'Features', 'nav.stats': 'Numbers', 'nav.screens': 'Screens',
+        'nav.themes': 'Themes',
+        'th.eyebrow': 'Pick your mood',
+        'th.h': 'Nine themes, one soul',
+        'th.p': 'Every theme is hand-tuned — background, surfaces and gold accents — down to the last shade.',
+        'tn.light': 'Golden', 'tn.dark': 'Nightly', 'tn.emerald': 'Emerald', 'tn.midnight': 'Midnight',
+        'tn.rose': 'Rosy', 'tn.ocean': 'Oceanic', 'tn.desert': 'Desert', 'tn.lavender': 'Lavender', 'tn.forest': 'Forest',
+        'back': 'NOVU Studio &larr;',
+        'hero.eyebrow': 'A NOVU Product &middot; Islamic App',
+        'hero.title': '<span class="gold-text">Itisam</span>',
+        'hero.ar': 'اعتصام',
+        'hero.sub': 'Your companion for the Quran &amp; dhikr — <strong>the full Quran in Uthmani script with tafsir, daily athkar, a digital tasbih, the 99 Names and a qibla compass</strong> — in one calm, green-and-gold app.',
+        'hero.cta1': 'Explore the Tour', 'hero.cta2': 'Get a Similar App',
+        'dl.nav': 'Get the App',
+        'dl.btn': 'Download the App',
+        'dl.title': 'Almost there — finish the setup',
+        'dl.sub': 'The download has started. Since Itisam isn\'t on Google Play yet, follow these 4 quick steps:',
+        'dl.s1h': 'Open the downloaded file',
+        'dl.s1p': 'Pull down your notifications and tap the Itisam file (or find it in your Downloads folder).',
+        'dl.s2h': 'Allow unknown apps',
+        'dl.s2p': 'Your phone asks for permission to install from your browser. Tap Settings &rarr; Allow from this source &rarr; go back.',
+        'dl.s3h': 'Install &amp; keep going',
+        'dl.s3p': 'Tap Install. If Google Play Protect shows a warning, choose More details &rarr; Install anyway. The app is safe and fully offline.',
+        'dl.s4h': 'Open Itisam &amp; make it yours',
+        'dl.s4p': 'Log in or continue as a guest — then pick the theme that feels like home.',
+        'dl.meta': 'Android only &middot; 57.3 MB &middot; works fully offline',
+        'dl.again': 'Download again',
+        'dl.done': 'Done',
+        'dl.close': 'Close',
+        'hint': 'Scroll',
+        'fc1': '<span>&#128214; Full Quran</span>',
+        'fc2': '<span>&#128255; Daily athkar</span>',
+        'fc3': '<span>&#129517; Qibla compass</span>',
+        's1.idx': '01 / THE TOUR',
+        's1.h': 'Read, anywhere',
+        's1.p': 'The whole Quran in beautiful Uthmani script — comfortable reading sizes, and tafsir one tap away for every single verse.',
+        's2.idx': '02 / THE TOUR',
+        's2.h': 'Remember, daily',
+        's2.p': 'Morning and evening athkar with built-in counters — every dhikr tracked, one tap at a time.',
+        's3.idx': '03 / THE TOUR',
+        's3.h': 'Glide, tap, count',
+        's3.p': 'A full-screen digital tasbih — pick your dhikr, set the target, and tap your way through it.',
+        'lv.eyebrow': 'Everything organized',
+        'lv.h': 'A library built for reflection',
+        'lv.p': 'All <strong>114 surahs</strong> in one index — jump to any surah, resume from your last ayah, and search the full text of the Quran for any word.',
+        'lv.b1': 'Uthmani script, comfortable reading sizes',
+        'lv.b2': 'Tafsir for every verse, one tap away',
+        'lv.b3': 'Copy, share and bookmark any ayah',
+        'chip.surah': '114 surahs',
+        'st.eyebrow': 'The numbers of the Book',
+        'st.h': 'The whole Book, in your pocket',
+        'lbl1': 'Surahs', 'lbl2': 'Ayat', 'lbl3': 'Ajzaa', 'lbl4': 'Names of Allah',
+        'ga.eyebrow': 'More screens',
+        'ga.h': 'Calm in every corner',
+        'ga.p': 'From the 99 Names to the qibla compass — every screen is quiet, clear and gold-lit.',
+        'cap1': '99 Names', 'cap2': 'Qibla compass', 'cap3': 'Daily athkar',
+        'sp1': 'Flutter', 'sp2': 'Offline-first', 'sp3': 'Full Arabic UI', 'sp4': '9 hand-made themes',
+        'sp5': 'Prayer times', 'sp6': 'Qibla compass', 'sp7': 'Digital tasbih', 'sp8': 'Audio recitations',
+        'end.name': 'Itisam', 'end.nameAr': 'اعتصام',
+        'end.h': 'Want an app<br />like this?',
+        'end.p': 'NOVU designs and builds complete mobile products — identity, UI and the working app itself. Tell us what you imagine.',
+        'end.btn': 'Start a Project',
+        'ft.brand': 'Itisam — designed & built by NOVU.',
+        'ft.l1': 'Studio', 'ft.l2': 'Tour', 'ft.l3': 'Screens',
+        'ft.copy': '&copy; <span id="pfYear"></span> NOVU — All rights reserved.'
+      },
+      ar: {
+        'meta.title': 'اعتصام — Itisam | منتج من NOVU',
+        'nav.tour': 'الجولة', 'nav.levels': 'المميزات', 'nav.stats': 'الأرقام', 'nav.screens': 'الشاشات',
+        'nav.themes': 'الثيمات',
+        'th.eyebrow': 'اختار مزاجك',
+        'th.h': 'تسع ثيمات، روح واحدة',
+        'th.p': 'كل ثيم مضبوط بإيد — خلفيات وأسطح ولمسات ذهبية — لحد آخر درجة لون.',
+        'tn.light': 'ذهبي', 'tn.dark': 'ليلي', 'tn.emerald': 'زمردي', 'tn.midnight': 'منتصف الليل',
+        'tn.rose': 'وردي', 'tn.ocean': 'محيطي', 'tn.desert': 'صحاري', 'tn.lavender': 'لافندر', 'tn.forest': 'غابي',
+        'back': 'استوديو NOVU &rarr;',
+        'hero.eyebrow': 'منتج من استوديو NOVU &middot; تطبيق إسلامي',
+        'hero.title': '<span class="gold-text">اعتصام</span>',
+        'hero.ar': 'Itisam',
+        'hero.sub': 'رفيقك في القرآن والأذكار — <strong>المصحف كاملًا بالرسم العثماني مع التفسير، أذكار الصباح والمساء، تسبيح رقمي، أسماء الله الحسنى، وبوصلة القبلة</strong> — في تطبيق واحد هادئ بالأخضر والذهبي.',
+        'hero.cta1': 'استكشف الجولة', 'hero.cta2': 'اطلب تطبيقًا مشابهًا',
+        'dl.nav': 'حمّل التطبيق',
+        'dl.btn': 'حمّل التطبيق',
+        'dl.title': 'خطوة واحدة وتخلّص — ظبّط التسطيب',
+        'dl.sub': 'التحميل بدأ. ولإن اعتصام لسه مش على جوجل بلاي، امشي على ٤ خطوات سريعة:',
+        'dl.s1h': 'افتح الملف اللي اتحمّل',
+        'dl.s1p': 'انزل من الإشعارات ودوس على ملف اعتصام (أو دور عليه في فولدر Downloads).',
+        'dl.s2h': 'اسمح بالتثبيت من مصدر غير معروف',
+        'dl.s2p': 'الموبايل هيطلب تصريح للتثبيت من المتصفح. افتح الإعدادات &larr; اسمح من هذا المصدر &larr; ارجع.',
+        'dl.s3h': 'ثبّت وكمل',
+        'dl.s3p': 'دوس تثبيت. ولو Google Play Protect وراك تحذير، اختار تفاصيل أكثر &larr; ثبّت على أي حال — التطبيق آمن وشغال أوفلاين.',
+        'dl.s4h': 'افتح اعتصام وخلّيه بتاعك',
+        'dl.s4p': 'سجّل دخولك أو كمل كضيف — وبعدين اختار الثيم اللي يحسّسك إنك في بيتك.',
+        'dl.meta': 'أندرويد بس &middot; 57.3 ميجا &middot; شغال أوفلاين بالكامل',
+        'dl.again': 'حمّله تاني',
+        'dl.done': 'تمام',
+        'dl.close': 'اقفل',
+        'hint': 'مرّر',
+        'fc1': '<span>&#128214; مصحف كامل</span>',
+        'fc2': '<span>&#128255; أذكار يومية</span>',
+        'fc3': '<span>&#129517; بوصلة القبلة</span>',
+        's1.idx': '01 / الجولة',
+        's1.h': 'اقرأ، في أي مكان',
+        's1.p': 'المصحف كاملًا بالرسم العثماني — بأحجام قراءة مريحة، والتفسير على بُعد لمسة من كل آية.',
+        's2.idx': '02 / الجولة',
+        's2.h': 'اذكر، كل يوم',
+        's2.p': 'أذكار الصباح والمساء بعدّاد مدمج — كل ذكر بتتبع دقيق، ولمسة بعد لمسة.',
+        's3.idx': '03 / الجولة',
+        's3.h': 'مرّر، اضغط، عُدّ',
+        's3.p': 'تسبيح رقمي بملء الشاشة — تختار ذكرك، تحدد الهدف، وتعدّ بلمساتك.',
+        'lv.eyebrow': 'كل شيء في مكانه',
+        'lv.h': 'فهرس مبني للتدبر',
+        'lv.p': 'كل <strong>السور الـ114</strong> في فهرس واحد — انتقل لأي سورة، أكمل من آخر آية توقفت عندها، وابحث في نص القرآن كله عن أي كلمة.',
+        'lv.b1': 'الرسم العثماني بأحجام قراءة مريحة',
+        'lv.b2': 'تفسير لكل آية على بُعد لمسة',
+        'lv.b3': 'نسخ ومشاركة وحفظ أي آية',
+        'chip.surah': '١١٤ سورة',
+        'st.eyebrow': 'أرقام الكتاب',
+        'st.h': 'الكتاب كله في جيبك',
+        'lbl1': 'سورة', 'lbl2': 'آية', 'lbl3': 'جزءًا', 'lbl4': 'اسمًا لله',
+        'ga.eyebrow': 'شاشات أكتر',
+        'ga.h': 'سكينة في كل ركن',
+        'ga.p': 'من الأسماء الحسنى لبوصلة القبلة — كل شاشة هادئة وواضحة وبتإضاءة ذهبية.',
+        'cap1': 'الأسماء الحسنى', 'cap2': 'بوصلة القبلة', 'cap3': 'الأذكار اليومية',
+        'sp1': 'Flutter', 'sp2': 'بدون إنترنت', 'sp3': 'واجهة عربية كاملة', 'sp4': '9 ثيمات مصنوعة بعناية',
+        'sp5': 'مواعيد الصلاة', 'sp6': 'بوصلة القبلة', 'sp7': 'تسبيح رقمي', 'sp8': 'تلاوات صوتية',
+        'end.name': 'اعتصام', 'end.nameAr': 'Itisam',
+        'end.h': 'عايز تطبيق<br />زي ده؟',
+        'end.p': 'استوديو NOVU بتصمّم ويبني منتجات موبايل كاملة — هوية، وواجهات، والتطبيق الشغال نفسه. احكينا بتحلم بإيه.',
+        'end.btn': 'ابدأ مشروع',
+        'ft.brand': 'Itisam (اعتصام) — تصميم وتطوير NOVU.',
+        'ft.l1': 'الاستوديو', 'ft.l2': 'الجولة', 'ft.l3': 'الشاشات',
+        'ft.copy': '&copy; <span id="pfYear"></span> NOVU — جميع الحقوق محفوظة.'
+      }
+    };
+  </script>
+</head>
+<body>
+
+<div class="is-pattern" aria-hidden="true"></div>
+<div class="pf-aurora" aria-hidden="true">
+  <span class="au au-a"></span>
+  <span class="au au-b"></span>
+  <span class="au au-c"></span>
+</div>
+
+<!---------------- HEADER ---------------->
+<header class="pf-header" id="pfHeader">
+  <div class="pf-container pf-nav">
+    <a class="pf-brand" href="../index.html" aria-label="NOVU — back to the studio">
+      <img src="../assets/brand/logo-white.png" alt="NOVU logo" />
+    </a>
+    <nav class="pf-navlinks" aria-label="Product tour">
+      <a href="#showcase" data-i18n="nav.tour">Tour</a>
+      <a href="#library" data-i18n="nav.levels">Features</a>
+      <a href="#numbers" data-i18n="nav.stats">Numbers</a>
+      <a href="#themes" data-i18n="nav.themes">Themes</a>
+      <a href="#screens" data-i18n="nav.screens">Screens</a>
+    </nav>
+    <div class="pf-nav-tools">
+      <a class="pf-btn pf-btn-solid pf-dl pf-nav-dl" href="../assets/products/itisam/Itisam.apk" download="Itisam.apk" data-i18n="dl.nav">Get the App</a>
+      <button class="pf-lang" id="pfLang" type="button" aria-label="Switch language">
+        <span class="lg-opt" data-lg="en">EN</span>
+        <span class="lg-opt" data-lg="ar" lang="ar">ع</span>
+      </button>
+      <a class="pf-back" href="../index.html" data-i18n="back">NOVU Studio &larr;</a>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <!---------------- HERO ---------------->
+  <section class="pf-hero">
+    <span class="is-callig hero-mark" lang="ar" aria-hidden="true">اعتصام</span>
+
+    <div class="pf-container pf-hero-grid">
+      <div class="pf-hero-copy">
+        <p class="pf-eyebrow" data-i18n="hero.eyebrow" data-reveal>A NOVU Product &middot; Islamic App</p>
+        <h1 data-i18n="hero.title" data-reveal data-delay="1"><span class="gold-text">Itisam</span></h1>
+        <p class="pf-arabic gold-text" lang="ar" dir="rtl" data-i18n="hero.ar" data-reveal data-delay="1">اعتصام</p>
+        <p class="pf-sub" data-i18n="hero.sub" data-reveal data-delay="2">
+          Your companion for the Quran &amp; dhikr — <strong>the full Quran in Uthmani script with tafsir, daily athkar, a digital tasbih, the 99 Names and a qibla compass</strong> — in one calm, green-and-gold app.
+        </p>
+        <div class="pf-cta" data-reveal data-delay="3">
+          <a class="pf-btn pf-btn-solid pf-dl" href="../assets/products/itisam/Itisam.apk" download="Itisam.apk" data-i18n="dl.btn">Download the App</a>
+          <a class="pf-btn pf-btn-ghost" href="#showcase" data-i18n="hero.cta1">Explore the Tour</a>
+          <a class="pf-btn pf-btn-ghost" href="../index.html#contact" data-i18n="hero.cta2">Get a Similar App</a>
+        </div>
+      </div>
+
+      <div class="pf-hero-phone" data-reveal data-delay="2">
+        <div data-parallax="-0.06">
+          <span class="phone-glow" aria-hidden="true"></span>
+          <div class="phone" data-tilt="7">
+            <span class="isle" aria-hidden="true"></span>
+            <img class="scr" src="../assets/products/itisam/shot-reader.png" alt="Itisam Quran reader — Surah Al-Fatiha in Uthmani script" />
+            <i class="th-tint" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="float-card fc-a" aria-hidden="true" data-i18n="fc1"><span>&#128214; Full Quran</span></div>
+        <div class="float-card fc-b" aria-hidden="true" data-i18n="fc2"><span>&#128255; Daily athkar</span></div>
+        <div class="float-card fc-c" aria-hidden="true" data-i18n="fc3"><span>&#129517; Qibla compass</span></div>
+      </div>
+    </div>
+
+    <a class="pf-scroll-hint" href="#showcase"><span data-i18n="hint">Scroll</span><span class="hint-line" aria-hidden="true"></span></a>
+  </section>
+
+  <!---------------- PINNED SHOWCASE (mirrored) ---------------->
+  <section class="pin-scene" id="showcase" data-scene data-flip="1">
+    <div class="pin-sticky">
+      <div class="pf-container pin-grid">
+        <div class="pin-copy">
+          <div class="pin-step" data-step>
+            <span class="step-idx" data-i18n="s1.idx">01 / THE TOUR</span>
+            <h3 data-i18n="s1.h">Read, anywhere</h3>
+            <p data-i18n="s1.p">The whole Quran in beautiful Uthmani script — comfortable reading sizes, and tafsir one tap away for every single verse.</p>
+          </div>
+          <div class="pin-step" data-step>
+            <span class="step-idx" data-i18n="s2.idx">02 / THE TOUR</span>
+            <h3 data-i18n="s2.h">Remember, daily</h3>
+            <p data-i18n="s2.p">Morning and evening athkar with built-in counters — every dhikr tracked, one tap at a time.</p>
+          </div>
+          <div class="pin-step" data-step>
+            <span class="step-idx" data-i18n="s3.idx">03 / THE TOUR</span>
+            <h3 data-i18n="s3.h">Glide, tap, count</h3>
+            <p data-i18n="s3.p">A full-screen digital tasbih — pick your dhikr, set the target, and tap your way through it.</p>
+          </div>
+        </div>
+        <div class="pin-stage">
+          <span class="stage-glow" aria-hidden="true"></span>
+          <div class="phone" data-scene-phone>
+            <span class="isle" aria-hidden="true"></span>
+            <img class="scr" src="../assets/products/itisam/shot-home.png" data-screen alt="" />
+            <img class="scr" src="../assets/products/itisam/shot-athkar.png" data-screen alt="" />
+            <img class="scr" src="../assets/products/itisam/shot-tasbih.png" data-screen alt="" />
+            <i class="th-tint" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- FEATURE: LIBRARY ---------------->
+  <section class="pf-section" id="library">
+    <div class="pf-container feat-grid">
+      <div class="feat-copy" data-reveal>
+        <p class="pf-eyebrow" data-i18n="lv.eyebrow">Everything organized</p>
+        <h2 data-i18n="lv.h">A library built for reflection</h2>
+        <p data-i18n="lv.p">All <strong>114 surahs</strong> in one index — jump to any surah, resume from your last ayah, and search the full text of the Quran for any word.</p>
+        <ul class="feat-list">
+          <li data-i18n="lv.b1">Uthmani script, comfortable reading sizes</li>
+          <li data-i18n="lv.b2">Tafsir for every verse, one tap away</li>
+          <li data-i18n="lv.b3">Copy, share and bookmark any ayah</li>
+        </ul>
+      </div>
+      <div class="feat-media" data-reveal data-delay="1">
+        <div data-parallax="-0.05">
+          <span class="phone-glow" aria-hidden="true"></span>
+          <div class="phone" data-tilt="8">
+            <span class="isle" aria-hidden="true"></span>
+            <img class="scr" src="../assets/products/itisam/shot-quran.png" alt="Itisam Quran index — all 114 surahs" />
+            <i class="th-tint" aria-hidden="true"></i>
+          </div>
+          <span class="chip-float" style="top: 16%; right: -6%; animation-delay: -1.5s;" aria-hidden="true" data-i18n="chip.surah">114 surahs</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- NUMBERS ---------------->
+  <section class="pf-section" id="numbers">
+    <div class="pf-container">
+      <div class="pf-head" data-reveal>
+        <p class="pf-eyebrow" data-i18n="st.eyebrow">The numbers of the Book</p>
+        <h2 data-i18n="st.h">The whole Book, in your pocket</h2>
+      </div>
+
+      <p class="basmala" lang="ar" data-reveal>﷽</p>
+
+      <div class="stat-cards">
+        <div class="stat-card" data-reveal><span class="num" data-counter="114">0</span><span class="lbl" data-i18n="lbl1">Surahs</span></div>
+        <div class="stat-card" data-reveal data-delay="1"><span class="num" data-counter="6236">0</span><span class="lbl" data-i18n="lbl2">Ayat</span></div>
+        <div class="stat-card" data-reveal data-delay="2"><span class="num" data-counter="30">0</span><span class="lbl" data-i18n="lbl3">Ajzaa</span></div>
+        <div class="stat-card" data-reveal data-delay="3"><span class="num" data-counter="99">0</span><span class="lbl" data-i18n="lbl4">Names of Allah</span></div>
+      </div>
+
+      <div class="pf-head" data-reveal style="margin-top: 20px;">
+        <p class="pf-eyebrow" data-i18n="pt.eyebrow">Never miss a prayer</p>
+        <h2 data-i18n="pt.h">Prayer times, counted down</h2>
+      </div>
+      <div class="feat-media" data-reveal data-delay="1">
+        <div data-parallax="-0.04">
+          <span class="phone-glow" aria-hidden="true"></span>
+          <div class="phone" data-tilt="8">
+            <span class="isle" aria-hidden="true"></span>
+            <img class="scr" src="../assets/products/itisam/shot-prayers.png" alt="Itisam prayer times with live countdown" />
+            <i class="th-tint" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- THEMES ---------------->
+  <section class="pf-section" id="themes">
+    <div class="pf-container">
+      <div class="pf-head" data-reveal>
+        <p class="pf-eyebrow" data-i18n="th.eyebrow">Pick your mood</p>
+        <h2 data-i18n="th.h">Nine themes, one soul</h2>
+        <p data-i18n="th.p">Every theme is hand-tuned — background, surfaces and gold accents — down to the last shade.</p>
+      </div>
+
+      <div class="theme-swatches" data-reveal role="group" aria-label="App themes">
+        <button class="swatch" data-theme-id="light" type="button"><span class="sw-dot" style="--sw:#F6F1E6; --sw-accent:#C9A227;"></span><span class="sw-name" data-i18n="tn.light">ذهبي</span></button>
+        <button class="swatch" data-theme-id="dark" type="button"><span class="sw-dot" style="--sw:#1F1912; --sw-accent:#E3BE57;"></span><span class="sw-name" data-i18n="tn.dark">ليلي</span></button>
+        <button class="swatch on" data-theme-id="emerald" type="button"><span class="sw-dot" style="--sw:#162B21; --sw-accent:#C8D06E;"></span><span class="sw-name" data-i18n="tn.emerald">زمردي</span></button>
+        <button class="swatch" data-theme-id="midnight" type="button"><span class="sw-dot" style="--sw:#182137; --sw-accent:#E8C15C;"></span><span class="sw-name" data-i18n="tn.midnight">منتصف الليل</span></button>
+        <button class="swatch" data-theme-id="rose" type="button"><span class="sw-dot" style="--sw:#FCF5F7; --sw-accent:#C9798C;"></span><span class="sw-name" data-i18n="tn.rose">وردي</span></button>
+        <button class="swatch" data-theme-id="ocean" type="button"><span class="sw-dot" style="--sw:#142B36; --sw-accent:#4FC4D0;"></span><span class="sw-name" data-i18n="tn.ocean">محيطي</span></button>
+        <button class="swatch" data-theme-id="desert" type="button"><span class="sw-dot" style="--sw:#FAF1E0; --sw-accent:#D88A2E;"></span><span class="sw-name" data-i18n="tn.desert">صحاري</span></button>
+        <button class="swatch" data-theme-id="lavender" type="button"><span class="sw-dot" style="--sw:#F6F2FD; --sw-accent:#8F6FC8;"></span><span class="sw-name" data-i18n="tn.lavender">لافندر</span></button>
+        <button class="swatch" data-theme-id="forest" type="button"><span class="sw-dot" style="--sw:#182720; --sw-accent:#D8B45A;"></span><span class="sw-name" data-i18n="tn.forest">غابي</span></button>
+      </div>
+
+      <div class="theme-stage" data-reveal data-delay="1">
+        <span class="phone-glow" aria-hidden="true"></span>
+        <div class="phone" data-tilt="6">
+          <span class="isle" aria-hidden="true"></span>
+          <img class="scr" id="themeScreen" src="../assets/products/itisam/theme-emerald.png" alt="Itisam home screen in the selected theme" />
+        </div>
+        <p class="theme-name" id="themeName" lang="ar" data-i18n="tn.emerald">زمردي</p>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- FANNED DECK GALLERY ---------------->
+  <section class="pf-section" id="screens">
+    <div class="pf-container">
+      <div class="pf-head" data-reveal>
+        <p class="pf-eyebrow" data-i18n="ga.eyebrow">More screens</p>
+        <h2 data-i18n="ga.h">Calm in every corner</h2>
+        <p data-i18n="ga.p">From the 99 Names to the qibla compass — every screen is quiet, clear and gold-lit.</p>
+      </div>
+      <div class="deck">
+        <div class="deck-item d-1" data-reveal>
+          <div class="phone" data-tilt="6"><span class="isle" aria-hidden="true"></span><img class="scr" src="../assets/products/itisam/shot-names.png" alt="The 99 Names of Allah screen" /><i class="th-tint" aria-hidden="true"></i></div>
+          <span class="deck-cap" data-i18n="cap1">99 Names</span>
+        </div>
+        <div class="deck-item d-2" data-reveal data-delay="1">
+          <div class="phone" data-tilt="6"><span class="isle" aria-hidden="true"></span><img class="scr" src="../assets/products/itisam/shot-qibla.png" alt="Qibla compass screen" /><i class="th-tint" aria-hidden="true"></i></div>
+          <span class="deck-cap" data-i18n="cap2">Qibla compass</span>
+        </div>
+        <div class="deck-item d-3" data-reveal data-delay="2">
+          <div class="phone" data-tilt="6"><span class="isle" aria-hidden="true"></span><img class="scr" src="../assets/products/itisam/shot-athkar.png" alt="Daily athkar screen" /><i class="th-tint" aria-hidden="true"></i></div>
+          <span class="deck-cap" data-i18n="cap3">Daily athkar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---------------- SPECS + CTA ---------------->
+  <section class="pf-section pf-end">
+    <div class="pf-container end-grid">
+      <div data-reveal>
+        <div class="end-id">
+          <img class="end-icon" src="../assets/products/itisam/icon-white.png" alt="Itisam app icon" />
+          <div>
+            <h2 data-i18n="end.name">Itisam</h2>
+            <p class="pf-arabic gold-text" lang="ar" dir="rtl" data-i18n="end.nameAr">اعتصام</p>
+          </div>
+        </div>
+        <ul class="spec-list">
+          <li data-i18n="sp1">Flutter</li>
+          <li data-i18n="sp2">Offline-first</li>
+          <li data-i18n="sp3">Full Arabic UI</li>
+          <li data-i18n="sp4">9 hand-made themes</li>
+          <li data-i18n="sp5">Prayer times</li>
+          <li data-i18n="sp6">Qibla compass</li>
+          <li data-i18n="sp7">Digital tasbih</li>
+          <li data-i18n="sp8">Audio recitations</li>
+        </ul>
+      </div>
+      <div class="end-cta" data-reveal data-delay="1">
+        <h3 data-i18n="end.h">Want an app<br />like this?</h3>
+        <p data-i18n="end.p">NOVU designs and builds complete mobile products — identity, UI and the working app itself. Tell us what you imagine.</p>
+        <a class="pf-btn pf-btn-solid" href="../index.html#contact" data-i18n="end.btn">Start a Project</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!---------------- FOOTER ---------------->
+<footer class="pf-footer">
+  <div class="pf-container pf-footer-grid">
+    <div class="pf-footer-brand">
+      <a href="../index.html" aria-label="NOVU — back to the studio">
+        <img src="../assets/brand/logo-white.png" alt="NOVU logo" />
+      </a>
+      <p data-i18n="ft.brand">Itisam — designed &amp; built by NOVU.</p>
+    </div>
+    <nav class="pf-footer-links" aria-label="Product links">
+      <a href="../index.html" data-i18n="ft.l1">Studio</a>
+      <a href="#showcase" data-i18n="ft.l2">Tour</a>
+      <a href="#screens" data-i18n="ft.l3">Screens</a>
+    </nav>
+    <div class="pf-social" aria-label="NOVU social profiles">
+      <a class="social-link" href="https://www.linkedin.com/in/zeyad-muhammed/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn — opens in a new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+      <a class="social-link" href="https://www.facebook.com/NOVUYUTAKA" target="_blank" rel="noopener noreferrer" aria-label="Facebook — opens in a new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+      <a class="social-link" href="https://www.instagram.com/zeyadelsokari" target="_blank" rel="noopener noreferrer" aria-label="Instagram — opens in a new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/></svg></a>
+      <a class="social-link" href="https://www.behance.net/ZeyadMohammed" target="_blank" rel="noopener noreferrer" aria-label="Behance — opens in a new tab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.969 16.927a2.561 2.561 0 0 0 1.901.677 2.501 2.501 0 0 0 1.531-.475c.362-.235.636-.584.779-.99h2.585a5.091 5.091 0 0 1-1.9 2.896 5.292 5.292 0 0 1-3.091.88 5.839 5.839 0 0 1-2.284-.433 4.871 4.871 0 0 1-1.723-1.211 5.657 5.657 0 0 1-1.08-1.874 7.057 7.057 0 0 1-.383-2.393c-.005-.8.129-1.595.396-2.349a5.313 5.313 0 0 1 5.088-3.604 4.87 4.87 0 0 1 2.376.563c.661.362 1.231.87 1.668 1.485a6.2 6.2 0 0 1 .943 2.133c.194.821.263 1.666.205 2.508h-7.699c-.063.79.184 1.574.688 2.187ZM6.947 4.084a8.065 8.065 0 0 1 1.928.198 4.29 4.29 0 0 1 1.49.638c.418.303.748.711.958 1.182.241.579.357 1.203.341 1.83a3.506 3.506 0 0 1-.506 1.961 3.726 3.726 0 0 1-1.503 1.287 3.588 3.588 0 0 1 2.027 1.437c.464.747.697 1.615.67 2.494a4.593 4.593 0 0 1-.423 2.032 3.945 3.945 0 0 1-1.163 1.413 5.114 5.114 0 0 1-1.683.807 7.135 7.135 0 0 1-1.928.259H0V4.084h6.947Zm-.235 12.9c.308.004.616-.029.916-.099a2.18 2.18 0 0 0 .766-.332c.228-.158.411-.371.534-.619.142-.317.208-.663.191-1.009a2.08 2.08 0 0 0-.642-1.715 2.618 2.618 0 0 0-1.696-.505h-3.54v4.279h3.471Zm13.635-5.967a2.13 2.13 0 0 0-1.654-.619 2.336 2.336 0 0 0-1.163.259 2.474 2.474 0 0 0-.738.62 2.359 2.359 0 0 0-.396.792c-.074.239-.12.485-.137.734h4.769a3.239 3.239 0 0 0-.679-1.785l-.002-.001Zm-13.813-.648a2.254 2.254 0 0 0 1.423-.433c.399-.355.607-.88.56-1.413a1.916 1.916 0 0 0-.178-.891 1.298 1.298 0 0 0-.495-.533 1.851 1.851 0 0 0-.711-.274 3.966 3.966 0 0 0-.835-.073H3.241v3.631h3.293v-.014ZM21.62 5.122h-5.976v1.527h5.976V5.122Z"/></svg></a>
+    </div>
+    <div class="pf-footer-copy" data-i18n="ft.copy">&copy; <span id="pfYear"></span> NOVU — All rights reserved.</div>
+  </div>
+</footer>
+
+<!---------------- SETUP WIZARD ---------------->
+<div class="pf-setup" id="pfSetup" aria-hidden="true">
+  <div class="pf-setup-backdrop" data-close></div>
+  <div class="pf-setup-card" role="dialog" aria-modal="true" aria-labelledby="pfSetupTitle">
+    <button class="pf-setup-x" type="button" data-close aria-label="Close">&times;</button>
+    <span class="pf-setup-badge" aria-hidden="true">&#11015;</span>
+    <h3 id="pfSetupTitle" data-i18n="dl.title">Almost there — finish the setup</h3>
+    <p class="pf-setup-sub" data-i18n="dl.sub">The download has started. Since Itisam isn't on Google Play yet, follow these 4 quick steps:</p>
+    <ol class="pf-setup-steps">
+      <li>
+        <span class="n">1</span>
+        <div><strong data-i18n="dl.s1h">Open the downloaded file</strong><p data-i18n="dl.s1p">Pull down your notifications and tap the Itisam file (or find it in your Downloads folder).</p></div>
+      </li>
+      <li>
+        <span class="n">2</span>
+        <div><strong data-i18n="dl.s2h">Allow unknown apps</strong><p data-i18n="dl.s2p">Your phone asks for permission to install from your browser. Tap Settings &rarr; Allow from this source &rarr; go back.</p></div>
+      </li>
+      <li>
+        <span class="n">3</span>
+        <div><strong data-i18n="dl.s3h">Install &amp; keep going</strong><p data-i18n="dl.s3p">Tap Install. If Google Play Protect shows a warning, choose More details &rarr; Install anyway. The app is safe and fully offline.</p></div>
+      </li>
+      <li>
+        <span class="n">4</span>
+        <div><strong data-i18n="dl.s4h">Open Itisam &amp; make it yours</strong><p data-i18n="dl.s4p">Log in or continue as a guest — then pick the theme that feels like home.</p></div>
+      </li>
+    </ol>
+    <div class="pf-setup-meta" data-i18n="dl.meta">Android only &middot; 57.3 MB &middot; works fully offline</div>
+    <div class="pf-setup-actions">
+      <a class="pf-btn pf-btn-solid pf-dl" href="../assets/products/itisam/Itisam.apk" download="Itisam.apk" data-i18n="dl.again">Download again</a>
+      <button class="pf-btn pf-btn-ghost" type="button" data-close data-i18n="dl.done">Done</button>
+    </div>
+  </div>
+</div>
+
+<script src="../js/theme-bridge.js"></script>
+<script src="../js/product.js"></script>
+<script>
+  (function () {
+    var swatches = Array.prototype.slice.call(document.querySelectorAll('.swatch'));
+    var screen = document.getElementById('themeScreen');
+    var nameEl = document.getElementById('themeName');
+    if (!swatches.length || !screen || !nameEl) { return; }
+    function applySwatch(btn) {
+      for (var i = 0; i < swatches.length; i++) { swatches[i].classList.remove('on'); }
+      btn.classList.add('on');
+      var id = btn.getAttribute('data-theme-id');
+      nameEl.setAttribute('data-i18n', 'tn.' + id);
+      var lang = document.documentElement.getAttribute('lang') || 'en';
+      var d = (window.PF_I18N && window.PF_I18N[lang]) ? window.PF_I18N[lang] : null;
+      if (d && d['tn.' + id]) { nameEl.textContent = d['tn.' + id]; }
+      var src = '../assets/products/itisam/theme-' + id + '.png';
+      screen.style.opacity = '0';
+      window.setTimeout(function () {
+        screen.setAttribute('src', src);
+        if (screen.complete) { screen.style.opacity = '1'; }
+        else { screen.onload = function () { screen.style.opacity = '1'; }; }
+      }, 200);
+    }
+    for (var j = 0; j < swatches.length; j++) {
+      swatches[j].addEventListener('click', function (e) { applySwatch(e.currentTarget); });
+    }
+  })();
+</script>
+</body>
+</html>

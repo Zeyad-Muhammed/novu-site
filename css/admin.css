@@ -1,0 +1,91 @@
+/* NOVU Admin — hidden tool styling. Reuses site design tokens. */
+.admin { max-width: 760px; margin: 0 auto; padding: 34px 20px 90px; }
+
+.admin-head {
+  display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;
+  padding-bottom: 18px; border-bottom: 1px solid var(--line); margin-bottom: 20px;
+}
+.admin-title { display: flex; gap: 14px; align-items: center; }
+.admin-title h1 { font-size: 22px; letter-spacing: .02em; margin: 0; }
+.admin-title p { margin: 4px 0 0; color: var(--fg-muted); font-size: 12px; }
+.admin-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--accent, #fff); box-shadow: 0 0 0 4px var(--line); flex: none; }
+.admin-head-actions { display: flex; gap: 10px; align-items: center; }
+
+.admin-notice {
+  font-size: 12px; line-height: 1.6; color: var(--fg-muted);
+  border: 1px solid var(--line); border-left-width: 3px; border-left-color: #d4af37;
+  padding: 12px 14px; margin-bottom: 24px; background: var(--bg-elev);
+}
+
+.gate { display: flex; justify-content: center; padding: 40px 0; }
+.gate-card {
+  width: 100%; max-width: 380px; padding: 26px; border: 1px solid var(--line);
+  background: var(--bg-elev);
+}
+.gate-card h2 { margin: 0 0 6px; }
+.gate-sub { margin: 0 0 16px; color: var(--fg-muted); font-size: 13px; }
+.gate-card label { display: block; font-size: 12px; letter-spacing: .05em; margin-bottom: 14px; color: var(--fg); }
+.gate-card input {
+  width: 100%; margin-top: 6px; padding: 11px 12px; font: inherit;
+  background: var(--bg); color: var(--fg); border: 1px solid var(--line-strong);
+}
+.gate-card .btn { width: 100%; }
+.gate-msg { min-height: 18px; margin: 12px 0 0; font-size: 12px; }
+.gate-msg.is-ok { color: #4caf50; }
+.gate-msg.is-error { color: #e57373; }
+.gate-note { margin: 14px 0 0; font-size: 11px; color: var(--fg-muted); }
+.gate-note code { font-size: 11px; }
+
+.dash-tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.dash-tabs button {
+  font: inherit; font-size: 13px; padding: 8px 16px; cursor: pointer;
+  background: var(--bg-elev); color: var(--fg); border: 1px solid var(--line);
+}
+.dash-tabs button[aria-selected="true"] { border-color: var(--fg); background: var(--fg); color: var(--bg); }
+
+.dash-panel { display: none; }
+.dash-panel[data-active="true"] { display: block; }
+
+.panel-head { margin-bottom: 16px; }
+.panel-head h2 { margin: 0 0 6px; font-size: 18px; }
+.panel-head p { margin: 0 0 12px; color: var(--fg-muted); font-size: 12px; line-height: 1.55; }
+.panel-head code, .pub-steps code { background: var(--bg-elev); border: 1px solid var(--line); padding: 1px 5px; font-size: 11px; }
+
+.panel-head .btn { float: right; }
+.dash-panel label { display: block; font-size: 12px; letter-spacing: .04em; margin-bottom: 12px; color: var(--fg-muted); }
+.dash-panel input[type="text"], .dash-panel textarea {
+  display: block; width: 100%; margin-top: 4px; padding: 9px 11px; font: inherit;
+  background: var(--bg); color: var(--fg); border: 1px solid var(--line-strong);
+}
+.dash-panel textarea { resize: vertical; }
+.row-mini { font-size: 11px; color: var(--fg-muted); letter-spacing: .02em; }
+
+.rows { display: flex; flex-direction: column; gap: 12px; margin-bottom: 16px; }
+.row-card {
+  border: 1px solid var(--line); background: var(--bg-elev); padding: 14px;
+}
+.row-card .rc-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+.row-card .rc-title { font-size: 13px; font-weight: 600; }
+.row-card button { font: inherit; font-size: 11px; padding: 4px 10px; background: none; border: 1px solid var(--line-strong); color: var(--fg-muted); cursor: pointer; }
+.row-card button:hover { color: #e57373; border-color: #e57373; }
+.grp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.grp.tight { grid-template-columns: 1fr 1fr 1fr; }
+.grp label { margin: 0; }
+
+.panel-actions { display: flex; align-items: center; gap: 12px; }
+.saved-hint { font-size: 12px; color: #4caf50; min-height: 1em; }
+
+.pub-row { display: flex; gap: 10px; margin: 6px 0 18px; }
+.pub-steps { margin: 0 0 8px; padding-left: 22px; color: var(--fg-muted); font-size: 13px; line-height: 1.8; }
+.pub-steps b { color: var(--fg); }
+.limit-box {
+  margin-top: 18px; border: 1px dashed var(--line-strong); padding: 14px 16px;
+}
+.limit-box h3 { margin: 0 0 6px; font-size: 13px; text-transform: uppercase; letter-spacing: .12em; }
+.limit-box p { margin: 0; font-size: 12px; color: var(--fg-muted); line-height: 1.6; }
+
+@media (max-width: 560px) {
+  .admin { padding: 20px 12px 60px; }
+  .grp { grid-template-columns: 1fr; }
+  .grp.tight { grid-template-columns: 1fr; }
+}

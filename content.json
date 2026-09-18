@@ -1,0 +1,41 @@
+{
+  "meta": {
+    "version": 1,
+    "note": "Editable content for the NOVU website. When this file changes in the repo, the deploy workflow publishes it automatically."
+  },
+  "hero": {
+    "eyebrow": "Creative & Digital Studio",
+    "lines": ["NOVU —", "Design that", "moves."],
+    "sub": "A creative and digital studio shaping brands, interfaces and experiences — from identity and visual design to web design and front-end development."
+  },
+  "marquee": [
+    "Graphic Design", "—", "Visual Identity", "—", "Branding", "—",
+    "UI/UX Design", "—", "Web Design", "—", "Development", "—",
+    "Graphic Design", "—", "Visual Identity", "—", "Branding", "—",
+    "UI/UX Design", "—", "Web Design", "—", "Development", "—"
+  ],
+  "services": [
+    { "id": 1, "title": "Graphic Design", "desc": "Editorial design, posters, social systems and print-ready creative assets." },
+    { "id": 2, "title": "Visual Identity", "desc": "Cohesive identity systems — color, type, grids and guidelines built to last." },
+    { "id": 3, "title": "Branding", "desc": "Brand strategy and expression that position you clearly in your market." },
+    { "id": 4, "title": "UI/UX Design", "desc": "Interfaces and experiences shaped by research, flows and pixel-precise design." },
+    { "id": 5, "title": "Web Design", "desc": "Responsive, accessible website design that reflects the brand and converts." },
+    { "id": 6, "title": "Front-End Development", "desc": "Clean, fast, maintainable code — turning approved design into production builds." }
+  ],
+  "workNote": "Portfolio slots are ready. Replace placeholder visuals with real project assets when available.",
+  "work": [],
+  "about": {
+    "main": "NOVU is a creative and digital studio working at the intersection of design and technology."
+  },
+  "contact": {
+    "copy": "Prefer email or a structured handover? Use the full Client Brief file to send everything upfront — identity, website and UI inputs in one message."
+  },
+  "products": [
+    { "name": "Habit Flow", "tagline": "Habits · Streaks · Levels", "url": "products/habitflow.html", "icon": "assets/products/habitflow/icon.png" },
+    { "name": "Itisam — اعتصام", "tagline": "Quran · Athkar · Tasbih", "url": "products/itisam.html", "icon": "assets/products/itisam/icon.png" },
+    { "name": "Hafiz — حافظ", "tagline": "Vault · 2FA · Autofill", "url": "hafiz/", "icon": "assets/products/hafiz/icon.png?v=3" }
+  ],
+  "footer": {
+    "note": "Creative & digital studio — design, identity and front-end development."
+  }
+}
