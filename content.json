@@ -35,6 +35,9 @@
     { "name": "Itisam — اعتصام", "tagline": "Quran · Athkar · Tasbih", "url": "products/itisam.html", "icon": "assets/products/itisam/icon.png" },
     { "name": "Hafiz — حافظ", "tagline": "Vault · 2FA · Autofill", "url": "hafiz/", "icon": "assets/products/hafiz/icon.png?v=3" }
   ],
+  "collaborations": [
+    { "name": "Doha", "tagline": "Digital Artist", "url": "collaboration/doha/", "icon": "assets/collaboration/doha.svg" }
+  ],
   "footer": {
     "note": "Creative & digital studio — design, identity and front-end development."
   }

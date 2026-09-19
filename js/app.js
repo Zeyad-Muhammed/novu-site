@@ -60,24 +60,49 @@
     }
   });
 
-  /* ---------------- Products dropdown ---------------- */
+  /* ---------------- Nav dropdowns (Products / Collaboration) ---------------- */
 
-  var navDrop = $('navDrop');
-  var productsBtn = $('productsBtn');
-  function closeDrop() {
-    navDrop.classList.remove('open');
-    productsBtn.setAttribute('aria-expanded', 'false');
+  var drops = [
+    { root: $('navDrop'), btn: $('productsBtn') },
+    { root: $('collabDrop'), btn: $('collabBtn') }
+  ];
+
+  function closeAllDrops() {
+    for (var i = 0; i < drops.length; i++) {
+      if (drops[i].root) {
+        drops[i].root.classList.remove('open');
+        if (drops[i].btn) { drops[i].btn.setAttribute('aria-expanded', 'false'); }
+      }
+    }
   }
-  productsBtn.addEventListener('click', function (e) {
-    e.stopPropagation();
-    var open = navDrop.classList.toggle('open');
-    productsBtn.setAttribute('aria-expanded', String(open));
-  });
+
+  for (var di = 0; di < drops.length; di++) {
+    (function (d) {
+      if (!d.root || !d.btn) { return; }
+      d.btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var open = d.root.classList.toggle('open');
+        d.btn.setAttribute('aria-expanded', String(open));
+        for (var j = 0; j < drops.length; j++) {
+          if (drops[j] !== d && drops[j].root) {
+            drops[j].root.classList.remove('open');
+            if (drops[j].btn) { drops[j].btn.setAttribute('aria-expanded', 'false'); }
+          }
+        }
+      });
+    })(drops[di]);
+  }
+
   document.addEventListener('click', function (e) {
-    if (!navDrop.contains(e.target)) { closeDrop(); }
+    for (var k = 0; k < drops.length; k++) {
+      if (drops[k].root && !drops[k].root.contains(e.target)) {
+        drops[k].root.classList.remove('open');
+        if (drops[k].btn) { drops[k].btn.setAttribute('aria-expanded', 'false'); }
+      }
+    }
   });
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') { closeDrop(); }
+    if (e.key === 'Escape') { closeAllDrops(); }
   });
 
   /* ---------------- Content overlay + render ---------------- */
@@ -94,12 +119,15 @@
   var marqueeTrack = $('marqueeTrack');
   var dropPanel = $('dropPanel');
   var footerProducts = $('footerProducts');
+  var collabPanel = $('collabPanel');
+  var footerCollab = $('footerCollab');
 
   var overlay = null;
   var current = {
     services: core.SERVICES,
     work: null,
     products: core.PRODUCTS,
+    collaborations: core.COLLABORATIONS,
     marquee: [],
     texts: {}
   };
@@ -182,6 +210,37 @@
     });
   }
 
+  function renderCollab() {
+    if (!collabPanel) { return; }
+    collabPanel.innerHTML = '';
+    (current.collaborations || []).forEach(function (c) {
+      var a = el('a', 'drop-item');
+      a.href = c.url;
+      a.setAttribute('role', 'menuitem');
+      var img = document.createElement('img');
+      img.src = c.icon;
+      img.alt = '';
+      img.width = 38;
+      img.height = 38;
+      var span = el('span');
+      span.appendChild(el('b', null, c.name));
+      span.appendChild(el('small', null, c.tagline));
+      a.appendChild(img);
+      a.appendChild(span);
+      collabPanel.appendChild(a);
+    });
+    if (footerCollab) {
+      footerCollab.innerHTML = '';
+      footerCollab.appendChild(el('h4', null, 'Collaboration'));
+      (current.collaborations || []).forEach(function (c) {
+        var a = el('a');
+        a.href = c.url;
+        a.textContent = c.name + ' \u2014 ' + c.tagline;
+        footerCollab.appendChild(a);
+      });
+    }
+  }
+
   function renderMarquee() {
     if (!current.marquee.length) { return; }
     marqueeTrack.innerHTML = '';
@@ -209,6 +268,7 @@
     if (json.services && json.services.length) { current.services = json.services; }
     if (json.work && json.work.length) { current.work = json.work; }
     if (json.products && json.products.length) { current.products = json.products; }
+    if (json.collaborations && json.collaborations.length) { current.collaborations = json.collaborations; }
     if (Array.isArray(json.marquee) && json.marquee.length) { current.marquee = json.marquee; }
     if (json.hero) {
       var h = json.hero;
@@ -230,6 +290,7 @@
     renderServices();
     renderWork();
     renderProducts();
+    renderCollab();
     renderMarquee();
     renderTexts();
     core.log('info', 'render', 'content overlay=' + (overlay ? 'applied' : 'defaults'));

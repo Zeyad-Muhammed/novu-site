@@ -29,6 +29,10 @@
     { name: 'Hafiz \u2014 \u062D\u0627\u0641\u0638', tagline: 'Vault \u00B7 2FA \u00B7 Autofill', url: 'hafiz/', icon: 'assets/products/hafiz/icon.png?v=3' }
   ];
 
+  var COLLABORATIONS = [
+    { name: 'Doha', tagline: 'Digital Artist', url: 'collaboration/doha/', icon: 'assets/collaboration/doha.svg' }
+  ];
+
   /* Placeholder visuals — replace with real project assets when available. */
   var WORK_CATEGORIES = ['Branding', 'Visual Identity', 'UI/UX', 'Web Design', 'Development', 'Graphic Design'];
 
@@ -179,6 +183,7 @@
     BRAND: BRAND,
     SERVICES: SERVICES,
     PRODUCTS: PRODUCTS,
+    COLLABORATIONS: COLLABORATIONS,
     WORK_CATEGORIES: WORK_CATEGORIES,
     placeholderWork: placeholderWork,
     themeInit: themeInit,
