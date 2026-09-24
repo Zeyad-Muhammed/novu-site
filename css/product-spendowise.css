@@ -1041,6 +1041,8 @@ html[dir='rtl'] .sw-page .sw-feat h3 {
   background: var(--sw-terminal-bg);
   overflow: hidden;
   box-shadow: 0 30px 70px rgba(0, 0, 0, 0.5);
+  direction: ltr;
+  text-align: left;
 }
 .sw-terminal__bar {
   display: flex;
@@ -1053,7 +1055,7 @@ html[dir='rtl'] .sw-page .sw-feat h3 {
   letter-spacing: 0.1em;
   color: var(--sw-dim);
 }
-.sw-terminal__bar span {
+.sw-terminal__bar span:not(.mono) {
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -1061,6 +1063,10 @@ html[dir='rtl'] .sw-page .sw-feat h3 {
 }
 .sw-terminal__bar span:first-child {
   background: #3E544A;
+}
+.sw-terminal__bar span.mono {
+  margin-inline-start: 10px;
+  white-space: nowrap;
 }
 .sw-terminal__body {
   padding: 22px 20px 24px;
@@ -1867,8 +1873,8 @@ html[dir='rtl'] .sw-page .sw-checks li {
   text-align: right;
 }
 html[dir='rtl'] .sw-page .sw-terminal__body p span:last-child {
-  margin-left: 0;
-  margin-right: auto;
+  margin-right: 0;
+  margin-left: auto;
 }
 html[dir='rtl'] .sw-page .sw-download__steps li {
   padding-left: 0;
