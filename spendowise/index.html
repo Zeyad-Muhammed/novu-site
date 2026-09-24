@@ -1,0 +1,1154 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SpendoWise — an offline-first, private personal finance app by NOVU. Your money, your device, your rules." />
+  <title>سبندو وايز — SpendoWise | منتج من NOVU</title>
+  <link rel="icon" href="../assets/products/spendowise/icon.png" type="image/png" />
+  <link rel="stylesheet" href="../css/product-spendowise.css" />
+  <script>
+    /* Apply saved theme before first paint to prevent a flash. */
+    (function () {
+      var t = 'dark';
+      try { t = (localStorage.getItem('sw-theme') === 'light') ? 'light' : 'dark'; } catch (e) {}
+      document.documentElement.setAttribute('data-sw-theme', t);
+    })();
+  </script>
+</head>
+
+<!-- ============================================================
+     SPENDOWISE — a NOVU product
+     Mirror of the Hafiz product page. Shared engine js/product.js
+     powers language, reveals, counters, tilt and the setup wizard.
+     ============================================================ -->
+<body class="pf-body sw-page">
+
+  <!-- Skip link -->
+  <a class="sw-skip" href="#overview" data-i18n="skip">التخطي إلى المحتوى</a>
+
+  <!-- Scroll progress -->
+  <div class="pf-progress"><span id="pfProgressBar"></span></div>
+
+  <!-- ============ NAV ============ -->
+  <header id="pfHeader" class="sw-nav">
+    <div class="sw-nav__inner">
+      <a class="sw-nav__brand" href="../index.html" aria-label="SpendoWise">
+        <img class="sw-nav__mark" src="../assets/products/spendowise/icon.png" alt="" height="26" width="26" />
+        <span class="sw-nav__word mono">SPENDO<em>WISE</em></span>
+      </a>
+
+      <nav class="sw-nav__links" aria-label="Main">
+        <a href="#overview" data-i18n="nav.overview">نظرة عامة</a>
+        <a href="#features" data-i18n="nav.features">المزايا</a>
+        <a href="#money" data-i18n="nav.money">الحسابات</a>
+        <a href="#security" data-i18n="nav.security">الأمان</a>
+        <a href="#pricing" data-i18n="nav.pricing">الأسعار</a>
+        <a href="#faq" data-i18n="nav.faq">الأسئلة الشائعة</a>
+      </nav>
+
+      <div class="sw-nav__actions">
+        <a class="pf-back" href="../index.html" data-i18n="back">استوديو NOVU &larr;</a>
+        <a class="sw-btn sw-btn--primary pf-dl" href="../assets/products/spendowise/SpendoWise.apk" download data-i18n="dl.nav">حمّل التطبيق</a>
+        <button id="swTheme" class="sw-theme" type="button" title="Theme" aria-label="Toggle theme">
+          <svg class="sw-theme__sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4.2"></circle>
+            <path d="M12 2v2.4M12 19.6V22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M2 12h2.4M19.6 12H22M4.9 19.1l1.7-1.7M17.4 6.6l1.7-1.7"></path>
+          </svg>
+          <svg class="sw-theme__moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path>
+          </svg>
+        </button>
+        <button id="pfLang" class="sw-lang" type="button" aria-label="Language">
+          <span class="lg-opt on" data-lg="ar">ع</span><span class="lg-opt" data-lg="en">EN</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="overview" class="sw-hero">
+      <div class="sw-hero__bg"></div>
+      <div class="sw-hero__grid"></div>
+      <div class="sw-hero__inner">
+        <div class="sw-hero__copy" data-reveal>
+          <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="hero.eyebrow">منتج من استوديو NOVU &middot; تطبيق موبايل</span></span>
+          <h1 class="sw-hero__title" data-i18n="hero.title">كل قرش له حساب.</h1>
+          <p class="sw-hero__lede" data-i18n="hero.sub">تطبيق مالية شخصية <strong>أوفلاين بالكامل</strong> — من غير حسابات، ومن غير سيرفرات، ومن غير تجسس. فلوسك قاعدين على جهازك، ومحدش غيرك يقدر يلمسهم.</p>
+          <div class="sw-hero__cta">
+            <a class="sw-btn sw-btn--primary sw-btn--lg pf-dl" href="../assets/products/spendowise/SpendoWise.apk" download data-i18n="hero.cta1">حمّل التطبيق</a>
+            <a class="sw-btn sw-btn--ghost sw-btn--lg" href="#showcase" data-i18n="hero.cta2">شوف الشاشات</a>
+          </div>
+          <ul class="sw-hero__chips">
+            <li data-i18n="hero.chip1">من غير حساب</li>
+            <li data-i18n="hero.chip2">أوفلاين أولًا</li>
+            <li data-i18n="hero.chip3">تشفير AES-256-GCM</li>
+          </ul>
+        </div>
+
+        <div class="sw-hero__device" data-reveal data-delay="2" data-parallax="0.05">
+          <figure class="sw-phone sw-phone--hero">
+            <div class="sw-phone__bezel">
+              <span class="sw-phone__notch"></span>
+              <img src="../assets/products/spendowise/dark/1-home.png"
+                   data-dark="../assets/products/spendowise/dark/1-home.png"
+                   data-light="../assets/products/spendowise/light/1-home.png"
+                   alt="SpendoWise home screen" />
+            </div>
+          </figure>
+          <div class="sw-float sw-float--a">
+            <span class="sw-float__label mono" data-i18n="f1.label">SYNC</span>
+            <span class="sw-float__value mono" data-i18n="f1.value">NONE</span>
+          </div>
+          <div class="sw-float sw-float--b">
+            <span class="sw-float__label mono" data-i18n="f2.label">STORAGE</span>
+            <span class="sw-float__value mono" data-i18n="f2.value">ON-DEVICE</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TICKER ============ -->
+    <div class="sw-ticker" aria-hidden="true">
+      <div class="sw-ticker__track">
+        <span data-i18n="t1">v1.0.0 IS LIVE</span><i>&middot;</i>
+        <span data-i18n="t2">OFFLINE-FIRST</span><i>&middot;</i>
+        <span data-i18n="t3">NO ACCOUNTS</span><i>&middot;</i>
+        <span data-i18n="t4">PRIVATE BY DEFAULT</span><i>&middot;</i>
+        <span data-i18n="t5">PLAIN NUMBERS</span><i>&middot;</i>
+        <span data-i18n="t6">NO TELEMETRY</span><i>&middot;</i>
+        <span data-i18n="t7">LOCAL SQLITE</span><i>&middot;</i>
+        <span data-i18n="t8">DOUBLE-ENTRY</span><i>&middot;</i>
+        <span data-i18n="t9">6 CURRENCIES</span><i>&middot;</i>
+        <span data-i18n="t10">2 LANGUAGES</span><i>&middot;</i>
+        <span data-i18n="t11">AES-256-GCM</span><i>&middot;</i>
+        <span data-i18n="t12">84 TESTS</span><i>&middot;</i>
+        <span data-i18n="t1">v1.0.0 IS LIVE</span><i>&middot;</i>
+        <span data-i18n="t2">OFFLINE-FIRST</span><i>&middot;</i>
+        <span data-i18n="t3">NO ACCOUNTS</span><i>&middot;</i>
+        <span data-i18n="t4">PRIVATE BY DEFAULT</span><i>&middot;</i>
+        <span data-i18n="t5">PLAIN NUMBERS</span><i>&middot;</i>
+        <span data-i18n="t6">NO TELEMETRY</span><i>&middot;</i>
+        <span data-i18n="t7">LOCAL SQLITE</span><i>&middot;</i>
+        <span data-i18n="t8">DOUBLE-ENTRY</span><i>&middot;</i>
+        <span data-i18n="t9">6 CURRENCIES</span><i>&middot;</i>
+        <span data-i18n="t10">2 LANGUAGES</span><i>&middot;</i>
+        <span data-i18n="t11">AES-256-GCM</span><i>&middot;</i>
+        <span data-i18n="t12">84 TESTS</span><i>&middot;</i>
+      </div>
+    </div>
+
+    <!-- ============ STATS ============ -->
+    <section id="stats" class="sw-stats">
+      <div class="sw-stats__rank">
+        <div class="sw-stats__stat" data-reveal>
+          <span class="sw-stats__num" data-counter="6">0</span>
+          <span class="sw-stats__unit" data-i18n="st1">عملات مدمجة</span>
+        </div>
+        <div class="sw-stats__stat" data-reveal data-delay="1">
+          <span class="sw-stats__num" data-counter="0">0</span>
+          <span class="sw-stats__unit" data-i18n="st2">تواصل مع سيرفر</span>
+        </div>
+        <div class="sw-stats__stat" data-reveal data-delay="2">
+          <span class="sw-stats__num" data-counter="1">0</span>
+          <span class="sw-stats__unit" data-i18n="st3">قاعدة بيانات محلية</span>
+        </div>
+        <div class="sw-stats__stat" data-reveal data-delay="3">
+          <span class="sw-stats__num" data-counter="2">0</span>
+          <span class="sw-stats__unit" data-i18n="st4">لغتان</span>
+        </div>
+        <div class="sw-stats__stat" data-reveal data-delay="4">
+          <span class="sw-stats__num" data-counter="84">0</span>
+          <span class="sw-stats__unit" data-i18n="st5">اختبار أوتوماتيكي</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section id="problem" class="sw-app sw-problem">
+      <div class="sw-problem__inner">
+        <div class="sw-section__head" data-reveal>
+          <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="pb.eyebrow">ثلاث ضغوط</span></span>
+          <h2 class="sw-h2" data-i18n="pb.h">تسمّيها فعلًا "ملكك"؟</h2>
+          <p class="sw-lede" data-i18n="pb.p">تطبيقات المالية بتشترط حاجات عمرك ما توافق عليها — سبندو وايز اتبنى عشان يتخطى الثلاث دول.</p>
+        </div>
+        <div class="sw-problem__grid">
+          <article class="sw-card sw-problem__card" data-reveal>
+            <span class="sw-problem__n mono">01</span>
+            <h3 data-i18n="pb1.h">سيرفرات شايلة سجلاتك</h3>
+            <p data-i18n="pb1.p">معظم التطبيقات بتحمّل بيانات فلوسك على السحابة. انت بتستأجرها مش بتمتلكها — حتى لو "مجانًا".</p>
+          </article>
+          <article class="sw-card sw-problem__card" data-reveal data-delay="1">
+            <span class="sw-problem__n mono">02</span>
+            <h3 data-i18n="pb2.h">بيعلموا عنك ويوجّهوك</h3>
+            <p data-i18n="pb2.p">بيحلّلوا صرفك عشان يخليك واقف أمامهم. عاداتك بتموّل الإعلانات وأبحاثهم.</p>
+          </article>
+          <article class="sw-card sw-problem__card" data-reveal data-delay="2">
+            <span class="sw-problem__n mono">03</span>
+            <h3 data-i18n="pb3.h">أسعار بتضيع من الحقيقة</h3>
+            <p data-i18n="pb3.p">حسابات الكسور بتخلي 0.1 + 0.2 تساوي 0.30000000000000004 — ولو اتكررت ألف مرة، التقريب الصامت بياكل رصيدك.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SHOWCASE ============ -->
+    <section id="showcase" class="sw-app">
+      <div class="sw-section__head" data-reveal>
+        <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="sh.eyebrow">صور حقيقية من التطبيق</span></span>
+        <h2 class="sw-h2" data-i18n="sh.h">كل رقم محتاجه — في شاشة واحدة</h2>
+        <p class="sw-lede" data-i18n="sh.p">لقطات شاشة من النسخة الشغالة نفسها، بثيم الفاتح والداكن.</p>
+      </div>
+      <div class="sw-showcase">
+        <div class="sw-showcase__grid">
+          <figure class="sw-phone" data-tilt="9" data-reveal>
+            <div class="sw-phone__bezel">
+              <span class="sw-phone__notch"></span>
+              <img src="../assets/products/spendowise/dark/1-home.png"
+                   data-dark="../assets/products/spendowise/dark/1-home.png"
+                   data-light="../assets/products/spendowise/light/1-home.png"
+                   alt="SpendoWise home" loading="lazy" />
+            </div>
+            <figcaption class="mono" data-i18n="cap1">الرئيسية</figcaption>
+          </figure>
+          <figure class="sw-phone" data-tilt="9" data-reveal data-delay="1">
+            <div class="sw-phone__bezel">
+              <span class="sw-phone__notch"></span>
+              <img src="../assets/products/spendowise/dark/5-transactions.png"
+                   data-dark="../assets/products/spendowise/dark/5-transactions.png"
+                   data-light="../assets/products/spendowise/light/5-transactions.png"
+                   alt="SpendoWise transactions" loading="lazy" />
+            </div>
+            <figcaption class="mono" data-i18n="cap2">المعاملات</figcaption>
+          </figure>
+          <figure class="sw-phone" data-tilt="9" data-reveal data-delay="2">
+            <div class="sw-phone__bezel">
+              <span class="sw-phone__notch"></span>
+              <img src="../assets/products/spendowise/dark/7-budgets.png"
+                   data-dark="../assets/products/spendowise/dark/7-budgets.png"
+                   data-light="../assets/products/spendowise/light/7-budgets.png"
+                   alt="SpendoWise budgets" loading="lazy" />
+            </div>
+            <figcaption class="mono" data-i18n="cap3">الميزانيات</figcaption>
+          </figure>
+          <figure class="sw-phone" data-tilt="9" data-reveal data-delay="3">
+            <div class="sw-phone__bezel">
+              <span class="sw-phone__notch"></span>
+              <img src="../assets/products/spendowise/dark/8-analytics.png"
+                   data-dark="../assets/products/spendowise/dark/8-analytics.png"
+                   data-light="../assets/products/spendowise/light/8-analytics.png"
+                   alt="SpendoWise analytics" loading="lazy" />
+            </div>
+            <figcaption class="mono" data-i18n="cap4">التحليلات</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section id="features" class="sw-features">
+      <div class="sw-section__head" data-reveal>
+        <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="f.eyebrow">إيه اللي جوه</span></span>
+        <h2 class="sw-h2" data-i18n="f.h">اتصمم للمدى الطويل</h2>
+        <p class="sw-lede" data-i18n="f.p">كل ميزة في التطبيق متبنية على قاعدة بيانات محلية حقيقية — من غير اعتماد على النت ولا على سيرفر.</p>
+      </div>
+      <div class="sw-features__grid">
+        <article class="sw-feat" data-reveal>
+          <span class="sw-feat__n mono">01</span>
+          <h3 data-i18n="f01.h">العملات المتعددة</h3>
+          <p data-i18n="f01.p">ضيف أرصدة بعملات مختلفة وحوّل بالأسعار اللي تختارها كل يوم — وكل قيمة تفضل دقيقة زي ما هي.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="1">
+          <span class="sw-feat__n mono">02</span>
+          <h3 data-i18n="f02.h">التصنيفات والوسوم</h3>
+          <p data-i18n="f02.p">نظّم كل معاملة بتصنيفات ووسوم — افحص الفن وابحث وعمل تقارير في ثواني.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="2">
+          <span class="sw-feat__n mono">03</span>
+          <h3 data-i18n="f03.h">الميزانيات</h3>
+          <p data-i18n="f03.p">ميزانيات شهرية لكل تصنيف بأشرطة استخدام واضحة — من غير مفاجآت في المصاريف.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="3">
+          <span class="sw-feat__n mono">04</span>
+          <h3 data-i18n="f04.h">معاملات مجدولة</h3>
+          <p data-i18n="f04.p">الفوتر والأجور بتتسجل لوحدها في ميعادها — حتى لو الجهاز أوفلاين.</p>
+        </article>
+        <article class="sw-feat" data-reveal>
+          <span class="sw-feat__n mono">05</span>
+          <h3 data-i18n="f05.h">التحليلات</h3>
+          <p data-i18n="f05.p">رسوم بيانية بتوري فلوسك بروح فين — بالتصنيف والاتجاه والشهر.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="1">
+          <span class="sw-feat__n mono">06</span>
+          <h3 data-i18n="f06.h">الأرصدة والسجل</h3>
+          <p data-i18n="f06.p">كل حساب ظاهر بلمسة، وسجل كامل قابل للفلترة والبحث.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="2">
+          <span class="sw-feat__n mono">07</span>
+          <h3 data-i18n="f07.h">التدفق النقدي</h3>
+          <p data-i18n="f07.p">فلوس جاية، فلوس رايحة، والإيقاع بينهم على مدار الوقت.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="3">
+          <span class="sw-feat__n mono">08</span>
+          <h3 data-i18n="f08.h">إحصائيات الميزانية</h3>
+          <p data-i18n="f08.p">شوف باقي إيه، سليم إيه، وإيه محتاج تبطّل فيه.</p>
+        </article>
+        <article class="sw-feat" data-reveal>
+          <span class="sw-feat__n mono">09</span>
+          <h3 data-i18n="f09.h">أهداف الادخار</h3>
+          <p data-i18n="f09.p">تابع أهدافك بشريط تقدم، واعرف هتوصلها إمتى بالظبط.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="1">
+          <span class="sw-feat__n mono">10</span>
+          <h3 data-i18n="f10.h">نسخ مشفّرة</h3>
+          <p data-i18n="f10.p">نسخ احتياطية مشفّرة على جهازك أنت، وشغّلها من غير النت.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="2">
+          <span class="sw-feat__n mono">11</span>
+          <h3 data-i18n="f11.h">العربية &amp; English</h3>
+          <p data-i18n="f11.p">تطبيق مترجَم بالكامل — بدّل اللغة في أي وقت وكل حاجة بتتبدل.</p>
+        </article>
+        <article class="sw-feat" data-reveal data-delay="3">
+          <span class="sw-feat__n mono">12</span>
+          <h3 data-i18n="f12.h">تنبيهات محلية</h3>
+          <p data-i18n="f12.p">تذكيرات بتتظبط على الجهاز نفسه — محدش بيبعتلك حاجة من سيرفر.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ MONEY (chain + terminal) ============ -->
+    <section id="money" class="sw-money">
+      <div class="sw-money__glow"></div>
+      <div class="sw-section__head" data-reveal>
+        <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="mo.eyebrow">حسابات بنكية</span></span>
+        <h2 class="sw-h2" data-i18n="mo.h">الفلوس بتبقى أرقام صحيحة</h2>
+        <p class="sw-lede" data-i18n="mo.p">سبندو وايز بيشغّل الفلوس بوحدات صغيرة (قرش، سنت) كأرقام صحيحة — ومفيش كسور عائمة في القيمة أصلًا. التقريب مستحيل يحصل لأنه مش بيتطبّق من الأساس.</p>
+      </div>
+      <div class="sw-money__layout">
+        <div class="sw-chain">
+          <article class="sw-chain__step" data-reveal>
+            <span class="sw-chain__n mono">STEP 01</span>
+            <h3 data-i18n="mo1.h">قراءة وتصنيف</h3>
+            <p data-i18n="mo1.p">كل معاملة بتتقرا وتتظبط وتتوسم قبل ما تدخل الدفتر.</p>
+          </article>
+          <div class="sw-chain__arrow" aria-hidden="true">&darr;</div>
+          <article class="sw-chain__step" data-reveal data-delay="1">
+            <span class="sw-chain__n mono">STEP 02</span>
+            <h3 data-i18n="mo2.h">شكل موحّد</h3>
+            <p data-i18n="mo2.p">المبالغ بتتحول لأرقام صحيحة بوحدات صغيرة — 12.75 جنيه بتتبقى 1275 قرش.</p>
+          </article>
+          <div class="sw-chain__arrow" aria-hidden="true">&darr;</div>
+          <article class="sw-chain__step" data-reveal data-delay="2">
+            <span class="sw-chain__n mono">STEP 03</span>
+            <h3 data-i18n="mo3.h">قيد مزدوج</h3>
+            <p data-i18n="mo3.p">الرصيد والميزانية والسجل بيتحدثوا مع بعض — عملية واحدة من غير انقسام.</p>
+          </article>
+          <div class="sw-chain__arrow" aria-hidden="true">&darr;</div>
+          <article class="sw-chain__step" data-reveal data-delay="3">
+            <span class="sw-chain__n mono">STEP 04</span>
+            <h3 data-i18n="mo4.h">إجماليات قابلة للتحقق</h3>
+            <p data-i18n="mo4.p">المجاميع المتفرعة بتتحسب من جديد وتتأكد من الدفتر المصدري.</p>
+          </article>
+        </div>
+
+        <div class="sw-terminal" data-reveal data-delay="1">
+          <div class="sw-terminal__bar"><span></span><span></span><span></span>&nbsp;<span class="mono" data-i18n="ter.title">LOCAL AUDIT &middot; NIGHTLY</span></div>
+          <div class="sw-terminal__body mono">
+            <p><span>$</span><span>spendowise --audit</span></p>
+            <p><span class="sw-k">✔</span><span>ledger rows ........ 14,282</span></p>
+            <p><span class="sw-k">✔</span><span>balances .......... 21,947.50 EGP</span></p>
+            <p><span class="sw-k">✔</span><span>budget allocated .. 3,120.00 EGP</span></p>
+            <p><span class="sw-k">✔</span><span>float ops ......... 0 (int64 only)</span></p>
+            <p><span class="sw-k">✔</span><span>delta ............. 0.00 EGP</span></p>
+            <p><span class="sw-green">✔</span><span class="sw-amber">backup cipher ...... AES-256-GCM</span></p>
+            <p><span>$</span><span class="sw-cursor">▌</span></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SECURITY ============ -->
+    <section id="security" class="sw-life">
+      <div class="sw-life__grid">
+        <div data-reveal>
+          <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="sec.eyebrow">دفاع على أكتر من طبقة</span></span>
+          <h2 class="sw-h2" data-i18n="sec.h">مقفول، على جهازك بس</h2>
+          <p class="sw-lede" data-i18n="sec.p">التهديدات بتتقفل قبل ما التطبيق يصحى أصلاً. من أول قفل الشاشة لحد تخزين الأنبوبة.</p>
+          <ol class="sw-steps">
+            <li data-reveal data-delay="1">
+              <span class="mono">01</span>
+              <div>
+                <h3 data-i18n="sec1.h">بوابة الـPIN</h3>
+                <p data-i18n="sec1.p">الـPIN متخزن كـ PBKDF2-SHA256 hash بملح، وبيتأكد محليًا بمقارنة زمن ثابت.</p>
+              </div>
+            </li>
+            <li data-reveal data-delay="2">
+              <span class="mono">02</span>
+              <div>
+                <h3 data-i18n="sec2.h">تشفير AES-GCM للبيانات المخزنة</h3>
+                <p data-i18n="sec2.p">ملفات النسخ والتصدير مشفّرة بـ AES-256-GCM. حتى بيانات التعريف متقفلة.</p>
+              </div>
+            </li>
+            <li data-reveal data-delay="3">
+              <span class="mono">03</span>
+              <div>
+                <h3 data-i18n="sec3.h">صفر تجسس</h3>
+                <p data-i18n="sec3.p">تقارير الأعطال بتفضل محلية. محدش بيعرف إيه اللي على جهازك.</p>
+              </div>
+            </li>
+          </ol>
+        </div>
+
+        <div class="sw-hero__device" data-reveal data-delay="1">
+          <figure class="sw-phone sw-phone--lone" data-tilt="8">
+            <div class="sw-phone__bezel">
+              <span class="sw-phone__notch"></span>
+              <img src="../assets/products/spendowise/dark/11-security.png"
+                   data-dark="../assets/products/spendowise/dark/11-security.png"
+                   data-light="../assets/products/spendowise/light/11-security.png"
+                   alt="SpendoWise security & privacy" loading="lazy" />
+            </div>
+            <figcaption class="mono" data-i18n="sec.cap">SECURITY &amp; PRIVACY</figcaption>
+          </figure>
+          <div class="sw-facts">
+            <div class="sw-perm">
+              <span class="sw-perm__name mono">CIPHER</span>
+              <span class="sw-perm__val mono">AES-256-GCM</span>
+            </div>
+            <div class="sw-perm">
+              <span class="sw-perm__name mono">KDF</span>
+              <span class="sw-perm__val mono">PBKDF2-SHA256</span>
+            </div>
+            <div class="sw-perm">
+              <span class="sw-perm__name mono">STORE</span>
+              <span class="sw-perm__val mono">SQLITE3</span>
+            </div>
+            <div class="sw-perm">
+              <span class="sw-perm__name mono">ANALYTICS</span>
+              <span class="sw-perm__val mono">OFF</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRIVACY ============ -->
+    <section id="privacy" class="sw-privacy">
+      <div class="sw-solo" style="max-width:1180px;margin:0 auto;">
+        <div class="sw-section__head" data-reveal>
+          <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="pr.eyebrow">التحقق من الحقائق</span></span>
+          <h2 class="sw-h2" data-i18n="pr.h">من غير سيرفرات ولا سحابة ولا تحليلات</h2>
+          <p class="sw-lede" data-i18n="pr.p">دي بالظبط الحاجة اللي التطبيق بيستعملها وهو شغال — وإيه اللي عمره ما يسيب جهازك.</p>
+        </div>
+        <div class="sw-privacy__cols">
+          <article class="sw-card" data-reveal>
+            <span class="sw-privacy__k mono" data-i18n="pr.col1">1 &middot; الأذونات</span>
+            <div class="sw-perms">
+              <div class="sw-perm sw-perm--on">
+                <span class="sw-perm__name mono">RECEIVE_BOOT_COMPLETED</span>
+                <span class="sw-perm__val mono">ON</span>
+              </div>
+              <div class="sw-perm sw-perm--on">
+                <span class="sw-perm__name mono">VIBRATE</span>
+                <span class="sw-perm__val mono">ON</span>
+              </div>
+              <div class="sw-perm sw-perm--on">
+                <span class="sw-perm__name mono">POST_NOTIFICATIONS</span>
+                <span class="sw-perm__val mono">ON</span>
+              </div>
+              <div class="sw-perm sw-perm--off">
+                <span class="sw-perm__name mono">READ_STORAGE</span>
+                <span class="sw-perm__val mono">OFF</span>
+              </div>
+              <div class="sw-perm sw-perm--off">
+                <span class="sw-perm__name mono">ACCESS_FINE_LOCATION</span>
+                <span class="sw-perm__val mono">OFF</span>
+              </div>
+              <div class="sw-perm sw-perm--off">
+                <span class="sw-perm__name mono">READ_CONTACTS</span>
+                <span class="sw-perm__val mono">OFF</span>
+              </div>
+            </div>
+            <p class="sw-privacy__note" data-i18n="pr.note">دي كل الأذونات اللي التطبيق بيطلبها — ثلاث فقط، محلية وبسيطة.</p>
+          </article>
+
+          <article class="sw-card" data-reveal data-delay="1">
+            <span class="sw-privacy__k mono" data-i18n="pr.col2">2 &middot; إيه اللي بيتخزن على الجهاز</span>
+            <ul class="sw-what">
+              <li data-i18n="pr.s1">كل المعاملات — ملف SQLite واحد محلي (Ledger.db).</li>
+              <li data-i18n="pr.s2">الإيصالات والصور، في فولدر خاص بالتطبيق.</li>
+              <li data-i18n="pr.s3">نسخ احتياطية مشفّرة — بس اللي تختار تعملها بنفسك.</li>
+            </ul>
+            <ul class="sw-privacy__chips" style="margin-top:18px;">
+              <li class="mono">LEDGER.DB</li>
+              <li class="mono">SQLITE3</li>
+              <li class="mono">DEVICE-ONLY</li>
+            </ul>
+          </article>
+
+          <article class="sw-card" data-reveal data-delay="2">
+            <span class="sw-privacy__k mono" data-i18n="pr.col3">3 &middot; إيه اللي بيطلع برا</span>
+            <div class="sw-privacy__zero">Nothing.</div>
+            <p class="sw-privacy__note" data-i18n="pr.zsub">من غير حسابات، ولا تسجيل دخول، ولا تجسس، ولا إشعارات من سيرفر، ولا إعلانات. ولا بايت واحد من سجلاتك بيطلع برا.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section id="pricing" class="sw-pricing">
+      <div class="sw-section__head" data-reveal>
+        <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="prc.eyebrow">عادل ومن غير مفاجآت</span></span>
+        <h2 class="sw-h2" data-i18n="prc.h">مجاني النهارده. وعد صادق بكرة.</h2>
+        <p class="sw-lede" data-i18n="prc.p">كل المزايا اللي فوق مجانية وشغالة أوفلاين للأبد. الـPro متصمم بس الدفع لسه مش متفعل — وهتعرف هنا الأول.</p>
+      </div>
+      <div class="sw-pricing__grid">
+        <article class="sw-plan" data-reveal>
+          <span class="sw-plan__tag mono" data-i18n="free.tag">PLAN 01 &middot; FREE</span>
+          <div class="sw-plan__price">0<span class="sw-plan__per" data-i18n="free.per">للأبد &middot; من غير كارت</span></div>
+          <ul class="sw-plan__list">
+            <li class="sw-plan__ok" data-i18n="free1">دفتر متعدد العملات — كل العملات</li>
+            <li class="sw-plan__ok" data-i18n="free2">ميزانيات، وجداول، وتحليلات</li>
+            <li class="sw-plan__ok" data-i18n="free3">نسخ احتياطية مشفّرة محلية</li>
+            <li class="sw-plan__ok" data-i18n="free4">العربية + English</li>
+            <li class="sw-plan__ok" data-i18n="free5">من غير إعلانات — أبدًا</li>
+            <li class="sw-plan__ok" data-i18n="free6">أوفلاين — 100% على جهازك</li>
+          </ul>
+          <a class="sw-btn sw-btn--primary pf-dl" href="../assets/products/spendowise/SpendoWise.apk" download data-i18n="free.btn">حمّل التطبيق</a>
+        </article>
+
+        <article class="sw-plan sw-plan--pro" data-reveal data-delay="1">
+          <span class="sw-plan__badge mono" data-i18n="pro.badge">أمانة &middot; قريبًا</span>
+          <span class="sw-plan__tag mono" data-i18n="pro.tag">PLAN 02 &middot; PRO</span>
+          <div class="sw-plan__price">PRO<span class="sw-plan__per" data-i18n="pro.per">[ الدفع غير متفعل ]</span></div>
+          <ul class="sw-plan__list">
+            <li class="sw-plan__ok" data-i18n="pro1">سرّ كبير متصمم — لسه منزلش</li>
+            <li class="sw-plan__ok" data-i18n="pro2">دفعة وحيدة، من غير اشتراكات</li>
+            <li class="sw-plan__ok" data-i18n="pro3">هتعرف أي حاجة جديدة هنا الأول</li>
+            <li class="sw-plan__ok" data-i18n="pro4">شغال أوفلاين زي المجاني تمامًا</li>
+            <li class="sw-plan__ok" data-i18n="pro5">من غير مصايد تجربة</li>
+            <li class="sw-plan__ok" data-i18n="pro6">من غير حيل تسويقية</li>
+          </ul>
+          <button class="sw-btn sw-btn--ghost" type="button" disabled data-i18n="pro.btn">قريبًا</button>
+        </article>
+      </div>
+      <p class="sw-pricing__note mono" data-i18n="prc.note">وقت ما يطلع الـPro، المجاني هيبقى مجاني.</p>
+    </section>
+
+    <!-- ============ DOWNLOAD ============ -->
+    <section id="download" class="sw-download">
+      <div class="sw-download__inner" data-reveal>
+        <div>
+          <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="dwn.eyebrow">الإصدار</span></span>
+          <h2 class="sw-h2" data-i18n="dwn.h">ملف واحد. كل حاجة فيه.</h2>
+          <p class="sw-lede" data-i18n="dwn.p">ملف APK موقّع ومتكامل، يتثبّت جنب أي تطبيق تاني. والتطبيق شغال أوفلاين بالكامل — لا تسجيل ولا اشتراك.</p>
+
+          <div class="sw-download__cta">
+            <a class="sw-btn sw-btn--primary sw-btn--lg pf-dl" href="../assets/products/spendowise/SpendoWise.apk" download data-i18n="dwn.btn">حمّل ملف التطبيق</a>
+            <span class="sw-download__aside-label mono" data-i18n="dwn.alt">مباشرة من الديفلوبر &middot; من غير متجر</span>
+          </div>
+
+          <ul class="sw-download__meta">
+            <li><span class="mono" data-i18n="dwn.m1">الإصدار</span><strong class="mono">1.0.0</strong></li>
+            <li><span class="mono" data-i18n="dwn.m2">المنصة</span><strong class="mono">Android 8.0+</strong></li>
+            <li><span class="mono" data-i18n="dwn.m3">الحجم</span><strong class="mono">63 MB</strong></li>
+            <li><span class="mono" data-i18n="dwn.m4">التشفير</span><strong class="mono">AES-256-GCM</strong></li>
+          </ul>
+
+          <details class="sw-download__steps">
+            <summary data-i18n="dwn.steps">طريقة التثبيت (بس مش على جوجل بلاي)</summary>
+            <ol>
+              <li><strong data-i18n="i1h">اسمح بالتثبيت من مصدر غير معروف</strong><br /><span data-i18n="i1p">افتح إعدادات الأمان واسمح بالتثبيت من المتصفح، ثم ارجع.</span></li>
+              <li><strong data-i18n="i2h">افتح ملف APK</strong><br /><span data-i18n="i2p">دوس على ملف SpendoWise.apk اللي اتحمل عشان يبدأ التثبيت.</span></li>
+              <li><strong data-i18n="i3h">راجع البيانات</strong><br /><span data-i18n="i3p">الإصدار 1.0.0 · الحجم 63 MB — وبعدين دوس تثبيت.</span></li>
+              <li><strong data-i18n="i4h">اعمل الـPIN بتاعك</strong><br /><span data-i18n="i4p">ظبط PIN من 4 إلى 6 أرقام تقفل بيه دفترك — وبكده خلصت.</span></li>
+            </ol>
+          </details>
+
+          <p class="sw-download__hash mono"><span data-i18n="dwn.hash">SHA-256</span><code>AB7C4ABF65A1C5F01103DCD2C78DA3F5009AC18C2A8B07358FC42569342461A5</code></p>
+        </div>
+
+        <aside class="sw-download__aside" data-reveal data-delay="1">
+          <a class="sw-apkcard pf-dl" href="../assets/products/spendowise/SpendoWise.apk" download>
+            <img class="sw-apkcard__icon" src="../assets/products/spendowise/icon.png" alt="SpendoWise icon" height="64" width="64" />
+            <span class="sw-apkcard__name">SpendoWise</span>
+            <span class="sw-apkcard__meta mono">v1.0.0 &middot; 63 MB &middot; APK</span>
+            <span class="sw-btn sw-btn--primary sw-apkcard__btn" data-i18n="dwn.card">تحميل</span>
+          </a>
+          <p class="sw-download__aside-label mono" data-i18n="dwn.flavor">OFFLINE-FIRST &middot; NO ACCOUNT NEEDED</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section id="faq" class="sw-faq">
+      <div class="sw-section__head" data-reveal>
+        <span class="sw-eyebrow"><span class="sw-eyebrow__dot"></span><span data-i18n="faq.eyebrow">أسئلة صريحة</span></span>
+        <h2 class="sw-h2" data-i18n="faq.h">اللي كلكم بتسألوا عليه</h2>
+        <p class="sw-lede" data-i18n="faq.p">إجابات مباشرة من غير طلاسم قاموس النظام.</p>
+      </div>
+      <div class="sw-faq__list">
+        <details class="sw-faq__item" data-reveal>
+          <summary data-i18n="q1">هل سبندو وايز فعلًا أوفلاين بدرجة أولى؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q1a">أيوه. كل ميزة شغالة من غير نت. كل البيانات في ملف SQLite واحد على جهازك، وكل حسابات القيمة بتتم على الجهاز نفسه.</p></div>
+        </details>
+        <details class="sw-faq__item" data-reveal data-delay="1">
+          <summary data-i18n="q2">هل محتاج أعمل حساب؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q2a">من غير حسابات ولا تسجيل دخول ولا سيرفرات. حمل التطبيق، ظبط الـPIN بتاعك، وابدأ.</p></div>
+        </details>
+        <details class="sw-faq__item" data-reveal data-delay="2">
+          <summary data-i18n="q3">إيه اللي هيحصل لبياناتي لو غيرت الموبايل؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q3a">بتعمل نسخة احتياطية مشفّرة (AES-256-GCM) وتنقلها للجهاز الجديد وتستعيدها — أوفلاين بالكامل ومن غير سحابة.</p></div>
+        </details>
+        <details class="sw-faq__item" data-reveal data-delay="3">
+          <summary data-i18n="q4">إيه العملات المدعومة؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q4a">ست عملات جاهزة — جنيه مصري، دولار، يورو، استرليني، ريال سعودي، ودرهم — بأسعار تحديثها في إيدك على الجهاز.</p></div>
+        </details>
+        <details class="sw-faq__item" data-reveal data-delay="1">
+          <summary data-i18n="q5">هل الـPIN بتاعي محفوظ بأمان؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q5a">الـPIN عمره ما يسيب الجهاز. متخزن كـ PBKDF2-SHA256 hash بملح، وبيتأكد محليًا بمقارنة زمن ثابت.</p></div>
+        </details>
+        <details class="sw-faq__item" data-reveal data-delay="2">
+          <summary data-i18n="q6">ليّه مش نازل على جوجل بلاي؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q6a">التحميل المباشر بيوصل النسخة الكاملة لأي جهاز أندرويد فورًا ومن غير قيود متجر، وNOVU بتجهز صفحة على المتجر من غير ما تقرب من بياناتك.</p></div>
+        </details>
+        <details class="sw-faq__item" data-reveal data-delay="3">
+          <summary data-i18n="q7">المعاملات بتتخزن إزاي؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q7a">كل معاملة بتتسجل كرقم صحيح موحّد في قاعدة بيانات SQLite محلية واحدة — وحدات صغيرة من غير كسور ولا انحراف في التقريب.</p></div>
+        </details>
+        <details class="sw-faq__item" data-reveal data-delay="1">
+          <summary data-i18n="q8">هل أقدر أصدّر بياناتي؟</summary>
+          <div class="sw-faq__body"><p data-i18n="q8a">أيوه. تقدر تصدّر في أي وقت، والنسخ الاحتياطي المشفّر للدفتر كله بيلا لمسة. مفيش حاجة محبوسة جوه.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section id="start" class="sw-final">
+      <div class="sw-final__inner">
+        <span class="sw-eyebrow sw-eyebrow--center" data-reveal><span class="sw-eyebrow__dot"></span><span data-i18n="fx.eyebrow">اتصنعت بعناية</span></span>
+        <h2 class="sw-h2 sw-h2--center" data-reveal data-delay="1" data-i18n="fx.h">فلوسك أنت. جهازك أنت. وحدك.</h2>
+        <p class="sw-lede" data-reveal data-delay="2" data-i18n="fx.p">سبندو وايز منتج من استوديو NOVU — اتصمم واتبنى بنفس العناية اللي بيمر بيها كل منتج في الاستوديو. عايز تطبيق زي ده؟ احكيلنا.</p>
+        <div class="sw-final__cta" data-reveal data-delay="3">
+          <a class="sw-btn sw-btn--primary sw-btn--lg" href="../index.html" data-i18n="fx.btn">ابدأ مشروعك — هيبقى خاص</a>
+          <span class="sw-final__hint mono" data-i18n="fx.hint">NOVU &middot; DESIGN &amp; BUILD</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="sw-footer">
+    <div class="sw-footer__inner">
+      <div class="sw-footer__brand">
+        <img class="sw-footer__logo" src="../assets/products/spendowise/icon.png" alt="SpendoWise" height="26" width="26" />
+        <span class="sw-footer__motto mono" data-i18n="ft.brand">سبندو وايز — تصميم وتطوير NOVU.</span>
+      </div>
+      <div class="sw-footer__links">
+        <a href="../index.html" data-i18n="ft.l1">الاستوديو</a>
+        <a href="#overview" data-i18n="ft.l2">نظرة عامة</a>
+        <a href="#features" data-i18n="ft.l3">المزايا</a>
+        <a href="#faq" data-i18n="nav.faq">الأسئلة الشائعة</a>
+      </div>
+      <div class="sw-footer__meta">
+        <span data-i18n="ft.copy">&copy; <span id="pfYear"></span> NOVU — جميع الحقوق محفوظة.</span>
+        <span class="mono" data-i18n="ft.tag">SW-DL &middot; APK &middot; AH PCAGA</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ SETUP WIZARD ============ -->
+  <div id="pfSetup" class="pf-setup" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="pfSetupTitle">
+    <div class="pf-setup-backdrop" data-close></div>
+    <div class="pf-setup-card" role="document">
+      <button class="pf-setup-x" type="button" data-close aria-label="Close">&times;</button>
+      <div class="pf-setup-badge" aria-hidden="true">&#10003;</div>
+      <h3 id="pfSetupTitle" data-i18n="dl.title">خطوة واحدة وتخلّص — ظبّط التثبيت</h3>
+      <p class="pf-setup-sub" data-i18n="dl.sub">التحميل بدأ. ولإن سبندو وايز مش على متجر بعد، امشي على 4 خطوات سريعة:</p>
+      <ol class="pf-setup-steps">
+        <li>
+          <span class="n">1</span>
+          <div><strong data-i18n="dl.s1h">افتح الملف اللي اتحمل</strong>
+          <p data-i18n="dl.s1p">انزل من الإشعارات ودوس على ملف SpendoWise.apk (أو دور عليه في فولدر Downloads).</p></div>
+        </li>
+        <li>
+          <span class="n">2</span>
+          <div><strong data-i18n="dl.s2h">اسمح بالتثبيت من مصدر غير معروف</strong>
+          <p data-i18n="dl.s2p">الموبايل هيطلب تصريح للتثبيت من المتصفح. افتح الإعدادات ← اسمح من هذا المصدر ← ارجع.</p></div>
+        </li>
+        <li>
+          <span class="n">3</span>
+          <div><strong data-i18n="dl.s3h">ثبّت وكمل</strong>
+          <p data-i18n="dl.s3p">دوس تثبيت. ولو Google Play Protect وراك تحذير، اختار تفاصيل أكثر ← تثبيت على أي حال — التطبيق آمن وشغال أوفلاين.</p></div>
+        </li>
+        <li>
+          <span class="n">4</span>
+          <div><strong data-i18n="dl.s4h">ظبط الـPIN بتاعك</strong>
+          <p data-i18n="dl.s4p">اعمل PIN من 4 إلى 6 أرقام، وبكده دفترك مقفول وانت جاهز تبدأ.</p></div>
+        </li>
+      </ol>
+      <p class="pf-setup-meta mono" data-i18n="dl.meta">أندرويد 8.0+ &middot; 63 MB &middot; شغال أوفلاين بالكامل</p>
+      <div class="pf-setup-actions">
+        <a class="sw-btn sw-btn--ghost pf-dl" href="../assets/products/spendowise/SpendoWise.apk" download data-i18n="dl.again">حمّله تاني</a>
+        <button class="sw-btn sw-btn--primary" type="button" data-close data-i18n="dl.done">تمام</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ THEME + SCREEN SWAP (runs before shared engine) ============ -->
+  <script>
+    (function () {
+      var root = document.documentElement;
+      var btn = document.getElementById('swTheme');
+      function themeNow() { return root.getAttribute('data-sw-theme') === 'light' ? 'light' : 'dark'; }
+      function swapScreens(t) {
+        var imgs = document.querySelectorAll('img[data-dark]');
+        for (var i = 0; i < imgs.length; i++) {
+          var src = (t === 'light') ? imgs[i].getAttribute('data-light') : imgs[i].getAttribute('data-dark');
+          if (src) { imgs[i].setAttribute('src', src); }
+        }
+      }
+      function applyTheme(t) {
+        root.setAttribute('data-sw-theme', t);
+        try { localStorage.setItem('sw-theme', t); } catch (e) {}
+        swapScreens(t);
+      }
+      if (btn) {
+        btn.addEventListener('click', function () {
+          var reduce = false;
+          try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
+          if (reduce) { applyTheme(themeNow() === 'light' ? 'dark' : 'light'); return; }
+          root.classList.add('pf-theming');
+          window.setTimeout(function () {
+            applyTheme(themeNow() === 'light' ? 'dark' : 'light');
+            root.classList.remove('pf-theming');
+          }, 200);
+        });
+      }
+      applyTheme(themeNow());
+    })();
+  </script>
+
+  <!-- ============ I18N dictionary ============ -->
+  <script>
+    window.PF_I18N = {
+      "en": {
+        "skip": "Skip to content",
+        "meta.title": "SpendoWise — every coin accounted for | A NOVU Product",
+        "back": "NOVU Studio &larr;",
+        "nav.overview": "Overview",
+        "nav.features": "Features",
+        "nav.money": "Numbers",
+        "nav.security": "Security",
+        "nav.pricing": "Pricing",
+        "nav.faq": "FAQ",
+        "dl.nav": "Get the App",
+        "hero.eyebrow": "A NOVU Product &middot; Mobile App",
+        "hero.title": "Every coin <span class='sw-hero__accent'>accounted for.</span>",
+        "hero.sub": "A <strong>fully offline</strong> personal finance app — no accounts, no servers, no telemetry. Your money sits on your device, and nobody touches it but you.",
+        "hero.cta1": "Download the App",
+        "hero.cta2": "See the screens",
+        "hero.chip1": "No account",
+        "hero.chip2": "Offline-first",
+        "hero.chip3": "AES-256-GCM",
+        "f1.label": "SYNC",
+        "f1.value": "NONE",
+        "f2.label": "STORAGE",
+        "f2.value": "ON-DEVICE",
+        "t1": "v1.0.0 IS LIVE",
+        "t2": "OFFLINE-FIRST",
+        "t3": "NO ACCOUNTS",
+        "t4": "PRIVATE BY DEFAULT",
+        "t5": "PLAIN NUMBERS",
+        "t6": "NO TELEMETRY",
+        "t7": "LOCAL SQLITE",
+        "t8": "DOUBLE-ENTRY",
+        "t9": "6 CURRENCIES",
+        "t10": "2 LANGUAGES",
+        "t11": "AES-256-GCM",
+        "t12": "84 TESTS",
+        "st1": "built-in currencies",
+        "st2": "cloud contacts",
+        "st3": "local database",
+        "st4": "languages",
+        "st5": "automated tests",
+        "pb.eyebrow": "Three pressures",
+        "pb.h": "Can you really call it yours?",
+        "pb.p": "Finance apps force compromises you would never sign otherwise. SpendoWise was built around all three.",
+        "pb1.h": "Servers hold your ledger",
+        "pb1.p": "Most apps push your money data to the cloud. You rent it — even when it's branded free.",
+        "pb2.h": "They learn you, to steer you",
+        "pb2.p": "They mine your spending to keep you on the feed. Your habits fund their ads and their research.",
+        "pb3.h": "Values drift from the truth",
+        "pb3.p": "Float math makes 0.1 + 0.2 equal 0.30000000000000004 — repeated a thousand times, silent rounding eats your balance.",
+        "sh.eyebrow": "Straight from the build",
+        "sh.h": "Every number you need — one screen",
+        "sh.p": "Honest screenshots from the running app, in both themes.",
+        "cap1": "HOME",
+        "cap2": "TRANSACTIONS",
+        "cap3": "BUDGETS",
+        "cap4": "ANALYTICS",
+        "f.eyebrow": "What's inside",
+        "f.h": "Engineered for the long run",
+        "f.p": "Every feature runs on a real local database — with no dependence on a network or a server.",
+        "f01.h": "Multi-currency",
+        "f01.p": "Keep balances in different currencies and convert at the daily rates you set — every value stays exact.",
+        "f02.h": "Categories & tags",
+        "f02.p": "Organize every transaction with categories and tags to filter, search, and report in seconds.",
+        "f03.h": "Budgets",
+        "f03.p": "Monthly budgets per category with clear usage bars — no overspending surprises.",
+        "f04.h": "Scheduled transactions",
+        "f04.p": "Recurring bills and salaries apply on schedule — even while the device is offline.",
+        "f05.h": "Analytics",
+        "f05.p": "Charts that show where money goes — by category, trend, and month.",
+        "f06.h": "Balances & history",
+        "f06.p": "Every account visible in one tap, with a full, filterable history.",
+        "f07.h": "Cash flow",
+        "f07.p": "Money in, money out, and the rhythm between them over time.",
+        "f08.h": "Budget stats",
+        "f08.p": "See what's left, what's safe, and what to slow down on.",
+        "f09.h": "Savings goals",
+        "f09.p": "Track goals with a progress bar and know exactly when you'll reach them.",
+        "f10.h": "Encrypted backups",
+        "f10.p": "Offline backups, encrypted on your device, restored from a single file.",
+        "f11.h": "العربية & English",
+        "f11.p": "A fully translated app — switch anytime, and everything follows.",
+        "f12.h": "Local notifications",
+        "f12.p": "Reminders scheduled on the device itself — nothing is pushed from a server.",
+        "mo.eyebrow": "Bank-grade math",
+        "mo.h": "Coins stay whole numbers",
+        "mo.p": "SpendoWise moves money in minor units (cents, piastres) as integers — floats are never used for value. Rounding cannot happen because rounding is never applied.",
+        "mo1.h": "Parse & classify",
+        "mo1.p": "Each transaction is parsed, cleaned, and labeled before it touches the ledger.",
+        "mo2.h": "Canonical form",
+        "mo2.p": "Amounts become minor-unit integers — EGP 12.75 becomes 1275 piastres.",
+        "mo3.h": "Double entry",
+        "mo3.p": "Balance, budget, and history update atomically — one operation, no split-brain.",
+        "mo4.h": "Verifiable totals",
+        "mo4.p": "Derived totals are recomputed, then cross-checked against the source ledger.",
+        "ter.title": "LOCAL AUDIT &middot; NIGHTLY",
+        "sec.eyebrow": "Defense in depth",
+        "sec.h": "Locked down, on your device only",
+        "sec.p": "Threats are already closed before the app wakes. From the lock screen to storage at rest.",
+        "sec1.h": "The PIN gate",
+        "sec1.p": "Your PIN is stored as a salted PBKDF2-SHA256 hash and verified locally with a constant-time compare.",
+        "sec2.h": "AES-GCM at rest",
+        "sec2.p": "Backup and export files use AES-256-GCM encryption. Even the metadata is sealed.",
+        "sec3.h": "Zero telemetry",
+        "sec3.p": "Crash reports stay local. Nothing your device knows is ever broadcast.",
+        "sec.cap": "SECURITY &amp; PRIVACY",
+        "pr.eyebrow": "The fact check",
+        "pr.h": "No servers. No cloud. No analytics.",
+        "pr.p": "Here is exactly what the app touches while running — and what never leaves your device.",
+        "pr.col1": "1 &middot; PERMISSIONS",
+        "pr.note": "That's the entire list — three tiny, local permissions. Nothing that reads your files, location, or contacts.",
+        "pr.col2": "2 &middot; WHAT'S STORED",
+        "pr.s1": "Every transaction — one local SQLite file (Ledger.db).",
+        "pr.s2": "Receipts and images, inside the app's private folder.",
+        "pr.s3": "Encrypted backups — only the ones you choose to write.",
+        "pr.col3": "3 &middot; WHAT LEAVES",
+        "pr.zsub": "No accounts, no login, no telemetry, no server-pushed notifications, no ads. Not one byte of your ledger ever leaves.",
+        "prc.eyebrow": "Fair, upfront",
+        "prc.h": "Free today. Honest later.",
+        "prc.p": "Every feature above is free and works offline forever. Pro is designed, but billing isn't live yet — you'll read about it here first.",
+        "free.tag": "PLAN 01 &middot; FREE",
+        "free.per": "forever &middot; no card",
+        "free1": "Multi-currency ledger — every currency",
+        "free2": "Budgets, schedules & insights",
+        "free3": "Encrypted local backups",
+        "free4": "العربية + English",
+        "free5": "No ads — ever",
+        "free6": "Offline — 100% on your device",
+        "free.btn": "Download the App",
+        "pro.badge": "SOON &middot; HONESTLY",
+        "pro.tag": "PLAN 02 &middot; PRO",
+        "pro.per": "[ billing not live ]",
+        "pro1": "Something great — designed, not shipped yet",
+        "pro2": "Single unlock, no subscriptions",
+        "pro3": "You'll read about it here first",
+        "pro4": "Works fully offline, same as Free",
+        "pro5": "No trial traps",
+        "pro6": "No dark patterns",
+        "pro.btn": "Coming soon",
+        "prc.note": "When Pro ships, Free stays free.",
+        "dwn.eyebrow": "The build",
+        "dwn.h": "One APK. All of it.",
+        "dwn.p": "A signed, self-contained APK that installs side-by-side with any other app — fully offline, no sign-up.",
+        "dwn.btn": "Download the APK",
+        "dwn.alt": "straight from the developer &middot; no store",
+        "dwn.m1": "VERSION",
+        "dwn.m2": "PLATFORM",
+        "dwn.m3": "SIZE",
+        "dwn.m4": "CIPHER",
+        "dwn.steps": "Install guide (it's not on Google Play yet)",
+        "i1h": "Allow unknown sources",
+        "i1p": "Open your security settings and allow installs from the browser, then go back.",
+        "i2h": "Open the APK file",
+        "i2p": "Tap the downloaded SpendoWise.apk to start the installer.",
+        "i3h": "Review the details",
+        "i3p": "Version 1.0.0 · 63 MB — then tap Install.",
+        "i4h": "Set your PIN",
+        "i4p": "Choose a 4–6 digit PIN to lock your ledger — you're done.",
+        "dwn.hash": "SHA-256",
+        "dwn.card": "Download",
+        "dwn.flavor": "OFFLINE-FIRST &middot; NO ACCOUNT NEEDED",
+        "faq.eyebrow": "Straight answers",
+        "faq.h": "What everyone asks",
+        "faq.p": "Direct answers, no dictionary walls.",
+        "q1": "Is SpendoWise really offline-first?",
+        "q1a": "Yes. Every feature works without a network. All data lives in a local SQLite file on your device, and all value math runs on-device.",
+        "q2": "Do I need to create an account?",
+        "q2a": "No accounts, no login, no server. Download the APK, set your PIN, and start.",
+        "q3": "What happens to my data if I switch phones?",
+        "q3a": "You create an encrypted backup (AES-256-GCM), move it to the new device, and restore — offline, no cloud involved.",
+        "q4": "Which currencies are supported?",
+        "q4a": "Six built-in currencies — EGP, USD, EUR, GBP, SAR, AED — with conversion rates you control on-device.",
+        "q5": "Is my PIN stored safely?",
+        "q5a": "Your PIN never leaves the device. It's a salted PBKDF2-SHA256 hash, verified locally with a constant-time compare.",
+        "q6": "Why not publish on Google Play?",
+        "q6a": "A direct download ships the full build to any Android device immediately with no store restrictions. NOVU is preparing a listing without changing how your data is handled.",
+        "q7": "How are transactions stored?",
+        "q7a": "Every transaction is a canonical integer row in one local SQLite database — minor units, no floats, no rounding drift.",
+        "q8": "Can I export my data?",
+        "q8a": "Yes. Export anytime, and keep a one-tap encrypted backup of the whole ledger. Nothing is locked inside.",
+        "fx.eyebrow": "Carefully crafted",
+        "fx.h": "Your money. Your device. Your call.",
+        "fx.p": "SpendoWise is a NOVU product — designed and built with the same care as everything in the studio. Want an app like this? Talk to us.",
+        "fx.btn": "Start a project — it stays private",
+        "fx.hint": "NOVU &middot; DESIGN &amp; BUILD",
+        "ft.brand": "SpendoWise — designed & built by NOVU.",
+        "ft.l1": "Studio",
+        "ft.l2": "Overview",
+        "ft.l3": "Features",
+        "ft.copy": "&copy; <span id='pfYear'></span> NOVU — All rights reserved.",
+        "ft.tag": "SW-DL &middot; APK &middot; SIGNED",
+        "dl.title": "Almost there — finish the setup",
+        "dl.sub": "The download has started. Since SpendoWise isn't on a store yet, follow these 4 quick steps:",
+        "dl.s1h": "Open the downloaded file",
+        "dl.s1p": "Pull down your notifications and tap SpendoWise.apk (or find it in your Downloads folder).",
+        "dl.s2h": "Allow unknown apps",
+        "dl.s2p": "Your phone asks for permission to install from your browser. Tap Settings → Allow from this source → go back.",
+        "dl.s3h": "Install & keep going",
+        "dl.s3p": "Tap Install. If Google Play Protect shows a warning, choose More details → Install anyway. The app is safe and fully offline.",
+        "dl.s4h": "Set your PIN",
+        "dl.s4p": "Choose a 4–6 digit PIN to lock your ledger — you're ready to start.",
+        "dl.meta": "Android 8.0+ &middot; 63 MB &middot; works fully offline",
+        "dl.again": "Download again",
+        "dl.done": "Done",
+        "dl.close": "Close"
+      },
+      "ar": {
+        "skip": "التخطي إلى المحتوى",
+        "meta.title": "سبندو وايز — كل قرش له حساب | منتج من NOVU",
+        "back": "استوديو NOVU &rarr;",
+        "nav.overview": "نظرة عامة",
+        "nav.features": "المزايا",
+        "nav.money": "الحسابات",
+        "nav.security": "الأمان",
+        "nav.pricing": "الأسعار",
+        "nav.faq": "الأسئلة الشائعة",
+        "dl.nav": "حمّل التطبيق",
+        "hero.eyebrow": "منتج من استوديو NOVU &middot; تطبيق موبايل",
+        "hero.title": "كل قرش <span class='sw-hero__accent'>له حساب.</span>",
+        "hero.sub": "تطبيق مالية شخصية <strong>أوفلاين بالكامل</strong> — من غير حسابات، ومن غير سيرفرات، ومن غير تجسس. فلوسك قاعدين على جهازك، ومحدش غيرك يقدر يلمسهم.",
+        "hero.cta1": "حمّل التطبيق",
+        "hero.cta2": "شوف الشاشات",
+        "hero.chip1": "من غير حساب",
+        "hero.chip2": "أوفلاين أولًا",
+        "hero.chip3": "تشفير AES-256-GCM",
+        "f1.label": "SYNC",
+        "f1.value": "NONE",
+        "f2.label": "STORAGE",
+        "f2.value": "ON-DEVICE",
+        "t1": "v1.0.0 IS LIVE",
+        "t2": "OFFLINE-FIRST",
+        "t3": "NO ACCOUNTS",
+        "t4": "PRIVATE BY DEFAULT",
+        "t5": "PLAIN NUMBERS",
+        "t6": "NO TELEMETRY",
+        "t7": "LOCAL SQLITE",
+        "t8": "DOUBLE-ENTRY",
+        "t9": "6 CURRENCIES",
+        "t10": "2 LANGUAGES",
+        "t11": "AES-256-GCM",
+        "t12": "84 TESTS",
+        "st1": "عملات مدمجة",
+        "st2": "تواصل مع سيرفر",
+        "st3": "قاعدة بيانات محلية",
+        "st4": "لغتان",
+        "st5": "اختبار أوتوماتيكي",
+        "pb.eyebrow": "ثلاث ضغوط",
+        "pb.h": "تسمّيها فعلًا \u201Cملكك\u201D؟",
+        "pb.p": "تطبيقات المالية بتشترط حاجات عمرك ما توافق عليها. سبندو وايز اتبنى عشان يتخطى الثلاث دول.",
+        "pb1.h": "سيرفرات شايلة سجلاتك",
+        "pb1.p": "معظم التطبيقات بتحمّل بيانات فلوسك على السحابة. انت بتستأجرها مش بتمتلكها — حتى لو \u201Cمجانًا\u201D.",
+        "pb2.h": "بيعلموا عنك ويوجّهوك",
+        "pb2.p": "بيحلّلوا صرفك عشان يخليك واقف أمامهم. عاداتك بتموّل إعلاناتهم وأبحاثهم.",
+        "pb3.h": "أسعار بتضيع من الحقيقة",
+        "pb3.p": "حسابات الكسور بتخلي 0.1 + 0.2 تساوي 0.30000000000000004 — لو اتكررت ألف مرة، التقريب الصامت بياكل رصيدك.",
+        "sh.eyebrow": "صور حقيقية من التطبيق",
+        "sh.h": "كل رقم محتاجه — في شاشة واحدة",
+        "sh.p": "لقطات شاشة من النسخة الشغالة نفسها، بالثيم الفاتح والداكن.",
+        "cap1": "الرئيسية",
+        "cap2": "المعاملات",
+        "cap3": "الميزانيات",
+        "cap4": "التحليلات",
+        "f.eyebrow": "إيه اللي جوه",
+        "f.h": "اتصمم للمدى الطويل",
+        "f.p": "كل ميزة في التطبيق متبنية على قاعدة بيانات محلية حقيقية — من غير اعتماد على النت أو على سيرفر.",
+        "f01.h": "العملات المتعددة",
+        "f01.p": "ضيف أرصدة بعملات مختلفة وحوّل بالأسعار اللي تختارها كل يوم — وكل قيمة تفضل دقيقة زي ما هي.",
+        "f02.h": "التصنيفات والوسوم",
+        "f02.p": "نظّم كل معاملة بتصنيفات ووسوم — افحص وابحث وعمل تقارير في ثواني.",
+        "f03.h": "الميزانيات",
+        "f03.p": "ميزانيات شهرية لكل تصنيف بأشرطة استخدام واضحة — من غير مفاجآت في المصاريف.",
+        "f04.h": "معاملات مجدولة",
+        "f04.p": "الفوتر والأجور بتتسجل لوحدها في ميعادها — حتى لو الجهاز أوفلاين.",
+        "f05.h": "التحليلات",
+        "f05.p": "رسوم بيانية بتوري فلوسك بروح فين — بالتصنيف والاتجاه والشهر.",
+        "f06.h": "الأرصدة والسجل",
+        "f06.p": "كل حساب ظاهر بلمسة، وسجل كامل قابل للفلترة والبحث.",
+        "f07.h": "التدفق النقدي",
+        "f07.p": "فلوس جاية، فلوس رايحة، والإيقاع بينهم على مدار الوقت.",
+        "f08.h": "إحصائيات الميزانية",
+        "f08.p": "شوف باقي إيه، سليم إيه، وإيه محتاج تبطّل فيه.",
+        "f09.h": "أهداف الادخار",
+        "f09.p": "تابع أهدافك بشريط تقدم، واعرف هتوصلها إمتى بالظبط.",
+        "f10.h": "نسخ مشفّرة",
+        "f10.p": "نسخ احتياطية مشفّرة على جهازك أنت، وشغّلها من غير النت.",
+        "f11.h": "العربية &amp; English",
+        "f11.p": "تطبيق مترجَم بالكامل — بدّل اللغة في أي وقت وكل حاجة بتتبدل.",
+        "f12.h": "تنبيهات محلية",
+        "f12.p": "تذكيرات بتتظبط على الجهاز نفسه — محدش بيبعتلك حاجة من سيرفر.",
+        "mo.eyebrow": "حسابات بنكية",
+        "mo.h": "الفلوس بتبقى أرقام صحيحة",
+        "mo.p": "سبندو وايز بيشغّل الفلوس بوحدات صغيرة (قرش، سنت) كأرقام صحيحة — ومفيش كسور عائمة في القيمة أصلًا. التقريب مستحيل يحصل لأنه مش بيتطبّق من الأساس.",
+        "mo1.h": "قراءة وتصنيف",
+        "mo1.p": "كل معاملة بتتقرا وتتظبط وتتوسم قبل ما تدخل الدفتر.",
+        "mo2.h": "شكل موحّد",
+        "mo2.p": "المبالغ بتتحول لأرقام صحيحة بوحدات صغيرة — 12.75 جنيه بتتبقى 1275 قرش.",
+        "mo3.h": "قيد مزدوج",
+        "mo3.p": "الرصيد والميزانية والسجل بيتحدثوا مع بعض — عملية واحدة من غير انقسام.",
+        "mo4.h": "إجماليات قابلة للتحقق",
+        "mo4.p": "المجاميع المتفرعة بتتحسب من جديد وتتأكد من الدفتر المصدري.",
+        "ter.title": "LOCAL AUDIT &middot; NIGHTLY",
+        "sec.eyebrow": "دفاع على أكتر من طبقة",
+        "sec.h": "مقفول، على جهازك بس",
+        "sec.p": "التهديدات بتتقفل قبل ما التطبيق يصحى أصلًا. من قفل الشاشة لتخزين الأنبوبة.",
+        "sec1.h": "بوابة الـPIN",
+        "sec1.p": "الـPIN متخزن كـ PBKDF2-SHA256 hash بملح، وبيتأكد محليًا بمقارنة زمن ثابت.",
+        "sec2.h": "تشفير AES-GCM للبيانات المخزنة",
+        "sec2.p": "ملفات النسخ والتصدير مشفّرة بـ AES-256-GCM. حتى بيانات التعريف متقفلة.",
+        "sec3.h": "صفر تجسس",
+        "sec3.p": "تقارير الأعطال بتفضل محلية. محدش بيعرف إيه اللي على جهازك.",
+        "sec.cap": "SECURITY &amp; PRIVACY",
+        "pr.eyebrow": "التحقق من الحقائق",
+        "pr.h": "من غير سيرفرات ولا سحابة ولا تحليلات",
+        "pr.p": "دي بالظبط الحاجة اللي التطبيق بيستعملها وهو شغال — وإيه اللي عمره ما يسيب جهازك.",
+        "pr.col1": "1 &middot; الأذونات",
+        "pr.note": "دي كل الأذونات اللي التطبيق بيطلبها — ثلاث فقط، محلية وبسيطة. مفيش حاجة بتقرا ملفاتك أو مكانك أو جهات اتصالك.",
+        "pr.col2": "2 &middot; إيه اللي بيتخزن على الجهاز",
+        "pr.s1": "كل المعاملات — ملف SQLite واحد محلي (Ledger.db).",
+        "pr.s2": "الإيصالات والصور، في فولدر خاص بالتطبيق.",
+        "pr.s3": "نسخ احتياطية مشفّرة — بس اللي تختار تعملها بنفسك.",
+        "pr.col3": "3 &middot; إيه اللي بيطلع برا",
+        "pr.zsub": "من غير حسابات، ولا تسجيل دخول، ولا تجسس، ولا إشعارات من سيرفر، ولا إعلانات. ولا بايت واحد من سجلاتك بيطلع برا.",
+        "prc.eyebrow": "عادل ومن غير مفاجآت",
+        "prc.h": "مجاني النهارده. وعد صادق بكرة.",
+        "prc.p": "كل المزايا اللي فوق مجانية وشغالة أوفلاين للأبد. الـPro متصمم بس الدفع لسه مش متفعل — وهتعرف هنا الأول.",
+        "free.tag": "PLAN 01 &middot; FREE",
+        "free.per": "للأبد &middot; من غير كارت",
+        "free1": "دفتر متعدد العملات — كل العملات",
+        "free2": "ميزانيات، وجداول، وتحليلات",
+        "free3": "نسخ احتياطية مشفّرة محلية",
+        "free4": "العربية + English",
+        "free5": "من غير إعلانات — أبدًا",
+        "free6": "أوفلاين — 100% على جهازك",
+        "free.btn": "حمّل التطبيق",
+        "pro.badge": "قريبًا &middot; بأمانة",
+        "pro.tag": "PLAN 02 &middot; PRO",
+        "pro.per": "[ الدفع غير متفعل ]",
+        "pro1": "سرّ كبير متصمم — لسه منزلش",
+        "pro2": "دفعة وحيدة، من غير اشتراكات",
+        "pro3": "هتعرف أي حاجة جديدة هنا الأول",
+        "pro4": "شغال أوفلاين زي المجاني تمامًا",
+        "pro5": "من غير مصايد تجربة",
+        "pro6": "من غير حيل تسويقية",
+        "pro.btn": "قريبًا",
+        "prc.note": "وقت ما يطلع الـPro، المجاني هيبقى مجاني.",
+        "dwn.eyebrow": "الإصدار",
+        "dwn.h": "ملف واحد. كل حاجة فيه.",
+        "dwn.p": "ملف APK موقّع ومتكامل، يتثبّت جنب أي تطبيق تاني. والتطبيق شغال أوفلاين بالكامل — لا تسجيل ولا اشتراك.",
+        "dwn.btn": "حمّل ملف التطبيق",
+        "dwn.alt": "مباشرة من الديفلوبر &middot; من غير متجر",
+        "dwn.m1": "الإصدار",
+        "dwn.m2": "المنصة",
+        "dwn.m3": "الحجم",
+        "dwn.m4": "التشفير",
+        "dwn.steps": "طريقة التثبيت (بس مش على جوجل بلاي)",
+        "i1h": "اسمح بالتثبيت من مصدر غير معروف",
+        "i1p": "افتح إعدادات الأمان واسمح بالتثبيت من المتصفح، ثم ارجع.",
+        "i2h": "افتح ملف APK",
+        "i2p": "دوس على ملف SpendoWise.apk اللي اتحمل عشان يبدأ التثبيت.",
+        "i3h": "راجع البيانات",
+        "i3p": "الإصدار 1.0.0 · الحجم 63 MB — وبعدين دوس تثبيت.",
+        "i4h": "اعمل الـPIN بتاعك",
+        "i4p": "ظبط PIN من 4 إلى 6 أرقام تقفل بيه دفترك — وبكده خلصت.",
+        "dwn.hash": "SHA-256",
+        "dwn.card": "تحميل",
+        "dwn.flavor": "OFFLINE-FIRST &middot; NO ACCOUNT NEEDED",
+        "faq.eyebrow": "أسئلة صريحة",
+        "faq.h": "اللي كلكم بتسألوا عليه",
+        "faq.p": "إجابات مباشرة من غير طلاسم قاموس النظام.",
+        "q1": "هل سبندو وايز فعلًا أوفلاين بدرجة أولى؟",
+        "q1a": "أيوه. كل ميزة شغالة من غير نت. كل البيانات في ملف SQLite واحد على جهازك، وكل حسابات القيمة بتتم على الجهاز نفسه.",
+        "q2": "هل محتاج أعمل حساب؟",
+        "q2a": "من غير حسابات ولا تسجيل دخول ولا سيرفرات. حمل التطبيق، ظبط الـPIN بتاعك، وابدأ.",
+        "q3": "إيه اللي هيحصل لبياناتي لو غيرت الموبايل؟",
+        "q3a": "بتعمل نسخة احتياطية مشفّرة (AES-256-GCM) وتنقلها للجهاز الجديد وتستعيدها — أوفلاين بالكامل ومن غير سحابة.",
+        "q4": "إيه العملات المدعومة؟",
+        "q4a": "ست عملات جاهزة — جنيه مصري، دولار، يورو، استرليني، ريال سعودي، ودرهم — بأسعار تحديثها في إيدك على الجهاز.",
+        "q5": "هل الـPIN بتاعي محفوظ بأمان؟",
+        "q5a": "الـPIN عمره ما يسيب الجهاز. متخزن كـ PBKDF2-SHA256 hash بملح، وبيتأكد محليًا بمقارنة زمن ثابت.",
+        "q6": "ليّه مش نازل على جوجل بلاي؟",
+        "q6a": "التحميل المباشر بيوصل النسخة الكاملة لأي جهاز أندرويد فورًا ومن غير قيود متجر، وNOVU بتجهز صفحة على المتجر من غير ما تقرب من بياناتك.",
+        "q7": "المعاملات بتتخزن إزاي؟",
+        "q7a": "كل معاملة بتتسجل كرقم صحيح موحّد في قاعدة بيانات SQLite محلية واحدة — وحدات صغيرة من غير كسور ولا انحراف في التقريب.",
+        "q8": "هل أقدر أصدّر بياناتي؟",
+        "q8a": "أيوه. تقدر تصدّر في أي وقت، والنسخ الاحتياطي المشفّر للدفتر كله بيلا لمسة. مفيش حاجة محبوسة جوه.",
+        "fx.eyebrow": "اتصنعت بعناية",
+        "fx.h": "فلوسك أنت. جهازك أنت. وحدك.",
+        "fx.p": "سبندو وايز منتج من استوديو NOVU — اتصمم واتبنى بنفس العناية اللي بيمر بيها كل منتج في الاستوديو. عايز تطبيق زي ده؟ احكيلنا.",
+        "fx.btn": "ابدأ مشروعك — هيبقى خاص",
+        "fx.hint": "NOVU &middot; DESIGN &amp; BUILD",
+        "ft.brand": "سبندو وايز — تصميم وتطوير NOVU.",
+        "ft.l1": "الاستوديو",
+        "ft.l2": "نظرة عامة",
+        "ft.l3": "المزايا",
+        "ft.copy": "&copy; <span id='pfYear'></span> NOVU — جميع الحقوق محفوظة.",
+        "ft.tag": "SW-DL &middot; APK &middot; SIGNED",
+        "dl.title": "خطوة واحدة وتخلّص — ظبّط التثبيت",
+        "dl.sub": "التحميل بدأ. ولإن سبندو وايز مش على متجر بعد، امشي على 4 خطوات سريعة:",
+        "dl.s1h": "افتح الملف اللي اتحمل",
+        "dl.s1p": "انزل من الإشعارات ودوس على ملف SpendoWise.apk (أو دور عليه في فولدر Downloads).",
+        "dl.s2h": "اسمح بالتثبيت من مصدر غير معروف",
+        "dl.s2p": "الموبايل هيطلب تصريح للتثبيت من المتصفح. افتح الإعدادات ← اسمح من هذا المصدر ← ارجع.",
+        "dl.s3h": "ثبّت وكمل",
+        "dl.s3p": "دوس تثبيت. ولو Google Play Protect وراك تحذير، اختار تفاصيل أكثر ← تثبيت على أي حال — التطبيق آمن وشغال أوفلاين.",
+        "dl.s4h": "ظبط الـPIN بتاعك",
+        "dl.s4p": "اعمل PIN من 4 إلى 6 أرقام، وبكده دفترك مقفول وانت جاهز تبدأ.",
+        "dl.meta": "أندرويد 8.0+ &middot; 63 MB &middot; شغال أوفلاين بالكامل",
+        "dl.again": "حمّله تاني",
+        "dl.done": "تمام",
+        "dl.close": "اقفل"
+      }
+    };
+  </script>
+
+  <!-- ============ SHARED ENGINE (do not modify) ============ -->
+  <script src="../js/product.js?v=10"></script>
+</body>
+</html>

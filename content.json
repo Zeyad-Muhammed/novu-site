@@ -33,7 +33,8 @@
   "products": [
     { "name": "Habit Flow", "tagline": "Habits · Streaks · Levels", "url": "products/habitflow.html", "icon": "assets/products/habitflow/icon.png" },
     { "name": "Itisam — اعتصام", "tagline": "Quran · Athkar · Tasbih", "url": "products/itisam.html", "icon": "assets/products/itisam/icon.png" },
-    { "name": "Hafiz — حافظ", "tagline": "Vault · 2FA · Autofill", "url": "hafiz/", "icon": "assets/products/hafiz/icon.png?v=3" }
+    { "name": "Hafiz — حافظ", "tagline": "Vault · 2FA · Autofill", "url": "hafiz/", "icon": "assets/products/hafiz/icon.png?v=3" },
+    { "name": "SpendoWise", "tagline": "Money · Offline · Budgets", "url": "spendowise/", "icon": "assets/products/spendowise/icon.png?v=1" }
   ],
   "collaborations": [
     { "name": "Doha", "tagline": "Digital Artist", "url": "collaboration/doha/", "icon": "assets/collaboration/doha.svg" }

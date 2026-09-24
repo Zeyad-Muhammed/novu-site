@@ -26,7 +26,8 @@
   var PRODUCTS = [
     { name: 'Habit Flow', tagline: 'Habits \u00B7 Streaks \u00B7 Levels', url: 'products/habitflow.html', icon: 'assets/products/habitflow/icon.png' },
     { name: 'Itisam \u2014 \u0627\u0639\u062A\u0635\u0627\u0645', tagline: 'Quran \u00B7 Athkar \u00B7 Tasbih', url: 'products/itisam.html', icon: 'assets/products/itisam/icon.png' },
-    { name: 'Hafiz \u2014 \u062D\u0627\u0641\u0638', tagline: 'Vault \u00B7 2FA \u00B7 Autofill', url: 'hafiz/', icon: 'assets/products/hafiz/icon.png?v=3' }
+    { name: 'Hafiz \u2014 \u062D\u0627\u0641\u0638', tagline: 'Vault \u00B7 2FA \u00B7 Autofill', url: 'hafiz/', icon: 'assets/products/hafiz/icon.png?v=3' },
+    { name: 'SpendoWise', tagline: 'Money \u00B7 Offline \u00B7 Budgets', url: 'spendowise/', icon: 'assets/products/spendowise/icon.png?v=1' }
   ];
 
   var COLLABORATIONS = [
