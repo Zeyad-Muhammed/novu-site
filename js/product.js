@@ -86,7 +86,6 @@
       'ft.copy': '&copy; <span id="pfYear"></span> NOVU — All rights reserved.',
       'nav.overview': 'Overview', 'nav.features': 'Features', 'nav.privacy': 'Privacy',
       'ft.l4': 'Privacy',
-      'rail.ov': 'Overview', 'rail.ft': 'Features &amp; strengths', 'rail.pr': 'Privacy policy',
       'ov.eyebrow': 'Overview &amp; excellence',
       'ov.h': 'Excellence is a calm design, not a loud one',
       'ov.statement': 'The habits market is full of apps that nag. <strong>Habit Flow refuses that game</strong> — it stays calm, honest and fully on-device.',
@@ -123,20 +122,8 @@
       'sk4.p': 'Fully offline, with no accounts, no ads and no trackers — privacy isn\'t a feature, it\'s the default.',
       'pr.eyebrow': 'Privacy policy',
       'pr.h': 'Your data doesn\'t leave your phone',
-      'pr.p': 'Because Habit Flow works fully offline, this policy is short and written in plain language.',
-      'pr1.h': 'What we collect',
-      'pr1.p': 'Nothing that leaves your device. Habit data, check-ins and progress live in a local database on your phone. No accounts, no sign-up telemetry, no third-party SDKs.',
-      'pr2.h': 'How we use it',
-      'pr2.p': 'Your entries power only the app\'s own screens: lists, streaks, statistics and the heatmap. They are never transmitted, sold or analysed by anyone else.',
-      'pr3.h': 'Data retention &amp; deletion',
-      'pr3.p': 'You stay in control: delete individual habits or wipe everything in one tap. Removing the app deletes the local database.',
-      'pr4.h': 'Your rights',
-      'pr4.p': 'Following standard privacy-law principles, you can export a full copy of your data at any time and take it anywhere. Contact NOVU to ask questions or request removal.',
-      'pr5.h': 'Security measures',
-      'pr5.p': 'Data stays inside a private, app-scoped storage area, protected by your device OS and your screen lock.',
-      'pr6.h': 'Third parties',
-      'pr6.p': 'There are none. No analytics, no ad networks, no crash-reporting services phone home.',
-      'pr.note': 'Last updated: September 2026 &middot; This policy changes only if a future version ever handles data differently.'
+      'pr.p': 'Habit Flow works fully offline, so our privacy policy is short and written in plain language.',
+      'pr.link': 'Read the privacy policy'
     },
     ar: {
       'meta.title': 'عاداتك — Habit Flow | منتج من NOVU',
@@ -241,20 +228,8 @@
       'sk4.p': 'أوفلاين بالكامل، بدون حسابات، بدون إعلانات، بدون تتبع — الخصوصية مش ميزة، دي القاعدة.',
       'pr.eyebrow': 'سياسة الخصوصية',
       'pr.h': 'بياناتك ما بتخرجش من جهازك',
-      'pr.p': 'لأن عاداتك شغال أوفلاين بالكامل، السياسة دي قصيرة ومكتوبة بلغة واضحة.',
-      'pr1.h': 'إيه اللي بنجمّعه',
-      'pr1.p': 'مفيش حاجة بتخرج من جهازك. بيانات العادات والتأشيرات والتقدم كلها بتتخزن محليًا في قاعدة بيانات على موبايلك. مافيش حسابات، مافيش تتبع، مافيش SDK تابعة لجهات خارجية.',
-      'pr2.h': 'بنستخدمه ازاي',
-      'pr2.p': 'البيانات دي بتظهر بس داخل شاشات التطبيق: القوائم، السلاسل، الإحصائيات، والخريطة الحرارية. ما بتتبعزش، ما بتُباعش، وما بيحلّلهاش حد غيرك.',
-      'pr3.h': 'الاحتفاظ والحذف',
-      'pr3.p': 'أنت المتحكم كاملًا: تقدر تحذف عادة واحدة أو تمسح كل البيانات بضغطة واحدة. لو حذفت التطبيق، قاعدة البيانات المحلية بتُحذف كمان.',
-      'pr4.h': 'حقوقك',
-      'pr4.p': 'وفقًا لمبادئ قوانين الخصوصية المعتمدة، تقدر تصدّر نسخة كاملة من بياناتك في أي وقت وتحطها فين ما تحب. لو عندك سؤال أو عايز تحذف البيانات تقدر تتواصل مع NOVU.',
-      'pr5.h': 'التدابير الأمنية',
-      'pr5.p': 'البيانات بتتخزن في مساحة خاصة بالتطبيق محمية بنظام تشغيل جهازك وقفل الشاشة.',
-      'pr6.h': 'جهات خارجية',
-      'pr6.p': 'مافيهاش. مافيش تحليلات، مافيش شبكات إعلانات، مافيش خدمات تقارير أعطال بتبعت بيانات.',
-      'pr.note': 'تاريخ التحديث: سبتمبر ٢٠٢٦ &middot; السياسة دي هتتغير بس لو فيه تعديل في المستقبل بيخلي التطبيق يتعامل مع البيانات بشكل مختلف.'
+      'pr.p': 'عاداتك شغال أوفلاين بالكامل، فسياسة الخصوصية قصيرة ومكتوبة بلغة واضحة.',
+      'pr.link': 'اقرأ سياسة الخصوصية'
     }
   };
 
