@@ -191,6 +191,18 @@ img { display: block; max-width: 100%; }
 .pf-sub strong { color: var(--pf-fg); font-weight: 500; }
 .pf-cta { display: flex; gap: 14px; flex-wrap: wrap; }
 
+.pf-legal-note { margin: 18px 0 0; }
+.pf-legal-note a {
+  display: inline-flex; align-items: center; gap: 6px;
+  color: var(--pf-muted);
+  font-size: 13px; font-weight: 400;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-color: rgba(185, 168, 245, .45);
+  transition: color .25s ease, text-decoration-color .25s ease;
+}
+.pf-legal-note a:hover { color: var(--pf-lav); text-decoration-color: var(--pf-lav); }
+
 .pf-hero-phone { position: relative; z-index: 1; justify-self: center; }
 .pf-hero-phone .phone { z-index: 1; }
 
