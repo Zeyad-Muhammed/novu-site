@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0f0f16" />
+  <title>عاداتك — Habit Flow | سياسة الخصوصية والنظرة العامة</title>
+  <meta name="description" content="Habit Flow (عاداتك) — نظرة عامة، الميزات ونقاط القوة، وسياسة الخصوصية. تطبيق موبايل من NOVU يعمل بالكامل دون اتصال." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NOVU" />
+  <meta property="og:title" content="Habit Flow — عاداتك | Overview, Features & Privacy" />
+  <meta property="og:description" content="A calm, dark-first habit tracker. Fully offline, Arabic-first. Privacy policy and app overview by NOVU." />
+  <meta property="og:image" content="../../assets/products/habitflow/icon.png" />
+  <link rel="icon" type="image/png" href="../../assets/products/habitflow/icon.png" />
+  <script>
+    (function () {
+      var l;
+      try { l = localStorage.getItem('hf-lang'); } catch (e) { l = null; }
+      l = (l === 'en') ? 'en' : 'ar';
+      document.documentElement.setAttribute('lang', l);
+      document.documentElement.setAttribute('dir', l === 'ar' ? 'rtl' : 'ltr');
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --pp-bg: #0f0f16;
+      --pp-bg-2: #14141e;
+      --pp-card: #191925;
+      --pp-card-2: #1e1e2b;
+      --pp-line: rgba(255, 255, 255, .09);
+      --pp-line-2: rgba(255, 255, 255, .16);
+      --pp-fg: #f4f2fb;
+      --pp-muted: #a5a1b8;
+      --pp-faint: #6f6c82;
+      --pp-lav: #b9a8f5;
+      --pp-pink: #eec0e0;
+      --pp-grad: linear-gradient(120deg, var(--pp-lav), var(--pp-pink));
+      --pp-r: 24px;
+      --pp-font-disp: 'Space Grotesk', 'Cairo', sans-serif;
+      --pp-font-body: 'Inter', 'Cairo', sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--pp-bg);
+      color: var(--pp-fg);
+      font-family: var(--pp-font-body);
+      font-weight: 300;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    ::selection { background: rgba(185, 168, 245, .35); }
+    .pp-bg {
+      position: fixed; inset: 0; z-index: -2;
+      background:
+        radial-gradient(52% 42% at 85% -5%, rgba(60, 42, 92, .38), transparent 70%),
+        radial-gradient(44% 38% at 8% 104%, rgba(190, 130, 180, .16), transparent 70%),
+        var(--pp-bg);
+    }
+    a { color: var(--pp-lav); text-decoration: none; }
+    a:hover { color: var(--pp-pink); }
+
+    .pp-top {
+      position: sticky; top: 0; z-index: 50;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 14px clamp(18px, 5vw, 44px);
+      background: rgba(15, 15, 22, .78);
+      -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--pp-line);
+    }
+    .pp-brand { display: flex; align-items: center; gap: 12px; }
+    .pp-brand img { width: 34px; height: 34px; border-radius: 9px; }
+    .pp-brand b { font-family: var(--pp-font-disp); font-weight: 700; font-size: 15px; letter-spacing: .01em; }
+    .pp-brand span { display: block; color: var(--pp-muted); font-size: 11.5px; font-weight: 300; }
+    .pp-actions { display: flex; align-items: center; gap: 10px; }
+    .pp-lang {
+      border: 1px solid var(--pp-line-2);
+      background: rgba(255, 255, 255, .03);
+      color: var(--pp-fg);
+      font-family: var(--pp-font-body);
+      font-size: 13px; font-weight: 500;
+      padding: 8px 16px; border-radius: 999px; cursor: pointer;
+      transition: border-color .25s ease, background .25s ease;
+    }
+    .pp-lang:hover { border-color: rgba(185, 168, 245, .5); background: rgba(185, 168, 245, .08); }
+    .pp-back { color: var(--pp-muted); font-size: 13px; font-weight: 400; }
+    .pp-back:hover { color: var(--pp-lav); }
+
+    .pp-wrap { width: min(1120px, 92%); margin: 0 auto; }
+
+    .pp-hero { padding: clamp(64px, 10vw, 110px) 0 clamp(48px, 6vw, 72px); text-align: center; }
+    .pp-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-family: var(--pp-font-disp);
+      font-size: 12px; letter-spacing: .28em; text-transform: uppercase;
+      color: var(--pp-pink);
+      margin: 0 0 20px;
+    }
+    .pp-eyebrow::before, .pp-eyebrow::after { content: ''; width: 30px; height: 1px; background: var(--pp-lav); opacity: .6; }
+    .pp-hero h1 {
+      font-family: var(--pp-font-disp);
+      font-size: clamp(34px, 6vw, 60px); font-weight: 700; letter-spacing: -.02em; line-height: 1.1;
+      margin: 0 0 14px;
+    }
+    .pp-hero h1 em { font-style: normal; background: var(--pp-grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .pp-hero p.sub { color: var(--pp-muted); font-size: clamp(14px, 1.6vw, 16px); max-width: 640px; margin: 0 auto; }
+    .pp-hero .badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 26px; }
+    .pp-badge {
+      font-family: var(--pp-font-disp); font-size: 11.5px; letter-spacing: .08em;
+      padding: 8px 14px; border-radius: 999px;
+      color: var(--pp-muted);
+      border: 1px solid var(--pp-line);
+      background: rgba(255, 255, 255, .02);
+    }
+
+    .pp-section { padding: clamp(56px, 8vw, 92px) 0; scroll-margin-top: 76px; }
+    .pp-section + .pp-section { border-top: 1px solid var(--pp-line); }
+    .pp-sechead { text-align: center; max-width: 720px; margin: 0 auto clamp(34px, 4vw, 52px); }
+    .pp-sechead h2 {
+      font-family: var(--pp-font-disp);
+      font-size: clamp(26px, 3.8vw, 38px); font-weight: 700; letter-spacing: -.015em; line-height: 1.18;
+      margin: 0 0 14px;
+    }
+    .pp-sechead p { color: var(--pp-muted); margin: 0; font-size: 15.5px; }
+    .pp-statement {
+      font-family: var(--pp-font-disp);
+      font-size: clamp(16px, 2vw, 21px);
+      font-weight: 500;
+      line-height: 1.5;
+      margin: 0;
+    }
+    .pp-statement strong { color: var(--pp-lav); font-weight: 700; }
+    .pp-lead { color: var(--pp-muted); margin: 16px auto 0; max-width: 660px; font-size: 15px; }
+
+    .pp-grid { display: grid; gap: 18px; }
+    .pp-grid.cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .pp-card {
+      background: linear-gradient(160deg, var(--pp-card-2), var(--pp-card));
+      border: 1px solid var(--pp-line);
+      border-radius: var(--pp-r);
+      padding: 28px 24px 26px;
+      transition: transform .3s ease, border-color .3s ease, box-shadow .3s ease;
+    }
+    .pp-card:hover { transform: translateY(-5px); border-color: rgba(185, 168, 245, .38); box-shadow: 0 20px 46px rgba(0, 0, 0, .38); }
+    .pp-iconic {
+      width: 48px; height: 48px; border-radius: 14px;
+      display: grid; place-items: center;
+      background: linear-gradient(140deg, rgba(185, 168, 245, .18), rgba(238, 192, 224, .1));
+      border: 1px solid rgba(185, 168, 245, .28);
+      margin-bottom: 18px;
+    }
+    .pp-iconic svg { width: 22px; height: 22px; fill: var(--pp-lav); }
+    .pp-card h3 { font-family: var(--pp-font-disp); font-size: 18px; font-weight: 700; line-height: 1.3; margin: 0 0 9px; }
+    .pp-card p { color: var(--pp-muted); font-size: 14px; margin: 0; line-height: 1.75; }
+
+    .pp-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; }
+    .pp-block {
+      background: linear-gradient(160deg, var(--pp-card-2), var(--pp-card));
+      border: 1px solid var(--pp-line);
+      border-radius: var(--pp-r);
+      padding: 30px 28px 28px;
+    }
+    .pp-block h3 { display: flex; align-items: baseline; gap: 12px; font-family: var(--pp-font-disp); font-size: 21px; font-weight: 700; margin: 0 0 22px; }
+    .pp-block h3 i { font-style: normal; font-size: 12px; letter-spacing: .24em; color: var(--pp-lav); }
+    .pp-mini-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .pp-mini {
+      background: rgba(255, 255, 255, .022);
+      border: 1px solid var(--pp-line);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .pp-mini b { display: block; font-family: var(--pp-font-disp); font-size: 15.5px; font-weight: 700; margin-bottom: 6px; }
+    .pp-mini span { color: var(--pp-muted); font-size: 13.5px; font-weight: 300; line-height: 1.65; }
+
+    .pp-priv-wrap {
+      background: linear-gradient(150deg, rgba(185, 168, 245, .08), rgba(238, 192, 224, .04) 55%, transparent);
+      border: 1px solid rgba(185, 168, 245, .22);
+      border-radius: calc(var(--pp-r) + 8px);
+      padding: clamp(34px, 4.6vw, 60px) clamp(22px, 4vw, 52px);
+    }
+    .pp-priv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .pp-priv {
+      background: rgba(15, 15, 22, .55);
+      border: 1px solid var(--pp-line);
+      border-radius: 18px;
+      padding: 22px 20px 20px;
+      -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+    }
+    .pp-priv h3 {
+      font-family: var(--pp-font-disp); font-size: 16.5px; font-weight: 700; line-height: 1.3;
+      margin: 0 0 11px; padding-bottom: 11px;
+      border-bottom: 1px solid var(--pp-line);
+    }
+    .pp-priv p { color: var(--pp-muted); font-size: 13.5px; margin: 0; line-height: 1.8; }
+    .pp-note { text-align: center; color: var(--pp-faint); font-size: 12.5px; letter-spacing: .04em; margin: 30px 0 0; }
+
+    .pp-footer {
+      border-top: 1px solid var(--pp-line);
+      padding: 30px clamp(18px, 5vw, 44px);
+      display: flex; align-items: center; justify-content: space-between; gap: 14px; flex-wrap: wrap;
+      color: var(--pp-muted); font-size: 13px;
+    }
+    .pp-footer a { color: var(--pp-muted); }
+    .pp-footer a:hover { color: var(--pp-lav); }
+
+    @media (max-width: 1020px) {
+      .pp-grid.cols-4 { grid-template-columns: repeat(2, 1fr); }
+      .pp-priv-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 720px) {
+      .pp-cols { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .pp-grid.cols-4 { grid-template-columns: 1fr; }
+      .pp-mini-list { grid-template-columns: 1fr; }
+      .pp-priv-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="pp-bg"></div>
+
+  <header class="pp-top">
+    <a class="pp-brand" href="../../products/habitflow.html">
+      <img src="../../assets/products/habitflow/icon.png" alt="Habit Flow" />
+      <span>
+        <b>Habit Flow <span data-i18n="pp.brandAr">عاداتك</span></b>
+        <span data-i18n="pp.brand">A NOVU mobile product</span>
+      </span>
+    </a>
+    <div class="pp-actions">
+      <a class="pp-back" href="../../products/habitflow.html" data-i18n="pp.back">Visit app page</a>
+      <button class="pp-lang" id="ppLang" type="button" aria-label="Toggle language">English</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="pp-hero">
+      <div class="pp-wrap">
+        <p class="pp-eyebrow" data-i18n="pp.heroEyebrow">A NOVU product &middot; Mobile app</p>
+        <h1><em>Habit Flow</em> <span data-i18n="pp.heroName">عاداتك</span></h1>
+        <p class="sub" data-i18n="pp.heroSub">Build habits that last. Calm, honest and fully offline — Arabic-first with a complete English mode.</p>
+        <div class="badges">
+          <span class="pp-badge">Flutter</span>
+          <span class="pp-badge" data-i18n="pp.b1">Offline-first</span>
+          <span class="pp-badge" data-i18n="pp.b2">No accounts</span>
+          <span class="pp-badge" data-i18n="pp.b3">No trackers</span>
+          <span class="pp-badge" data-i18n="pp.b4">Local-only data</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="pp-section" id="overview">
+      <div class="pp-wrap">
+        <div class="pp-sechead">
+          <p class="pp-eyebrow" data-i18n="ov.eyebrow">Overview &amp; excellence</p>
+          <h2 data-i18n="ov.h">Excellence is a calm design, not a loud one</h2>
+          <p class="pp-statement" data-i18n="ov.statement">The habits market is full of apps that nag. <strong>Habit Flow refuses that game</strong> — it stays calm, honest and fully on-device.</p>
+          <p class="pp-lead" data-i18n="ov.lead">Instead of pulling you back every hour and selling your attention, it wins by subtraction: a restful dark interface, one-tap logging, and reward loops that celebrate showing up — not staring at a screen.</p>
+        </div>
+        <div class="pp-grid cols-4">
+          <article class="pp-card">
+            <div class="pp-iconic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3a9 9 0 1 0 9 9 9.01 9.01 0 0 0-9-9Zm-1 12.5-4-4 1.4-1.4 2.6 2.6 5.6-5.6 1.4 1.4Z"/></svg></div>
+            <h3 data-i18n="up1.h">Your data never leaves the phone</h3>
+            <p data-i18n="up1.p">No cloud account, no tracking, no internet required. Everything lives in one local database on your device.</p>
+          </article>
+          <article class="pp-card">
+            <div class="pp-iconic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v2H4Zm0 6h10v2H4Zm0 6h16v2H4Z"/></svg></div>
+            <h3 data-i18n="up2.h">Honest by design</h3>
+            <p data-i18n="up2.p">Statistics show streaks and slumps alike. No cherry-picked numbers to manufacture addiction — just the truth.</p>
+          </article>
+          <article class="pp-card">
+            <div class="pp-iconic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm4.5 14.5-6-3.5V7h2v5.2l4.8 2.8Z"/></svg></div>
+            <h3 data-i18n="up3.h">Calm, dark-first design</h3>
+            <p data-i18n="up3.p">A quiet, dark interface designed to fade into the background, so the habit is what stays in focus.</p>
+          </article>
+          <article class="pp-card">
+            <div class="pp-iconic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.99 11 3 15l3.99 4v-3H14v-2H6.99ZM21 9l-3.99-4v3H10v2h7.01v3Z"/></svg></div>
+            <h3 data-i18n="up4.h">Works everywhere</h3>
+            <p data-i18n="up4.p">Fully offline, launched in a second, with local reminders and a homescreen widget — momentum even without a connection.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="pp-section" id="features">
+      <div class="pp-wrap">
+        <div class="pp-sechead">
+          <p class="pp-eyebrow" data-i18n="ff.eyebrow">Features &amp; strengths</p>
+          <h2 data-i18n="ff.h">Everything a habit needs, nothing it doesn&apos;t</h2>
+          <p data-i18n="ff.p">Four core features do the heavy lifting; four strengths keep the experience comfortable for years, not weeks.</p>
+        </div>
+        <div class="pp-cols">
+          <div class="pp-block">
+            <h3><i data-i18n="ffg1">01</i><span data-i18n="ffg1.h">Core features</span></h3>
+            <div class="pp-mini-list">
+              <div class="pp-mini"><b data-i18n="fk1.h">Habit tracking</b><span data-i18n="fk1.p">Daily targets with precise logging — one tap for a check-in, fine dialogs for measurable goals.</span></div>
+              <div class="pp-mini"><b data-i18n="fk2.h">Smart reminders</b><span data-i18n="fk2.p">Local notifications that respect your rhythm and nudge without noise.</span></div>
+              <div class="pp-mini"><b data-i18n="fk3.h">Honest analytics</b><span data-i18n="fk3.p">Weekly rhythm, a 12-month heatmap and per-habit breakdowns — the truth, always.</span></div>
+              <div class="pp-mini"><b data-i18n="fk4.h">Gamified progress</b><span data-i18n="fk4.p">XP, levels and milestone badges that celebrate consistency without turning into a casino.</span></div>
+            </div>
+          </div>
+          <div class="pp-block">
+            <h3><i data-i18n="ffg2">02</i><span data-i18n="ffg2.h">Core strengths</span></h3>
+            <div class="pp-mini-list">
+              <div class="pp-mini"><b data-i18n="sk1.h">Friendly by default</b><span data-i18n="sk1.p">You learn the app in minutes, not weekends. Arabic-first with a full English mode.</span></div>
+              <div class="pp-mini"><b data-i18n="sk2.h">Seamless continuity</b><span data-i18n="sk2.p">Export, import and local backups keep your streaks safe while you switch devices.</span></div>
+              <div class="pp-mini"><b data-i18n="sk3.h">High customization</b><span data-i18n="sk3.p">Dark &amp; light themes, per-habit colors and goals shaped around your real life.</span></div>
+              <div class="pp-mini"><b data-i18n="sk4.h">Privacy-first</b><span data-i18n="sk4.p">Fully offline, with no accounts, no ads and no trackers — privacy isn&apos;t a feature, it&apos;s the default.</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="pp-section" id="privacy">
+      <div class="pp-wrap">
+        <div class="pp-sechead">
+          <p class="pp-eyebrow" data-i18n="pr.eyebrow">Privacy policy</p>
+          <h2 data-i18n="pr.h">Your data doesn&apos;t leave your phone</h2>
+          <p data-i18n="pr.p">Because Habit Flow works fully offline, this policy is short and written in plain language.</p>
+        </div>
+        <div class="pp-priv-wrap">
+          <div class="pp-priv-grid">
+            <article class="pp-priv"><h3 data-i18n="pr1.h">What we collect</h3><p data-i18n="pr1.p">Nothing that leaves your device. Habit data, check-ins and progress live in a local database on your phone. No accounts, no sign-up telemetry, no third-party SDKs.</p></article>
+            <article class="pp-priv"><h3 data-i18n="pr2.h">How we use it</h3><p data-i18n="pr2.p">Your entries power only the app&apos;s own screens: lists, streaks, statistics and the heatmap. They are never transmitted, sold or analysed by anyone else.</p></article>
+            <article class="pp-priv"><h3 data-i18n="pr3.h">Data retention &amp; deletion</h3><p data-i18n="pr3.p">You stay in control: delete individual habits or wipe everything in one tap. Removing the app deletes the local database.</p></article>
+            <article class="pp-priv"><h3 data-i18n="pr4.h">Your rights</h3><p data-i18n="pr4.p">Following standard privacy-law principles, you can export a full copy of your data at any time and take it anywhere. Contact NOVU to ask questions or request removal.</p></article>
+            <article class="pp-priv"><h3 data-i18n="pr5.h">Security measures</h3><p data-i18n="pr5.p">Data stays inside a private, app-scoped storage area, protected by your device OS and your screen lock.</p></article>
+            <article class="pp-priv"><h3 data-i18n="pr6.h">Third parties</h3><p data-i18n="pr6.p">There are none. No analytics, no ad networks, no crash-reporting services phone home.</p></article>
+          </div>
+          <p class="pp-note" data-i18n="pr.note">Last updated: September 2026 &middot; This policy changes only if a future version ever handles data differently.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pp-footer">
+    <span data-i18n="ft.brand">Habit Flow (عاداتك) — designed &amp; built by NOVU.</span>
+    <a href="https://zeyad-muhammed.github.io/novu-site/" data-i18n="ft.l1">NOVU Studio</a>
+  </footer>
+
+  <script>
+    var I18N = {
+      en: {
+        'pp.brandAr': 'عاداتك',
+        'pp.brand': 'A NOVU mobile product',
+        'pp.back': 'Visit app page',
+        'pp.heroEyebrow': 'A NOVU product &middot; Mobile app',
+        'pp.heroName': 'عاداتك',
+        'pp.heroSub': 'Build habits that last. Calm, honest and fully offline — Arabic-first with a complete English mode.',
+        'pp.b1': 'Offline-first', 'pp.b2': 'No accounts', 'pp.b3': 'No trackers', 'pp.b4': 'Local-only data',
+        'ov.eyebrow': 'Overview &amp; excellence',
+        'ov.h': 'Excellence is a calm design, not a loud one',
+        'ov.statement': 'The habits market is full of apps that nag. <strong>Habit Flow refuses that game</strong> — it stays calm, honest and fully on-device.',
+        'ov.lead': 'Instead of pulling you back every hour and selling your attention, it wins by subtraction: a restful dark interface, one-tap logging, and reward loops that celebrate showing up — not staring at a screen.',
+        'up1.h': 'Your data never leaves the phone',
+        'up1.p': 'No cloud account, no tracking, no internet required. Everything lives in one local database on your device.',
+        'up2.h': 'Honest by design',
+        'up2.p': 'Statistics show streaks and slumps alike. No cherry-picked numbers to manufacture addiction — just the truth.',
+        'up3.h': 'Calm, dark-first design',
+        'up3.p': 'A quiet, dark interface designed to fade into the background, so the habit is what stays in focus.',
+        'up4.h': 'Works everywhere',
+        'up4.p': 'Fully offline, launched in a second, with local reminders and a homescreen widget — momentum even without a connection.',
+        'ff.eyebrow': 'Features &amp; strengths',
+        'ff.h': 'Everything a habit needs, nothing it doesn\'t',
+        'ff.p': 'Four core features do the heavy lifting; four strengths keep the experience comfortable for years, not weeks.',
+        'ffg1': '01', 'ffg2': '02',
+        'ffg1.h': 'Core features',
+        'ffg2.h': 'Core strengths',
+        'fk1.h': 'Habit tracking',
+        'fk1.p': 'Daily targets with precise logging — one tap for a check-in, fine dialogs for measurable goals.',
+        'fk2.h': 'Smart reminders',
+        'fk2.p': 'Local notifications that respect your rhythm and nudge without noise.',
+        'fk3.h': 'Honest analytics',
+        'fk3.p': 'Weekly rhythm, a 12-month heatmap and per-habit breakdowns — the truth, always.',
+        'fk4.h': 'Gamified progress',
+        'fk4.p': 'XP, levels and milestone badges that celebrate consistency without turning into a casino.',
+        'sk1.h': 'Friendly by default',
+        'sk1.p': 'You learn the app in minutes, not weekends. Arabic-first with a full English mode.',
+        'sk2.h': 'Seamless continuity',
+        'sk2.p': 'Export, import and local backups keep your streaks safe while you switch devices.',
+        'sk3.h': 'High customization',
+        'sk3.p': 'Dark &amp; light themes, per-habit colors and goals shaped around your real life.',
+        'sk4.h': 'Privacy-first',
+        'sk4.p': 'Fully offline, with no accounts, no ads and no trackers — privacy isn\'t a feature, it\'s the default.',
+        'pr.eyebrow': 'Privacy policy',
+        'pr.h': 'Your data doesn\'t leave your phone',
+        'pr.p': 'Because Habit Flow works fully offline, this policy is short and written in plain language.',
+        'pr1.h': 'What we collect',
+        'pr1.p': 'Nothing that leaves your device. Habit data, check-ins and progress live in a local database on your phone. No accounts, no sign-up telemetry, no third-party SDKs.',
+        'pr2.h': 'How we use it',
+        'pr2.p': 'Your entries power only the app\'s own screens: lists, streaks, statistics and the heatmap. They are never transmitted, sold or analysed by anyone else.',
+        'pr3.h': 'Data retention &amp; deletion',
+        'pr3.p': 'You stay in control: delete individual habits or wipe everything in one tap. Removing the app deletes the local database.',
+        'pr4.h': 'Your rights',
+        'pr4.p': 'Following standard privacy-law principles, you can export a full copy of your data at any time and take it anywhere. Contact NOVU to ask questions or request removal.',
+        'pr5.h': 'Security measures',
+        'pr5.p': 'Data stays inside a private, app-scoped storage area, protected by your device OS and your screen lock.',
+        'pr6.h': 'Third parties',
+        'pr6.p': 'There are none. No analytics, no ad networks, no crash-reporting services phone home.',
+        'pr.note': 'Last updated: September 2026 &middot; This policy changes only if a future version ever handles data differently.',
+        'ft.brand': 'Habit Flow (عاداتك) — designed &amp; built by NOVU.',
+        'ft.l1': 'NOVU Studio'
+      },
+      ar: {
+        'pp.brandAr': 'عاداتك',
+        'pp.brand': 'منتج موبايل من NOVU',
+        'pp.back': 'صفحة التطبيق',
+        'pp.heroEyebrow': 'منتج من استوديو NOVU &middot; تطبيق موبايل',
+        'pp.heroName': 'عاداتك',
+        'pp.heroSub': 'ابنِ عادات تدوم. هادي، صادق، وشغال أوفلاين بالكامل — عربي أولًا مع دعم كامل للإنجليزي.',
+        'pp.b1': 'أوفلاين الأول', 'pp.b2': 'مافيش حسابات', 'pp.b3': 'مافيش تتبع', 'pp.b4': 'بيانات محلية بس',
+        'ov.eyebrow': 'نظرة عامة وتميز',
+        'ov.h': 'التميز في الهدوء، مش في الضوضاء',
+        'ov.statement': 'سوق العادات مليان تطبيقات بتزعجك. <strong>عاداتك رفضت اللعب دي</strong> — هادي، صادق، وشغال بالكامل على جهازك.',
+        'ov.lead': 'بدل ما يجيبك كل ساعة ويبيع انتباهك، بيحقق مكاسب بالتقليل: واجهة داكنة مريحة، تسجيل بلمسة واحدة، وحلقات مكافآت تحتفل بإنك تظهر — مش إنك تفضل تركزش في الشاشة.',
+        'up1.h': 'بياناتك ما بتخرجش من الموبايل',
+        'up1.p': 'مافيش حساب سحابي، ما فيش تتبع، ما فيش إنترنت. كل حاجة موجودة في قاعدة بيانات محلية بس على جهازك.',
+        'up2.h': 'صادق من التصميم',
+        'up2.p': 'الإحصائيات بتظهر السلاسل والانقطاعات على حد سواء. مافيش أرقام بتُختار عشان تحسّن الإدمان — الحقيقة بس.',
+        'up3.h': 'هادئ، داكن الأول',
+        'up3.p': 'واجهة داكنة وراقية بتختفي في الخلفية، عشان العادة هي اللي تفضل في بؤرة التركيز.',
+        'up4.h': 'يشتغل في كل مكان',
+        'up4.p': 'أوفلاين بالكامل، يفتح بسرعة، مع تنبيهات محلية وودجت على الشاشة الرئيسية — الاستمرارية تفضل موجودة حتى لو مفيش شبكة.',
+        'ff.eyebrow': 'الميزات ونقاط القوة',
+        'ff.h': 'كل اللي العادة محتاجة، ومفيش زيادة',
+        'ff.p': '٤ ميزات أساسية بتشيل الشغل، و٤ نقاط قوة بتخلي التجربة مريحة لسنين مش أسابيع.',
+        'ffg1': '١', 'ffg2': '٢',
+        'ffg1.h': 'الميزات الأساسية',
+        'ffg2.h': 'نقاط القوة',
+        'fk1.h': 'متابعة العادات',
+        'fk1.p': 'أهداف يومية بتسجيل دقيق — لمسة واحدة للتأشير، ونوافذ خاصة للأهداف القابلة للقياس.',
+        'fk2.h': 'التذكيرات الذكية',
+        'fk2.p': 'تنبيهات محلية بتراعي إيقاعك وتنبّهك بدون ضوضاء.',
+        'fk3.h': 'تحليلات صادقة',
+        'fk3.p': 'إيقاع أسبوعي، خريطة حرارية ١٢ شهر، وتفصيل لكل عادة — الحقيقة دايمًا.',
+        'fk4.h': 'التقدم بالتشويق',
+        'fk4.p': 'نقاط خبرة، مستويات، وشارات للمراحل — بتحتفل بالاستمرارية بدون ما يتحول لتطبيق قمار.',
+        'sk1.h': 'ودي وسهل',
+        'sk1.p': 'بتتعلم التطبيق في دقائق مش في عطلة. عربي أولًا مع دعم كامل للإنجليزي.',
+        'sk2.h': 'استمرارية سلسة',
+        'sk2.p': 'التصدير والاستيراد والنسخ الاحتياطي المحلي بيحافظوا على سلاسل الإنجاز حتى لو بدّلت الجهاز.',
+        'sk3.h': 'قابل للتخصيص جدًا',
+        'sk3.p': 'ثيمات داكنة وفاتحة، ألوان لكل عادة، وأهداف بتناسب حياتك الواقعية.',
+        'sk4.h': 'أولوية للخصوصية',
+        'sk4.p': 'أوفلاين بالكامل، بدون حسابات، بدون إعلانات، بدون تتبع — الخصوصية مش ميزة، دي القاعدة.',
+        'pr.eyebrow': 'سياسة الخصوصية',
+        'pr.h': 'بياناتك ما بتخرجش من جهازك',
+        'pr.p': 'لأن عاداتك شغال أوفلاين بالكامل، السياسة دي قصيرة ومكتوبة بلغة واضحة.',
+        'pr1.h': 'إيه اللي بنجمّعه',
+        'pr1.p': 'مفيش حاجة بتخرج من جهازك. بيانات العادات والتأشيرات والتقدم كلها بتتخزن محليًا في قاعدة بيانات على موبايلك. مافيش حسابات، مافيش تتبع، مافيش SDK تابعة لجهات خارجية.',
+        'pr2.h': 'بنستخدمه ازاي',
+        'pr2.p': 'البيانات دي بتظهر بس داخل شاشات التطبيق: القوائم، السلاسل، الإحصائيات، والخريطة الحرارية. ما بتتبعزش، ما بتُباعش، وما بيحلّلهاش حد غيرك.',
+        'pr3.h': 'الاحتفاظ والحذف',
+        'pr3.p': 'أنت المتحكم كاملًا: تقدر تحذف عادة واحدة أو تمسح كل البيانات بضغطة واحدة. لو حذفت التطبيق، قاعدة البيانات المحلية بتُحذف كمان.',
+        'pr4.h': 'حقوقك',
+        'pr4.p': 'وفقًا لمبادئ قوانين الخصوصية المعتمدة، تقدر تصدّر نسخة كاملة من بياناتك في أي وقت وتحطها فين ما تحب. لو عندك سؤال أو عايز تحذف البيانات تقدر تتواصل مع NOVU.',
+        'pr5.h': 'التدابير الأمنية',
+        'pr5.p': 'البيانات بتتخزن في مساحة خاصة بالتطبيق محمية بنظام تشغيل جهازك وقفل الشاشة.',
+        'pr6.h': 'جهات خارجية',
+        'pr6.p': 'مافيهاش. مافيش تحليلات، مافيش شبكات إعلانات، مافيش خدمات تقارير أعطال بتبعت بيانات.',
+        'pr.note': 'تاريخ التحديث: سبتمبر ٢٠٢٦ &middot; السياسة دي هتتغير بس لو فيه تعديل في المستقبل بيخلي التطبيق يتعامل مع البيانات بشكل مختلف.',
+        'ft.brand': 'Habit Flow (عاداتك) — تصميم وتطوير NOVU.',
+        'ft.l1': 'استوديو NOVU'
+      }
+    };
+
+    (function () {
+      var current;
+      try { current = localStorage.getItem('hf-lang') === 'en' ? 'en' : 'ar'; } catch (e) { current = 'ar'; }
+
+      function apply(lang) {
+        current = lang;
+        var dict = I18N[lang];
+        var els = document.querySelectorAll('[data-i18n], [data-i18n-html]');
+        for (var i = 0; i < els.length; i++) {
+          var key = els[i].getAttribute('data-i18n-html') || els[i].getAttribute('data-i18n');
+          if (dict[key]) els[i].innerHTML = dict[key];
+        }
+        document.documentElement.setAttribute('lang', lang);
+        document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+        document.getElementById('ppLang').textContent = lang === 'ar' ? 'English' : 'العربية';
+        try { localStorage.setItem('hf-lang', lang); } catch (e) {}
+      }
+
+      var btn = document.getElementById('ppLang');
+      btn.addEventListener('click', function () { apply(current === 'ar' ? 'en' : 'ar'); });
+      apply(current);
+    })();
+  </script>
+</body>
+</html>
