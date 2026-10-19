@@ -58,7 +58,7 @@
   <div class="wrap">
     <div class="filters" data-filters="product-items" role="group" aria-label="Filter products" style="margin-bottom:32px" data-r>
       <button class="filter" type="button" data-filter="all" aria-pressed="true">All <small>07</small></button>
-      <button class="filter" type="button" data-filter="live" aria-pressed="false">Available now <small>06</small></button>
+      <button class="filter" type="button" data-filter="live" aria-pressed="false">Available now <small>07</small></button>
       <button class="filter" type="button" data-filter="security" aria-pressed="false">Security <small>01</small></button>
       <button class="filter" type="button" data-filter="early" aria-pressed="false">Early access <small>01</small></button>
     </div>
@@ -206,24 +206,92 @@
         </div>
       </article>
 
-      <article class="card product-row" data-cat="early" id="launcher" data-r>
-        <div class="media combo"><div class="window"><img src="assets/products/launcher/pc-home.png" alt="NOVU Launcher desktop home screen" loading="lazy"></div><div class="phone"><img src="assets/products/launcher/m-store.png" alt="NOVU Store inside the Android launcher" loading="lazy"></div><div class="over"><span class="pill">Developer preview</span></div></div>
+      <article class="card product-row" data-cat="live early" id="launcher" data-r>
+        <div class="media combo"><div class="window"><img src="assets/products/launcher/pc-home.png" alt="NOVU Launcher desktop home screen" loading="lazy"></div><div class="phone"><img src="assets/products/launcher/m-store.png" alt="NOVU Store inside the Android launcher" loading="lazy"></div><div class="over"><span class="pill hot">Android v1.0</span><span class="pill">Desktop preview</span></div></div>
         <div class="pr-body">
-          <div class="flex-between"><div class="app-id"><img src="assets/brand/logo-white.png" alt="" style="padding:10px"><div><h2 class="h3">NOVU Launcher</h2><span class="label">Command shell · Desktop + Android</span></div></div><span class="pill">Early access</span></div>
-          <p class="body-s">A keyboard-first command matrix and local AI workspace for developers and designers. Launch, search and run system-wide actions in a single shortcut — and on Android, a calm home screen with the NOVU store built in.</p>
+          <div class="flex-between"><div class="app-id"><img src="assets/brand/logo-white.png" alt="" style="padding:10px"><div><h2 class="h3">NOVU Launcher</h2><span class="label">Command shell · Desktop + Android</span></div></div><span class="pill hot live">Android · v1.0</span></div>
+          <p class="body-s">A keyboard-first command matrix and local AI workspace for developers and designers. Launch, search and run system-wide actions in a single shortcut. On Android, it is your hub for every NOVU app — with the NOVU Store, Synapse commands and a clean, private dashboard.</p>
           <div class="specs">
             <div><span>Cold start</span><span>140 ms</span></div>
             <div><span>Idle memory</span><span>18 MB</span></div>
             <div><span>Input</span><span>Custom keymap engine</span></div>
             <div><span>Stack</span><span>Rust · Tauri · Kotlin</span></div>
+            <div><span>Android</span><span>8.0+ · 10.5 MB · APK</span></div>
           </div>
           <div class="pr-actions">
-            <a class="btn btn-primary btn-sm" href="index.html#brief">Join the preview <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+            <a class="btn btn-primary btn-sm" href="assets/products/launcher/NOVU-Launcher-1.0.0.apk" download>Download for Android <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+            <a class="btn btn-ghost btn-sm" href="#install">How to install</a>
           </div>
         </div>
       </article>
     </div>
     <p class="empty-note" data-empty-for="product-items">Nothing here yet.</p>
+  </div>
+</section>
+
+<section class="section" id="install">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="num" data-r>Install guide · Android</span>
+        <h2 class="h2 split-words">Install NOVU Launcher on your phone.</h2>
+      </div>
+      <div data-r><p class="lede">NOVU Launcher isn’t on Google Play yet, so Android treats it like any app downloaded from the web and asks you to confirm. It takes about a minute.</p></div>
+    </div>
+
+    <div class="install">
+      <aside class="card card-pad stack install-file" data-r>
+        <div class="app-id"><img src="assets/brand/logo-white.png" alt="" style="padding:10px"><div><h3 class="h4">NOVU Launcher</h3><span class="label">Version 1.0.0 · Android</span></div></div>
+        <div class="specs">
+          <div><span>File</span><span>NOVU-Launcher-1.0.0.apk</span></div>
+          <div><span>Size</span><span>10.5 MB</span></div>
+          <div><span>Requires</span><span>Android 8.0 or newer</span></div>
+          <div><span>Signed by</span><span>NOVU · Cairo, EG</span></div>
+        </div>
+        <a class="btn btn-primary btn-block" href="assets/products/launcher/NOVU-Launcher-1.0.0.apk" download>Download APK <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></a>
+        <details class="hash">
+          <summary class="label">Verify the file (SHA-256)</summary>
+          <p class="body-s">File checksum</p>
+          <code>a28a6a0e7dd39f5be6db14b55c5b388fbd49574cad28c67f749073b826fdfde7</code>
+          <p class="body-s">Signing certificate</p>
+          <code>1884bb3eeab6e1074e96a755227d55a436f637e5848a57a92b8b47d3eadccf78</code>
+        </details>
+      </aside>
+
+      <div class="install-langs">
+        <div class="card card-pad" data-r>
+          <span class="label accent">English</span>
+          <ol class="steps-list">
+            <li><b>Download the APK</b> on your Android phone. If Chrome says <em>“This type of file can harm your device”</em>, tap <b>Download anyway</b>.</li>
+            <li><b>Open the file</b> from the download notification, or from <b>Files › Downloads</b>.</li>
+            <li><b>Allow installs from this source.</b> If Android says your phone isn’t allowed to install unknown apps, tap <b>Settings</b>, turn on <b>Allow from this source</b>, then go back.</li>
+            <li><b>Tap Install.</b> If Google Play Protect shows a warning, tap <b>More details › Install anyway</b>. This appears for any app that isn’t on Google Play yet.</li>
+            <li><b>Open NOVU Launcher</b> and tap <b>Continue as Guest</b>, or sign in with your NOVU ID.</li>
+          </ol>
+          <p class="body-s tip">Tip: after installing, you can switch <b>Allow from this source</b> back off in <b>Settings › Apps › Special app access › Install unknown apps</b>.</p>
+        </div>
+
+        <div class="card card-pad rtl" lang="ar" dir="rtl" data-r>
+          <span class="label accent">بالعربي</span>
+          <ol class="steps-list">
+            <li><b>نزّل ملف الـ APK</b> من الموبايل. لو Chrome قالك إن <em>«الملف ده ممكن يضر جهازك»</em> دوس <b>تنزيل على أي حال</b>.</li>
+            <li><b>افتح الملف</b> من إشعار التنزيل، أو من <b>الملفات ‹ التنزيلات</b>.</li>
+            <li><b>اسمح بالتثبيت من المصدر ده.</b> لو أندرويد قالك إن التطبيقات غير المعروفة ممنوعة، دوس <b>الإعدادات</b> وفعّل <b>السماح من هذا المصدر</b> وارجع.</li>
+            <li><b>دوس تثبيت.</b> لو ظهر تحذير من Google Play Protect دوس <b>مزيد من التفاصيل ‹ التثبيت على أي حال</b>. التحذير ده بيظهر لأي تطبيق لسه مش على جوجل بلاي.</li>
+            <li><b>افتح NOVU Launcher</b> واختار <b>Continue as Guest</b>، أو سجّل دخول بحساب NOVU.</li>
+          </ol>
+          <p class="body-s tip">نصيحة: بعد التثبيت تقدر تقفل <b>السماح من هذا المصدر</b> تاني من <b>الإعدادات ‹ التطبيقات ‹ أذونات خاصة ‹ تثبيت تطبيقات غير معروفة</b>.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="card card-pad flex-between mt-l" data-r>
+      <div class="stack" style="gap:6px;max-width:64ch">
+        <h3 class="h4">Why does Android warn me?</h3>
+        <p class="body-s">Android shows the same warning for every app installed outside Google Play — it doesn’t mean something is wrong with the file. NOVU Launcher has no ads or trackers, and the APK is signed with NOVU’s own key, so future updates install right over it.</p>
+      </div>
+      <span class="pill hot">Google Play · coming soon</span>
+    </div>
   </div>
 </section>
 

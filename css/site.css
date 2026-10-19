@@ -624,3 +624,31 @@ html.has-cursor input, html.has-cursor textarea { cursor: text !important; }
 .mini-phones .phone:nth-child(2) { transform: translateY(-8px); }
 .card:hover .media.mini-phones img { transform: none; }
 .media.mock img { object-position: center top; }
+
+/* ---------- Android install guide (products#install) ---------- */
+.install { display: grid; grid-template-columns: 1fr; gap: clamp(14px, 2vw, 24px); align-items: start; }
+@media (min-width: 1024px) { .install { grid-template-columns: 4fr 8fr; } .install-file { position: sticky; top: calc(var(--header-h) + 24px); } }
+.install-langs { display: grid; grid-template-columns: 1fr; gap: clamp(14px, 2vw, 24px); }
+@media (min-width: 1280px) { .install-langs { grid-template-columns: 1fr 1fr; } }
+.steps-list { list-style: none; counter-reset: st; margin: 18px 0 0; padding: 0; display: flex; flex-direction: column; gap: 18px; }
+.steps-list li { counter-increment: st; position: relative; padding-inline-start: 44px; font-size: 15px; line-height: 1.6; color: var(--muted); }
+.steps-list li::before {
+  content: counter(st); position: absolute; inset-inline-start: 0; top: -2px; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center; font: 600 13px/1 var(--f-mono); color: var(--accent);
+  border: 1px solid rgba(255, 86, 38, .45); background: var(--accent-soft);
+}
+.steps-list b { color: var(--text); font-weight: 600; }
+.steps-list em { font-style: normal; color: var(--text); }
+.install .tip { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--line); }
+.rtl { font-family: "Noto Kufi Arabic", var(--f-body); }
+.rtl .steps-list li { font-size: 14.5px; line-height: 1.9; }
+.rtl .label { letter-spacing: 0; }
+.hash summary { cursor: pointer; list-style: none; }
+.hash summary::-webkit-details-marker { display: none; }
+.hash summary::after { content: " +"; color: var(--accent); }
+.hash[open] summary::after { content: " –"; }
+.hash p { margin-top: 12px; }
+.hash code {
+  display: block; margin-top: 4px; font: 11.5px/1.5 var(--f-mono); color: var(--text); word-break: break-all;
+  padding: 10px 12px; border-radius: 10px; background: var(--bg-2); border: 1px solid var(--line);
+}
