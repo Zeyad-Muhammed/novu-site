@@ -3,34 +3,35 @@
    Builds on site.css tokens; loaded by store.html only.
    ============================================================ */
 
-/* ---------- Bundle slideshow ---------- */
-.slides { position: relative; background: #0b0f17; display: flex; align-items: center; overflow: hidden; }
+/* ---------- Bundle slideshow ----------
+   The frame always has the images' own 16:9 ratio, so a slide fills it
+   exactly at every width — never cropped, letterboxed or zoomed. */
+.slides { display: flex; flex-direction: column; justify-content: center; gap: 14px; padding: clamp(14px, 2vw, 22px); min-width: 0; }
 .product-row > .slides { min-height: 0; }
-.slides .frame { position: relative; width: 100%; aspect-ratio: 16 / 9; }
+.slides .frame {
+  position: relative; width: 100%; aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: var(--radius-sm); border: 1px solid var(--line); background: #0a0a0b;
+}
 .slides .slide {
   position: absolute; inset: 0; margin: 0; opacity: 0; visibility: hidden;
   transition: opacity .7s var(--ease), visibility .7s;
 }
 .slides .slide.on { opacity: 1; visibility: visible; }
-.slides .slide img { width: 100%; height: 100%; object-fit: contain; transform: scale(1.015); transition: transform 5s linear; }
-.slides .slide.on img { transform: none; }
-.slides .over { position: absolute; top: 18px; left: 18px; right: 18px; display: flex; gap: 8px; z-index: 2; }
-.slides .controls {
-  position: absolute; left: 18px; right: 18px; bottom: 16px; z-index: 2;
-  display: flex; align-items: center; justify-content: space-between; gap: 12px;
-}
-.slides .cap { font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--text); opacity: .8; }
+.slides .slide img, .card:hover .slides .slide img { width: 100%; height: 100%; object-fit: fill; transform: none; }
+.slides .controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.slides .cap { flex: 1; min-width: 0; font-family: var(--f-mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .slides .dots { display: flex; gap: 6px; }
 .slides .dot {
-  width: 8px; height: 8px; padding: 0; border-radius: 999px; border: 0; background: rgba(255,255,255,.28);
+  width: 8px; height: 8px; padding: 0; border-radius: 999px; border: 0; background: rgba(255,255,255,.22);
   transition: width .35s var(--ease), background .35s;
 }
 .slides .dot[aria-current="true"] { width: 26px; background: var(--accent); }
 .slides .arrows { display: flex; gap: 8px; }
-.slides .icon-btn { width: 36px; height: 36px; background: rgba(10,10,11,.55); backdrop-filter: blur(6px); }
+.slides .icon-btn { width: 36px; height: 36px; }
 .slides .icon-btn svg { width: 15px; height: 15px; }
 
 /* ---------- Template cards ---------- */
+.tpl-card:hover .media img { transform: none; }
 .tpl-card .media { display: block; width: 100%; padding: 0; border: 0; background: #0b0f17; aspect-ratio: 16 / 9; cursor: pointer; }
 .tpl-card .ar { font-family: "Noto Kufi Arabic", var(--f-body); color: var(--muted); font-size: 14px; margin-top: -6px; text-align: left; }
 .tpl-card .open { background: none; border: 0; padding: 0; margin-top: auto; align-self: flex-start; }
@@ -43,12 +44,13 @@ dialog.tpl {
   background: var(--bg); color: var(--text); overflow: hidden;
   box-shadow: 0 40px 120px -20px rgba(0,0,0,.8);
 }
-dialog.tpl[open] { display: flex; flex-direction: column; animation: tpl-in .45s var(--ease); }
+dialog.tpl[open] { display: flex; flex-direction: column; animation: tpl-fade .3s ease; }
+/* motion lives on the content, not the dialog: a transform on the dialog would offset the site cursor inside it */
+dialog.tpl[open] .tpl-scroll { animation: tpl-in .45s var(--ease); }
 dialog.tpl::backdrop { background: rgba(4,4,5,.72); backdrop-filter: blur(6px); animation: tpl-fade .35s ease; }
-dialog.tpl.closing { animation: tpl-out .22s ease forwards; }
+dialog.tpl.closing { animation: tpl-fade .22s ease reverse forwards; }
 dialog.tpl.closing::backdrop { animation: tpl-fade .22s ease reverse forwards; }
-@keyframes tpl-in { from { opacity: 0; transform: translateY(28px) scale(.985); } to { opacity: 1; transform: none; } }
-@keyframes tpl-out { to { opacity: 0; transform: translateY(16px) scale(.99); } }
+@keyframes tpl-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
 @keyframes tpl-fade { from { opacity: 0; } to { opacity: 1; } }
 
 .tpl-bar {
@@ -118,6 +120,6 @@ dialog.tpl.closing::backdrop { animation: tpl-fade .22s ease reverse forwards; }
   .tpl-bar .crumb { display: none; }
 }
 @media (prefers-reduced-motion: reduce) {
-  dialog.tpl[open], dialog.tpl::backdrop, dialog.tpl.closing { animation: none; }
-  .slides .slide, .slides .slide img { transition: none; }
+  dialog.tpl[open], dialog.tpl[open] .tpl-scroll, dialog.tpl::backdrop, dialog.tpl.closing { animation: none; }
+  .slides .slide { transition: none; }
 }

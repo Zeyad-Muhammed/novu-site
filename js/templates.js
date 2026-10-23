@@ -61,12 +61,21 @@
 
   function dialogFor(id) { return document.getElementById('tpl-' + id); }
 
+  // site.js draws its own cursor in <body>; a modal dialog renders in the top layer above it,
+  // so carry the cursor into the open dialog and hand it back to <body> on close.
+  function moveCursor(to) {
+    Array.prototype.forEach.call(document.querySelectorAll('.cursor-dot, .cursor-ring'), function (el) {
+      if (el.parentNode !== to) to.appendChild(el);
+    });
+  }
+
   function open(id, push) {
     var d = dialogFor(id);
     if (!d || d.open) return;
     if (typeof d.showModal !== 'function') { d.setAttribute('open', ''); }
     else d.showModal();
     root.classList.add('tpl-open');
+    moveCursor(d);
     var sc = d.querySelector('.tpl-scroll');
     if (sc) sc.scrollTop = 0;
     if (push !== false && window.history && history.replaceState) history.replaceState(null, '', '#tpl-' + id);
@@ -75,7 +84,10 @@
   // Runs however the dialog ended up closed (button, backdrop, Escape, browser close watcher).
   function closed(d) {
     d.classList.remove('closing');
-    if (!document.querySelector('dialog.tpl[open]')) root.classList.remove('tpl-open');
+    if (!document.querySelector('dialog.tpl[open]')) {
+      root.classList.remove('tpl-open');
+      moveCursor(document.body);
+    }
     if (window.history && history.replaceState && /^#tpl-/.test(location.hash)) {
       history.replaceState(null, '', location.pathname + location.search + '#templates');
     }
