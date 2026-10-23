@@ -14,6 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Kufi+Arabic:wght@400;600&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/site.css">
+<link rel="stylesheet" href="css/templates.css?v=2">
 </head>
 <body data-page="store">
 <a class="skip" href="#main">Skip to content</a>
@@ -88,7 +89,12 @@
       <div data-r><p class="lede">Free, private, ready-to-use templates for Excel and Google Sheets. Download, type in the tinted cells — the dashboards and charts do the rest.</p></div>
     </div>
     <article class="card product-row" data-r style="margin-bottom:24px">
-      <div class="media" style="min-height:360px;position:relative;overflow:hidden"><img style="position:absolute;inset:0;object-position:right center" src="assets/products/templates/bundle/cover.jpg" alt="Life Planner Bundle preview" loading="lazy"><div class="over"><span class="pill hot">Free download</span></div></div>
+      <div class="slides" data-slides aria-roledescription="carousel" aria-label="Template previews">
+        <div class="frame"><figure class="slide on" data-cap="Life Planner Bundle"><img src="assets/products/templates/bundle/cover.jpg" alt="Life Planner Bundle preview"></figure><figure class="slide" data-cap="Monthly Budget Planner"><img src="assets/products/templates/budget/cover.jpg" alt="Monthly Budget Planner preview" loading="lazy"></figure><figure class="slide" data-cap="Study Planner"><img src="assets/products/templates/study/cover.jpg" alt="Study Planner preview" loading="lazy"></figure><figure class="slide" data-cap="Habit Tracker"><img src="assets/products/templates/habits/cover.jpg" alt="Habit Tracker preview" loading="lazy"></figure></div>
+        <div class="over"><span class="pill hot">Free download</span></div>
+        <div class="controls"><span class="cap" aria-live="polite"></span><div class="dots"><button class="dot" type="button" data-i="0" aria-label="Show Life Planner Bundle"></button><button class="dot" type="button" data-i="1" aria-label="Show Monthly Budget Planner"></button><button class="dot" type="button" data-i="2" aria-label="Show Study Planner"></button><button class="dot" type="button" data-i="3" aria-label="Show Habit Tracker"></button></div>
+          <div class="arrows"><button class="icon-btn" type="button" data-go="-1" aria-label="Previous"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg></button><button class="icon-btn" type="button" data-go="1" aria-label="Next"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3.5 10.5 8 6 12.5"/></svg></button></div></div>
+      </div>
       <div class="pr-body">
         <span class="label accent">Bundle · باقة</span>
         <h2 class="h2" style="font-size:clamp(28px,3.2vw,42px)">Life Planner Bundle</h2>
@@ -101,36 +107,36 @@
       </div>
     </article>
     <div class="grid g3" data-stagger>
-      <article class="card lift" data-cat="templates" style="display:flex;flex-direction:column">
-        <a class="media" style="aspect-ratio:16/9;display:block;position:relative;overflow:hidden" href="templates/budget/"><img src="assets/products/templates/budget/cover.jpg" alt="Monthly Budget Planner preview" loading="lazy"><div class="over"><span class="pill">Finance</span></div></a>
+      <article class="card lift tpl-card" data-cat="templates" style="display:flex;flex-direction:column">
+        <button class="media" type="button" data-tpl-open="budget" aria-label="Open Monthly Budget Planner"><img src="assets/products/templates/budget/cover.jpg" alt="Monthly Budget Planner preview" loading="lazy"><span class="over"><span class="pill">Finance</span></span></button>
         <div class="card-pad stack" style="flex:1">
           <h3 class="h4">Monthly Budget Planner</h3>
-          <p class="body-s" lang="ar" dir="rtl" style="font-family:'Noto Kufi Arabic',sans-serif">مخطط الميزانية الشهرية</p>
+          <p class="ar" lang="ar" dir="rtl">مخطط الميزانية الشهرية</p>
           <p class="body-s">Dashboard, budget vs. actual with alerts, 1,000-row transaction log and a year overview.</p>
           <div class="tags"><span class="pill">Excel</span><span class="pill">Google Sheets</span><span class="pill">LibreOffice</span></div>
-          <a class="link-arrow" style="margin-top:auto" href="templates/budget/">See inside <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></a>
+          <button class="link-arrow open" type="button" data-tpl-open="budget">See inside <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button>
           <div class="flex-between" style="padding-top:16px;border-top:1px solid var(--line)"><span class="price">Free<small>.xlsx · 49 KB</small></span><a class="btn btn-ghost btn-sm" href="downloads/templates/NOVU-Budget-Planner.xlsx" download>Download <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a></div>
         </div>
       </article>
-      <article class="card lift" data-cat="templates" style="display:flex;flex-direction:column">
-        <a class="media" style="aspect-ratio:16/9;display:block;position:relative;overflow:hidden" href="templates/study/"><img src="assets/products/templates/study/cover.jpg" alt="Study Planner preview" loading="lazy"><div class="over"><span class="pill">Students</span></div></a>
+      <article class="card lift tpl-card" data-cat="templates" style="display:flex;flex-direction:column">
+        <button class="media" type="button" data-tpl-open="study" aria-label="Open Study Planner"><img src="assets/products/templates/study/cover.jpg" alt="Study Planner preview" loading="lazy"><span class="over"><span class="pill">Students</span></span></button>
         <div class="card-pad stack" style="flex:1">
           <h3 class="h4">Study Planner</h3>
-          <p class="body-s" lang="ar" dir="rtl" style="font-family:'Noto Kufi Arabic',sans-serif">مخطط المذاكرة</p>
+          <p class="ar" lang="ar" dir="rtl">مخطط المذاكرة</p>
           <p class="body-s">Subjects and exams, hours-per-day needed, session log with focus score and a weekly timetable.</p>
           <div class="tags"><span class="pill">Excel</span><span class="pill">Google Sheets</span><span class="pill">LibreOffice</span></div>
-          <a class="link-arrow" style="margin-top:auto" href="templates/study/">See inside <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></a>
+          <button class="link-arrow open" type="button" data-tpl-open="study">See inside <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button>
           <div class="flex-between" style="padding-top:16px;border-top:1px solid var(--line)"><span class="price">Free<small>.xlsx · 44 KB</small></span><a class="btn btn-ghost btn-sm" href="downloads/templates/NOVU-Study-Planner.xlsx" download>Download <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a></div>
         </div>
       </article>
-      <article class="card lift" data-cat="templates" style="display:flex;flex-direction:column">
-        <a class="media" style="aspect-ratio:16/9;display:block;position:relative;overflow:hidden" href="templates/habits/"><img src="assets/products/templates/habits/cover.jpg" alt="Habit Tracker preview" loading="lazy"><div class="over"><span class="pill">Routines</span></div></a>
+      <article class="card lift tpl-card" data-cat="templates" style="display:flex;flex-direction:column">
+        <button class="media" type="button" data-tpl-open="habits" aria-label="Open Habit Tracker"><img src="assets/products/templates/habits/cover.jpg" alt="Habit Tracker preview" loading="lazy"><span class="over"><span class="pill">Routines</span></span></button>
         <div class="card-pad stack" style="flex:1">
           <h3 class="h4">Habit Tracker</h3>
-          <p class="body-s" lang="ar" dir="rtl" style="font-family:'Noto Kufi Arabic',sans-serif">متتبع العادات</p>
+          <p class="ar" lang="ar" dir="rtl">متتبع العادات</p>
           <p class="body-s">12 monthly trackers, 15 habits with goals, daily score and a full-year heat map.</p>
           <div class="tags"><span class="pill">Excel</span><span class="pill">Google Sheets</span><span class="pill">LibreOffice</span></div>
-          <a class="link-arrow" style="margin-top:auto" href="templates/habits/">See inside <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4.5 11.5l7-7M5.5 4.5h6v6"/></svg></a>
+          <button class="link-arrow open" type="button" data-tpl-open="habits">See inside <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button>
           <div class="flex-between" style="padding-top:16px;border-top:1px solid var(--line)"><span class="price">Free<small>.xlsx · 72 KB</small></span><a class="btn btn-ghost btn-sm" href="downloads/templates/NOVU-Habit-Tracker.xlsx" download>Download <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a></div>
         </div>
       </article>
@@ -300,6 +306,96 @@
     </div>
   </div>
 </footer>
+
+<!-- templates:dialogs -->
+<dialog class="tpl" id="tpl-budget" aria-labelledby="tpl-budget-title">
+  <div class="tpl-bar">
+    <span class="brand"><img src="assets/brand/logo-white.png" alt="" width="26" height="26">NOVU</span>
+    <span class="crumb">Store / Templates / <b>Monthly Budget Planner</b></span>
+    <span class="sp"></span>
+    <a class="btn btn-primary btn-sm" href="downloads/templates/NOVU-Budget-Planner.xlsx" download>Download <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a>
+    <button class="icon-btn" type="button" data-tpl-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+  </div>
+  <div class="tpl-scroll"><div class="tpl-in">
+    <div class="tpl-hero">
+      <div>
+        <span class="eyebrow">Free template</span>
+        <h2 id="tpl-budget-title">Monthly Budget Planner</h2>
+        <div class="ar" lang="ar" dir="rtl">مخطط الميزانية الشهرية</div>
+        <p class="lede">Plan every pound. Track every expense. A private, ready-to-use spreadsheet for Excel and Google Sheets.</p>
+        <a class="btn btn-primary" href="downloads/templates/NOVU-Budget-Planner.xlsx" download>Download free <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a>
+        <div class="meta"><span class="label">.xlsx · 49 KB</span><span class="label">Excel · Google Sheets · LibreOffice</span><span class="label">No account</span></div>
+      </div>
+      <div class="shot"><img src="assets/products/templates/budget/cover.jpg" alt="Monthly Budget Planner preview" loading="lazy"></div>
+    </div>
+    <section class="tpl-sec"><span class="label">01 — What you get</span><ul class="tpl-checks"><li>Monthly dashboard with 5 key numbers</li><li>Budget vs. actual for every category with alerts</li><li>20 editable categories and any currency</li><li>Year overview with chart</li><li>Dropdowns and validation so nothing breaks</li><li>Works in Excel, Google Sheets and LibreOffice</li></ul></section>
+    <section class="tpl-sec"><span class="label">02 — See it in action</span><div class="tpl-gallery"><img src="assets/products/templates/budget/1-dashboard.jpg" alt="Monthly Budget Planner — dashboard" loading="lazy"><img src="assets/products/templates/budget/2-transactions.jpg" alt="Monthly Budget Planner — transactions" loading="lazy"><img src="assets/products/templates/budget/3-year.jpg" alt="Monthly Budget Planner — year" loading="lazy"></div></section>
+    <section class="tpl-sec"><span class="label">03 — What's inside</span><div class="tpl-inside"><div class="card"><span class="num">01</span><h4>Dashboard</h4><p class="body-s" style="margin:0">Pick a month, get income, spending, net, savings rate and budget left.</p></div><div class="card"><span class="num">02</span><h4>Budget vs. actual</h4><p class="body-s" style="margin:0">Every category with remaining amount and a red/amber alert.</p></div><div class="card"><span class="num">03</span><h4>Transactions</h4><p class="body-s" style="margin:0">Up to 1,000 rows with category dropdowns and validation.</p></div><div class="card"><span class="num">04</span><h4>Setup</h4><p class="body-s" style="margin:0">Your currency and 20 editable income &amp; expense categories.</p></div><div class="card"><span class="num">05</span><h4>Year overview</h4><p class="body-s" style="margin:0">All 12 months with a income vs. expenses chart.</p></div><div class="card"><span class="num">06</span><h4>100% private</h4><p class="body-s" style="margin:0">No sign-up, no bank sync, no cloud. One file you own.</p></div></div></section>
+    <section class="tpl-sec"><span class="label">04 — Who it's for</span><p class="lede">Students, young professionals and families who want a clear picture of their money without handing their bank data to an app.</p></section>
+    <section class="tpl-sec tpl-ar" lang="ar" dir="rtl"><div class="panel"><h3>مخطط الميزانية الشهرية</h3><p>للطلاب والموظفين والعائلات اللي عايزين صورة واضحة لفلوسهم من غير ما يدّوا بياناتهم البنكية لأي تطبيق.</p><ul class="tpl-checks"><li>لوحة شهرية بأهم 5 أرقام</li><li>مقارنة الميزانية بالصرف الفعلي لكل تصنيف مع تنبيهات</li><li>20 تصنيف قابل للتعديل وأي عملة</li><li>نظرة سنوية مع رسم بياني</li><li>قوائم منسدلة وحماية من الأخطاء</li><li>يعمل على Excel و Google Sheets و LibreOffice</li></ul></div></section>
+    <section class="tpl-sec tpl-faq"><span class="label">05 — FAQ</span><details><summary>Which apps does it work in?</summary><p>Microsoft Excel 2010 or newer, Google Sheets (File → Import, or open from Drive) and LibreOffice Calc. Numbers on Mac opens it too, with simpler charts.</p></details><details><summary>Do I need to know formulas?</summary><p>No. You only type in the tinted cells — everything else calculates itself. Each file opens on a Start Here sheet with the steps.</p></details><details><summary>Is my data private?</summary><p>Yes. It&#x27;s a file on your own device or Drive. There is no account, no sync and nothing sent to NOVU.</p></details><details><summary>Can I use it on my phone?</summary><p>Yes, through the Google Sheets or Excel mobile apps.</p></details></section>
+    <div class="tpl-final"><h3 class="h2">Start today.</h3><a class="btn btn-primary" href="downloads/templates/NOVU-Budget-Planner.xlsx" download>Download free <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a></div>
+  </div></div>
+</dialog>
+<dialog class="tpl" id="tpl-study" aria-labelledby="tpl-study-title">
+  <div class="tpl-bar">
+    <span class="brand"><img src="assets/brand/logo-white.png" alt="" width="26" height="26">NOVU</span>
+    <span class="crumb">Store / Templates / <b>Study Planner</b></span>
+    <span class="sp"></span>
+    <a class="btn btn-primary btn-sm" href="downloads/templates/NOVU-Study-Planner.xlsx" download>Download <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a>
+    <button class="icon-btn" type="button" data-tpl-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+  </div>
+  <div class="tpl-scroll"><div class="tpl-in">
+    <div class="tpl-hero">
+      <div>
+        <span class="eyebrow">Free template</span>
+        <h2 id="tpl-study-title">Study Planner</h2>
+        <div class="ar" lang="ar" dir="rtl">مخطط المذاكرة</div>
+        <p class="lede">Know exactly how much is left before every exam. A private, ready-to-use spreadsheet for Excel and Google Sheets.</p>
+        <a class="btn btn-primary" href="downloads/templates/NOVU-Study-Planner.xlsx" download>Download free <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a>
+        <div class="meta"><span class="label">.xlsx · 44 KB</span><span class="label">Excel · Google Sheets · LibreOffice</span><span class="label">No account</span></div>
+      </div>
+      <div class="shot"><img src="assets/products/templates/study/cover.jpg" alt="Study Planner preview" loading="lazy"></div>
+    </div>
+    <section class="tpl-sec"><span class="label">01 — What you get</span><ul class="tpl-checks"><li>Subjects with exam dates and target hours</li><li>Automatic progress, days left and hours-per-day needed</li><li>Session log with focus score</li><li>Weekly dashboard with charts</li><li>Weekly timetable</li><li>Works in Excel, Google Sheets and LibreOffice</li></ul></section>
+    <section class="tpl-sec"><span class="label">02 — See it in action</span><div class="tpl-gallery"><img src="assets/products/templates/study/1-subjects.jpg" alt="Study Planner — subjects" loading="lazy"><img src="assets/products/templates/study/2-dashboard.jpg" alt="Study Planner — dashboard" loading="lazy"><img src="assets/products/templates/study/3-timetable.jpg" alt="Study Planner — timetable" loading="lazy"></div></section>
+    <section class="tpl-sec"><span class="label">03 — What's inside</span><div class="tpl-inside"><div class="card"><span class="num">01</span><h4>Subjects</h4><p class="body-s" style="margin:0">Exams, target hours, progress bars and smart status.</p></div><div class="card"><span class="num">02</span><h4>Hours / day needed</h4><p class="body-s" style="margin:0">Tells you how much to study daily to hit your target.</p></div><div class="card"><span class="num">03</span><h4>Session log</h4><p class="body-s" style="margin:0">Date, subject, minutes, topic and focus score (1–5).</p></div><div class="card"><span class="num">04</span><h4>Weekly dashboard</h4><p class="body-s" style="margin:0">Hours per day and per subject with charts.</p></div><div class="card"><span class="num">05</span><h4>Timetable</h4><p class="body-s" style="margin:0">A weekly schedule you fill in once and follow.</p></div><div class="card"><span class="num">06</span><h4>Exam alerts</h4><p class="body-s" style="margin:0">Subjects turn red one week before the exam.</p></div></div></section>
+    <section class="tpl-sec"><span class="label">04 — Who it's for</span><p class="lede">High-school and university students preparing for exams who want a plan they can actually follow.</p></section>
+    <section class="tpl-sec tpl-ar" lang="ar" dir="rtl"><div class="panel"><h3>مخطط المذاكرة</h3><p>لطلاب الثانوي والجامعة اللي بيذاكروا للامتحانات وعايزين خطة يقدروا يمشوا عليها فعلًا.</p><ul class="tpl-checks"><li>المواد ومواعيد الامتحانات والساعات المستهدفة</li><li>حساب تلقائي للتقدم والأيام الباقية وساعات المذاكرة اليومية المطلوبة</li><li>سجل جلسات مع تقييم التركيز</li><li>لوحة أسبوعية برسوم بيانية</li><li>جدول أسبوعي</li><li>يعمل على Excel و Google Sheets و LibreOffice</li></ul></div></section>
+    <section class="tpl-sec tpl-faq"><span class="label">05 — FAQ</span><details><summary>Which apps does it work in?</summary><p>Microsoft Excel 2010 or newer, Google Sheets (File → Import, or open from Drive) and LibreOffice Calc. Numbers on Mac opens it too, with simpler charts.</p></details><details><summary>Do I need to know formulas?</summary><p>No. You only type in the tinted cells — everything else calculates itself. Each file opens on a Start Here sheet with the steps.</p></details><details><summary>Is my data private?</summary><p>Yes. It&#x27;s a file on your own device or Drive. There is no account, no sync and nothing sent to NOVU.</p></details><details><summary>Can I use it on my phone?</summary><p>Yes, through the Google Sheets or Excel mobile apps.</p></details></section>
+    <div class="tpl-final"><h3 class="h2">Start today.</h3><a class="btn btn-primary" href="downloads/templates/NOVU-Study-Planner.xlsx" download>Download free <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a></div>
+  </div></div>
+</dialog>
+<dialog class="tpl" id="tpl-habits" aria-labelledby="tpl-habits-title">
+  <div class="tpl-bar">
+    <span class="brand"><img src="assets/brand/logo-white.png" alt="" width="26" height="26">NOVU</span>
+    <span class="crumb">Store / Templates / <b>Habit Tracker</b></span>
+    <span class="sp"></span>
+    <a class="btn btn-primary btn-sm" href="downloads/templates/NOVU-Habit-Tracker.xlsx" download>Download <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a>
+    <button class="icon-btn" type="button" data-tpl-close aria-label="Close"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+  </div>
+  <div class="tpl-scroll"><div class="tpl-in">
+    <div class="tpl-hero">
+      <div>
+        <span class="eyebrow">Free template</span>
+        <h2 id="tpl-habits-title">Habit Tracker</h2>
+        <div class="ar" lang="ar" dir="rtl">متتبع العادات</div>
+        <p class="lede">One tap a day. A whole year of progress. A private, ready-to-use spreadsheet for Excel and Google Sheets.</p>
+        <a class="btn btn-primary" href="downloads/templates/NOVU-Habit-Tracker.xlsx" download>Download free <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a>
+        <div class="meta"><span class="label">.xlsx · 72 KB</span><span class="label">Excel · Google Sheets · LibreOffice</span><span class="label">No account</span></div>
+      </div>
+      <div class="shot"><img src="assets/products/templates/habits/cover.jpg" alt="Habit Tracker preview" loading="lazy"></div>
+    </div>
+    <section class="tpl-sec"><span class="label">01 — What you get</span><ul class="tpl-checks"><li>12 monthly trackers that set their own dates</li><li>Up to 15 habits with monthly goals</li><li>Completion rate and daily score</li><li>Year heat map and trend chart</li><li>Today&#x27;s column highlighted automatically</li><li>Works in Excel, Google Sheets and LibreOffice</li></ul></section>
+    <section class="tpl-sec"><span class="label">02 — See it in action</span><div class="tpl-gallery"><img src="assets/products/templates/habits/1-month.jpg" alt="Habit Tracker — month" loading="lazy"><img src="assets/products/templates/habits/2-year.jpg" alt="Habit Tracker — year" loading="lazy"></div></section>
+    <section class="tpl-sec"><span class="label">03 — What's inside</span><div class="tpl-inside"><div class="card"><span class="num">01</span><h4>12 monthly sheets</h4><p class="body-s" style="margin:0">Dates and weekdays set themselves — leap years included.</p></div><div class="card"><span class="num">02</span><h4>15 habits</h4><p class="body-s" style="margin:0">Type them once in Setup; they appear on every month.</p></div><div class="card"><span class="num">03</span><h4>Goals</h4><p class="body-s" style="margin:0">Set a target of days per month for each habit.</p></div><div class="card"><span class="num">04</span><h4>Daily score</h4><p class="body-s" style="margin:0">See how complete every single day was.</p></div><div class="card"><span class="num">05</span><h4>Year heat map</h4><p class="body-s" style="margin:0">Your consistency for every habit across the year.</p></div><div class="card"><span class="num">06</span><h4>Faith-friendly</h4><p class="body-s" style="margin:0">Comes with adhkar, Quran and prayer habits ready to go.</p></div></div></section>
+    <section class="tpl-sec"><span class="label">04 — Who it's for</span><p class="lede">Anyone building better routines — prayer, Quran, adhkar, fitness, reading or sleep.</p></section>
+    <section class="tpl-sec tpl-ar" lang="ar" dir="rtl"><div class="panel"><h3>متتبع العادات</h3><p>لأي حد بيبني عادات أحسن: الصلاة، القرآن، الأذكار، الرياضة، القراءة أو النوم.</p><ul class="tpl-checks"><li>12 شهر بتواريخ بتتظبط لوحدها</li><li>لحد 15 عادة بهدف شهري لكل عادة</li><li>نسبة الالتزام ونسبة إنجاز كل يوم</li><li>خريطة حرارية للسنة ورسم للتقدم</li><li>عمود اليوم بيتلوّن تلقائيًا</li><li>يعمل على Excel و Google Sheets و LibreOffice</li></ul></div></section>
+    <section class="tpl-sec tpl-faq"><span class="label">05 — FAQ</span><details><summary>Which apps does it work in?</summary><p>Microsoft Excel 2010 or newer, Google Sheets (File → Import, or open from Drive) and LibreOffice Calc. Numbers on Mac opens it too, with simpler charts.</p></details><details><summary>Do I need to know formulas?</summary><p>No. You only type in the tinted cells — everything else calculates itself. Each file opens on a Start Here sheet with the steps.</p></details><details><summary>Is my data private?</summary><p>Yes. It&#x27;s a file on your own device or Drive. There is no account, no sync and nothing sent to NOVU.</p></details><details><summary>Can I use it on my phone?</summary><p>Yes, through the Google Sheets or Excel mobile apps.</p></details></section>
+    <div class="tpl-final"><h3 class="h2">Start today.</h3><a class="btn btn-primary" href="downloads/templates/NOVU-Habit-Tracker.xlsx" download>Download free <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M8 2.5v8M4.5 7 8 10.5 11.5 7M3 13.5h10"/></svg></a></div>
+  </div></div>
+</dialog>
+<!-- /templates:dialogs -->
 <div class="drawer-back" data-close-cart></div>
 <aside class="drawer" aria-hidden="true" aria-label="Cart">
   <div class="d-head"><span class="h4">Your cart</span><button class="icon-btn" type="button" data-close-cart aria-label="Close cart">✕</button></div>
@@ -312,5 +408,6 @@
 </aside>
 <div class="toast" role="status" aria-live="polite"></div>
 <script src="js/site.js"></script>
+<script src="js/templates.js?v=2"></script>
 </body>
 </html>
