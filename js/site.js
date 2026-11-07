@@ -13,7 +13,7 @@
 (function () {
   'use strict';
 
-  var STUDIO_EMAIL = 'studio@novu.design';
+  var STUDIO_EMAIL = 'zeyad@novu-design.com';
   var doc = document.documentElement;
   var reduce = false;
   try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}

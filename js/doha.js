@@ -96,8 +96,8 @@
 
   var dForm = one('#dForm');
   if (dForm) {
-    var RELAY = 'https://formsubmit.co/ajax/zeyadmohammed14@outlook.com';
-    var RELAY_FALLBACK = 'https://formsubmit.co/zeyadmohammed14@outlook.com';
+    var RELAY = 'https://formsubmit.co/ajax/zeyad@novu-design.com';
+    var RELAY_FALLBACK = 'https://formsubmit.co/zeyad@novu-design.com';
     var dResult = one('#dFormResult');
 
     function dMsg(text, kind) {

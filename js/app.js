@@ -314,8 +314,8 @@
   var form = $('contactForm');
   var result = $('formResult');
 
-  var ENDPOINT = 'https://formsubmit.co/ajax/zeyadmohammed14@outlook.com';
-  var RELAY_URL = 'https://formsubmit.co/zeyadmohammed14@outlook.com';
+  var ENDPOINT = 'https://formsubmit.co/ajax/zeyad@novu-design.com';
+  var RELAY_URL = 'https://formsubmit.co/zeyad@novu-design.com';
 
   /* ---------------- Attachments ---------------- */
 
