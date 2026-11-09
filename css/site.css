@@ -654,3 +654,12 @@ html.has-cursor input, html.has-cursor textarea { cursor: text !important; }
   display: block; margin-top: 4px; font: 11.5px/1.5 var(--f-mono); color: var(--text); word-break: break-all;
   padding: 10px 12px; border-radius: 10px; background: var(--bg-2); border: 1px solid var(--line);
 }
+
+/* ---------- Windows apps (Dev Notes, CYVEX): window shots in tiles ---------- */
+.ptile .shot.desk { height: 300px; align-items: flex-start; padding: 28px 28px 0; }
+.ptile .shot.desk .window { width: 100%; border-radius: 12px 12px 0 0; overflow: hidden; border: 1px solid var(--line-2); border-bottom: 0; background: #000; box-shadow: 0 30px 70px -30px rgba(0,0,0,.9); transition: transform .6s var(--ease); }
+.ptile .shot.desk .window img { width: 100%; height: auto; }
+.ptile:hover .shot.desk .window { transform: translateY(-8px); }
+.desk-devnotes { background: radial-gradient(70% 60% at 50% 100%, rgba(255,122,69,.22), transparent 70%), var(--bg-2) !important; }
+.desk-cyvex { background: radial-gradient(70% 60% at 50% 100%, rgba(76,141,246,.26), transparent 70%), var(--bg-2) !important; }
+.media.combo.desk-devnotes .window, .media.combo.desk-cyvex .window { width: 100%; }
