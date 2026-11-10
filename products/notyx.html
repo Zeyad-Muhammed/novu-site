@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-app="devnotes">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#000000" />
+  <title>NOTYX — Markdown notes for developers | A NOVU Product</title>
+  <meta name="description" content="NOTYX is a fast Markdown notes app for Windows, made for developers: live preview, code coloring and autocomplete, math, diagrams, revision history and Git sync. Your notes stay plain .md files." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="NOVU" />
+  <meta property="og:title" content="NOTYX — Markdown notes for developers" />
+  <meta property="og:description" content="Live preview, code autocomplete, math, diagrams, history and Git sync. Plain .md files on your own PC." />
+  <meta property="og:image" content="../assets/products/devnotes/hero-dark.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="../assets/products/devnotes/icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/novu-app-base.css" />
+  <link rel="stylesheet" href="../css/product-devnotes.css" />
+</head>
+<body>
+
+<header class="ap-top">
+  <div class="wrap ap-bar">
+    <a class="ap-back" href="../products.html"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><path d="M10 3.5 5.5 8l4.5 4.5"/></svg><span data-i18n="back">NOVU</span></a>
+    <a class="ap-brand" href="#top"><img src="../assets/products/devnotes/icon.png" alt="" />NOTYX</a>
+    <nav class="ap-nav" aria-label="Page">
+      <a href="#write" data-i18n="nav.write">Writing</a>
+      <a href="#highlights" data-i18n="nav.hl">Highlights</a>
+      <a href="#themes" data-i18n="nav.themes">Themes</a>
+    </nav>
+    <button class="ap-lang" type="button" data-lang-toggle aria-label="Language">ع</button>
+    <a class="btn primary sm" href="#download" data-i18n="nav.get">Download</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. HERO -->
+  <section class="dx-hero">
+    <div class="wrap dx-hero-in">
+      <p class="dx-name" data-rv><img src="../assets/products/devnotes/icon.png" alt="" width="28" height="28" />NOTYX</p>
+      <h1 class="dx-title" data-rv="2"><span data-i18n="hero.t1">Notes that read</span> <span class="dx-soft" data-i18n="hero.t2">like code.</span></h1>
+      <p class="dx-lede" data-rv="3" data-i18n="hero.sub">The Markdown notebook for developers. Free for Windows.</p>
+      <div class="dx-cta" data-rv="4">
+        <a class="btn primary dx-pill" href="#download" data-i18n="hero.cta">Download</a>
+        <a class="dx-link" href="#write"><span data-i18n="hero.cta2">Watch it write</span> <span class="dx-chev" aria-hidden="true">›</span></a>
+      </div>
+    </div>
+    <div class="dx-hero-shot" data-pass>
+      <div class="dx-glow" aria-hidden="true"></div>
+      <div class="dx-rise">
+        <div class="win dx-demo" id="dx-demo">
+          <img class="dx-demo-shot" src="../assets/products/devnotes/hero-dark.webp" width="1600" height="983" alt="NOTYX in split view: the note list on the left, Markdown and its finished page side by side" />
+        </div>
+      </div>
+      <p class="dx-try"><span class="dx-live" aria-hidden="true"></span><span class="dx-try-desk" data-i18n="try.desk">This is the real app, running right here. Click a note and start typing.</span><span class="dx-try-mob" data-i18n="try.mob">Open this page on a computer to try the real app here.</span></p>
+    </div>
+  </section>
+
+  <!-- 2. STATEMENT: words light up as you scroll -->
+  <section class="dx-say" data-pin aria-label="About NOTYX">
+    <div class="dx-say-in">
+      <p class="dx-words" data-words data-i18n="say">Markdown on one side. A clean page on the other. Code that colors itself, math, diagrams, and a history of every change. All saved as plain files that belong to you.</p>
+    </div>
+  </section>
+
+  <!-- 3. PINNED EDITOR STORY -->
+  <section class="dx-story" id="write" data-pin>
+    <div class="dx-sticky">
+      <div class="dx-caps" aria-live="polite">
+        <div class="dx-cap" data-s="1"><h2 data-i18n="s1.h">Type plain Markdown.</h2><p data-i18n="s1.p">The page builds itself next to it as you go.</p></div>
+        <div class="dx-cap" data-s="2"><h2 data-i18n="s2.h">Press / for anything.</h2><p data-i18n="s2.p">Tables, checklists, callouts, math and diagrams. Keep typing to filter.</p></div>
+        <div class="dx-cap" data-s="3"><h2 data-i18n="s3.h">Code that finishes itself.</h2><p data-i18n="s3.p">VS Code colors and suggestions in six languages.</p></div>
+        <div class="dx-cap" data-s="4"><h2 data-i18n="s4.h">Then just read.</h2><p data-i18n="s4.p">Switch to Read for a clean page, or Write to focus.</p></div>
+      </div>
+
+      <div class="dx-ed" dir="ltr" aria-hidden="true">
+        <div class="dx-ed-bar">
+          <span class="dx-file mono">work/api-auth-refactor.md <i class="dx-saved"></i>Saved</span>
+          <span class="dx-seg"><b class="m-write">Write</b><b class="m-split">Split</b><b class="m-read">Read</b></span>
+          <span class="dx-lights"><i></i><i></i><i></i></span>
+        </div>
+        <div class="dx-ed-body">
+          <div class="dx-src mono">
+            <div class="l" data-i="1"><span class="ln">1</span><span class="h"># API auth refactor</span></div>
+            <div class="l" data-i="2"><span class="ln">2</span></div>
+            <div class="l" data-i="3"><span class="ln">3</span>Move token refresh into the middleware.</div>
+            <div class="l" data-i="4"><span class="ln">4</span>Cost is <span class="s">$O(n \log n)$</span>.</div>
+            <div class="l" data-i="5"><span class="ln">5</span></div>
+            <div class="l" data-i="6"><span class="ln">6</span><span class="p">- [x]</span> Read the old flow</div>
+            <div class="l" data-i="7"><span class="ln">7</span><span class="p">- [ ]</span> Write tests</div>
+            <div class="l" data-i="8"><span class="ln">8</span></div>
+            <div class="l v-slash" data-i="9"><span class="ln">9</span>/ta<span class="caret"></span>
+              <div class="dx-slash">
+                <div class="on"><span class="ico">⊞</span><b>Table</b><em>3 × 3</em></div>
+                <div><span class="ico">☑</span><b>Task list</b><em>- [ ]</em></div>
+                <div><span class="ico">!</span><b>Tip callout</b><em>&gt; [!TIP]</em></div>
+                <div><span class="ico">∑</span><b>Math block</b><em>$$</em></div>
+              </div>
+            </div>
+            <div class="l v-table" data-i="9"><span class="ln">9</span><span class="p">| Route</span>    <span class="p">| Status |</span></div>
+            <div class="l v-table" data-i="9"><span class="ln">10</span><span class="p">|----------|--------|</span></div>
+            <div class="l v-table" data-i="9"><span class="ln">11</span><span class="p">|</span> /refresh <span class="p">|</span> done   <span class="p">|</span></div>
+            <div class="l v-code" data-i="10"><span class="ln">12</span></div>
+            <div class="l v-code" data-i="10"><span class="ln">13</span><span class="q">```ts</span></div>
+            <div class="l v-code" data-i="10"><span class="ln">14</span><span class="k">export async function</span> <span class="f">refresh</span>(<span class="v">token</span>: <span class="t">string</span>) {</div>
+            <div class="l v-code ac-line" data-i="10"><span class="ln">15</span>  <span class="k">const</span> <span class="v">res</span> = <span class="k">await</span> <span class="f">fe</span><span class="done-word"><span class="f">tch</span>(<span class="s">'/api/refresh'</span>)</span><span class="caret"></span>
+              <div class="dx-ac">
+                <div class="on"><i>ƒ</i>fetch<em>function</em></div>
+                <div><i class="kw">k</i>finally<em>keyword</em></div>
+                <div><i class="kw">k</i>for<em>keyword</em></div>
+              </div>
+            </div>
+            <div class="l v-code" data-i="10"><span class="ln">16</span>  <span class="k">return</span> <span class="v">res</span>.<span class="f">json</span>()</div>
+            <div class="l v-code" data-i="10"><span class="ln">17</span>}</div>
+            <div class="l v-code" data-i="10"><span class="ln">18</span><span class="q">```</span></div>
+          </div>
+          <div class="dx-out">
+            <h3 class="o" data-i="1">API auth refactor</h3>
+            <p class="o" data-i="3">Move token refresh into the middleware.</p>
+            <p class="o" data-i="4">Cost is <i class="m">O(n log n)</i>.</p>
+            <div class="o ck on" data-i="6"><i></i><s>Read the old flow</s></div>
+            <div class="o ck" data-i="7"><i></i>Write tests</div>
+            <table class="o v-table" data-i="9"><tr><th>Route</th><th>Status</th></tr><tr><td class="mono">/refresh</td><td>done</td></tr></table>
+            <pre class="o cd v-code mono" data-i="10"><span class="k">export async function</span> <span class="f">refresh</span>(<span class="v">token</span>: <span class="t">string</span>) {
+  <span class="k">const</span> <span class="v">res</span> = <span class="k">await</span> <span class="f">fetch</span>(<span class="s">'/api/refresh'</span>)
+  <span class="k">return</span> <span class="v">res</span>.<span class="f">json</span>()
+}</pre>
+          </div>
+        </div>
+      </div>
+
+      <div class="dx-dots" aria-hidden="true"><i data-s="1"></i><i data-s="2"></i><i data-s="3"></i><i data-s="4"></i></div>
+    </div>
+  </section>
+
+  <!-- 4. HIGHLIGHTS: horizontal gallery -->
+  <section class="dx-sec" id="highlights">
+    <div class="wrap dx-hl-head">
+      <h2 class="dx-h2" data-rv data-i18n="hl.h">Get the highlights.</h2>
+      <div class="dx-arrows" data-rv>
+        <button type="button" class="dx-arrow" data-gal="-1" aria-label="Previous"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4.5 6.5 10l5.5 5.5"/></svg></button>
+        <button type="button" class="dx-arrow" data-gal="1" aria-label="Next"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 4.5 13.5 10 8 15.5"/></svg></button>
+      </div>
+    </div>
+    <div class="dx-gal" id="dx-gal" tabindex="0" aria-label="Highlights">
+      <figure class="dx-card">
+        <figcaption><b data-i18n="c1.h">Callouts that stand out.</b><span data-i18n="c1.p">Note, Warning and Tip blocks light up in the preview as you type.</span></figcaption>
+        <video class="dx-vid" src="../assets/products/devnotes/f-callouts.mp4" poster="../assets/products/devnotes/f-callouts.jpg" muted loop playsinline preload="none" aria-label="Typing a Tip callout and seeing it appear in the preview"></video>
+      </figure>
+      <figure class="dx-card">
+        <figcaption><b data-i18n="c2.h">A status for every note.</b><span data-i18n="c2.p">Active, On hold, Done or Dropped. Pin, tag and select many at once.</span></figcaption>
+        <video class="dx-vid" src="../assets/products/devnotes/f-status.mp4" poster="../assets/products/devnotes/f-status.jpg" muted loop playsinline preload="none" aria-label="Clicking the status of a note to change it from Active to On hold, Dropped and Done"></video>
+      </figure>
+      <figure class="dx-card">
+        <figcaption><b data-i18n="c3.h">Notebooks inside notebooks.</b><span data-i18n="c3.p">Nest them as deep as you like and move notes between them.</span></figcaption>
+        <video class="dx-vid" src="../assets/products/devnotes/f-notebooks.mp4" poster="../assets/products/devnotes/f-notebooks.jpg" muted loop playsinline preload="none" aria-label="Creating a Research notebook and moving a note into it"></video>
+      </figure>
+      <figure class="dx-card">
+        <figcaption><b data-i18n="c4.h">Every save is a version.</b><span data-i18n="c4.p">See what changed line by line, and bring any version back.</span></figcaption>
+        <video class="dx-vid" src="../assets/products/devnotes/f-history.mp4" poster="../assets/products/devnotes/f-history.jpg" muted loop playsinline preload="none" aria-label="Opening the history of a note and comparing older versions"></video>
+      </figure>
+      <figure class="dx-card">
+        <figcaption><b data-i18n="c5.h">Sync with your own Git.</b><span data-i18n="c5.p">A private repo you own. No accounts, no servers of ours.</span></figcaption>
+        <video class="dx-vid" src="../assets/products/devnotes/f-sync.mp4" poster="../assets/products/devnotes/f-sync.jpg" muted loop playsinline preload="none" aria-label="Adding a Git repository in Settings and pressing Sync now"></video>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 5. BIG NUMBERS -->
+  <section class="dx-sec dx-nums-sec">
+    <div class="wrap">
+      <h2 class="dx-h2 center" data-rv data-i18n="n.h">Small app. Big notebook.</h2>
+      <div class="dx-nums">
+        <div data-rv="1"><b dir="ltr">4.7<small>MB</small></b><span data-i18n="n.1">for the whole installer</span></div>
+        <div data-rv="2"><b>0</b><span data-i18n="n.2">accounts or sign-ins</span></div>
+        <div data-rv="3"><b>6</b><span data-i18n="n.3">languages with code autocomplete</span></div>
+        <div data-rv="4"><b dir="ltr">.md</b><span data-i18n="n.4">every note, a plain file</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. THEMES: swatches -->
+  <section class="dx-sec" id="themes">
+    <div class="wrap">
+      <h2 class="dx-h2 center" data-rv data-i18n="th.h">Black, white, or glass.</h2>
+      <p class="dx-p center" data-rv data-i18n="th.p">Four themes. Acrylic lets your wallpaper blur through.</p>
+      <div class="dx-theme" data-rv="2">
+        <div class="win dx-theme-stage">
+          <img class="on" data-theme-img="dark" src="../assets/products/devnotes/hero-dark.webp" alt="NOTYX in the Dark theme" loading="lazy" />
+          <img data-theme-img="light" src="../assets/products/devnotes/light.webp" alt="NOTYX in the Light theme" loading="lazy" />
+          <img data-theme-img="adark" src="../assets/products/devnotes/acrylic-dark.webp" alt="NOTYX in the Acrylic dark theme" loading="lazy" />
+          <img data-theme-img="alight" src="../assets/products/devnotes/acrylic-light.webp" alt="NOTYX in the Acrylic light theme" loading="lazy" />
+        </div>
+      </div>
+      <div class="dx-swatches" role="radiogroup" aria-label="Theme" data-rv="3">
+        <button type="button" role="radio" aria-checked="true" data-theme-btn="dark" style="--sw:#0b0b0b"><i></i><span data-i18n="th.dark">Dark</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-btn="light" style="--sw:#f4f4f4"><i></i><span data-i18n="th.light">Light</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-btn="adark" style="--sw:linear-gradient(135deg,#3a3f4a,#111)"><i></i><span data-i18n="th.adark">Acrylic dark</span></button>
+        <button type="button" role="radio" aria-checked="false" data-theme-btn="alight" style="--sw:linear-gradient(135deg,#ffffff,#c9ced8)"><i></i><span data-i18n="th.alight">Acrylic light</span></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. FILES -->
+  <section class="dx-sec dx-files">
+    <div class="wrap">
+      <h2 class="dx-big center" data-rv><span data-i18n="files.h1">Your notes.</span><br /><span class="dx-soft" data-i18n="files.h2">Just files.</span></h2>
+      <p class="dx-p center" data-rv="2" data-i18n="files.p">Every note is a normal Markdown file in Documents\NOTYX. Open it anywhere. Keep it forever.</p>
+      <div class="dx-tree mono" dir="ltr" data-rv="3" aria-label="Example folder">
+        <div class="t-row"><span class="t-ico">▾</span>work</div>
+        <div class="t-row d2 file"><span class="t-md">md</span>api-auth-refactor.md</div>
+        <div class="t-row d2 file"><span class="t-md">md</span>landing-page-copy.md</div>
+        <div class="t-row"><span class="t-ico">▾</span>snippets</div>
+        <div class="t-row d2 file"><span class="t-md">md</span>fetch-json.md</div>
+        <div class="t-row dim"><span class="t-ico">◦</span>.git</div>
+      </div>
+      <p class="dx-row" data-rv="4"><span data-i18n="files.l1">No account</span><i></i><span data-i18n="files.l2">Works offline</span><i></i><span data-i18n="files.l3">Paste images</span><i></i><span data-i18n="files.l4">Arabic &amp; English search</span></p>
+    </div>
+  </section>
+
+  <!-- 8. DOWNLOAD -->
+  <section class="dx-end" id="download">
+    <div class="wrap dx-end-in">
+      <img class="dx-end-icon" src="../assets/products/devnotes/icon.png" alt="" width="120" height="120" data-rv />
+      <h2 class="dx-big" data-rv="2"><span data-i18n="dl.h1">NOTYX.</span> <span class="dx-soft" data-i18n="dl.h2">Free.</span></h2>
+      <p class="dx-p" data-rv="3" data-i18n="dl.p">For Windows 10 and 11. One small installer, no account.</p>
+      <a class="btn primary dx-pill big" href="../assets/products/devnotes/NOTYX-0.1.0-Setup.exe" download data-rv="4"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 3v10m0 0 4-4m-4 4-4-4M4 16h12"/></svg><span data-i18n="dl.btn">Download for Windows</span></a>
+      <p class="dx-fine mono" data-rv="4">v0.1.0 · <span data-i18n="dl.size">4.7 MB</span> · <span data-i18n="dl.lang">English interface</span></p>
+      <details class="dx-warn" data-rv="4">
+        <summary data-i18n="dl.how">Windows showed a warning?</summary>
+        <p data-i18n="dl.howp">NOTYX isn't signed with a paid certificate yet, so SmartScreen may stop it the first time.</p>
+        <ol class="dl-steps">
+          <li data-i18n="dl.s1">Open the downloaded file.</li>
+          <li data-i18n="dl.s2">If you see "Windows protected your PC", click <b>More info</b>.</li>
+          <li data-i18n="dl.s3">Click <b>Run anyway</b> and follow the installer.</li>
+          <li data-i18n="dl.s4">Open NOTYX from the Start menu. Your first notes are waiting in Documents\NOTYX.</li>
+        </ol>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer class="ap-foot">
+  <div class="wrap">
+    <span>© 2026 NOVU · <span data-i18n="foot.made">Designed and built by NOVU</span></span>
+    <nav aria-label="NOVU">
+      <a href="../index.html" data-i18n="foot.home">Home</a>
+      <a href="../products.html" data-i18n="foot.products">Products</a>
+      <a href="cyvex.html">CYVEX</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+window.APP_I18N = { ar: {
+  "meta.title": "NOTYX — ملاحظات Markdown للمطورين | من NOVU",
+  "back": "NOVU",
+  "nav.write": "الكتابة", "nav.hl": "أبرز المميزات", "nav.themes": "الثيمات", "nav.get": "تحميل",
+  "hero.t1": "ملاحظات تُقرأ", "hero.t2": "كأنها كود.",
+  "hero.sub": "دفتر Markdown مصمَّم للمطورين. مجاني لويندوز.",
+  "hero.cta": "تحميل", "hero.cta2": "شاهده يكتب",
+  "say": "Markdown في جانب، وصفحة نظيفة في الجانب الآخر. كود يتلوّن وحده، ومعادلات، ورسومات، وسجل لكل تعديل. وكل ذلك محفوظ في ملفات عادية ملكك أنت.",
+  "s1.h": "اكتب Markdown عادي.", "s1.p": "والصفحة تتكوّن بجانبه وأنت تكتب.",
+  "s2.h": "اضغط / لأي شيء.", "s2.p": "جداول وقوائم مهام وتنبيهات ومعادلات ورسومات. تابع الكتابة للتصفية.",
+  "s3.h": "كود يكمل نفسه.", "s3.p": "ألوان واقتراحات VS Code في ست لغات.",
+  "s4.h": "ثم اقرأ فقط.", "s4.p": "اختر Read لصفحة نظيفة، أو Write للتركيز.",
+  "hl.h": "أبرز المميزات.",
+  "try.desk": "هذا هو التطبيق الحقيقي، يعمل هنا مباشرة. اضغط على أي ملاحظة وابدأ الكتابة.", "try.mob": "افتح هذه الصفحة على الكمبيوتر لتجرّب التطبيق الحقيقي هنا.",
+  "c1.h": "تنبيهات تلفت النظر.", "c1.p": "بلوكات Note وWarning وTip تظهر بوضوح في المعاينة وأنت تكتب.",
+  "c2.h": "حالة لكل ملاحظة.", "c2.p": "نشطة، مؤجلة، منتهية أو ملغاة. ثبّت ووسِّم وحدِّد عدة ملاحظات مرة واحدة.",
+  "st.active": "نشطة", "st.hold": "مؤجلة", "st.done": "منتهية", "st.dropped": "ملغاة",
+  "c3.h": "دفاتر داخل دفاتر.", "c3.p": "بالعمق الذي تريده، وانقل الملاحظات بينها.",
+  "c4.h": "كل حفظ نسخة.", "c4.p": "شاهد ما تغيّر سطرًا بسطر، واسترجع أي نسخة.",
+  "c5.h": "مزامنة مع Git الخاص بك.", "c5.p": "مستودع خاص تملكه أنت. بلا حسابات ولا خوادم تابعة لنا.",
+  "n.h": "تطبيق صغير. دفتر كبير.",
+  "n.1": "حجم ملف التثبيت كله", "n.2": "حسابات أو تسجيل دخول", "n.3": "لغات فيها إكمال تلقائي للكود", "n.4": "كل ملاحظة ملف عادي",
+  "th.h": "أسود، أبيض، أو زجاج.", "th.p": "أربعة ثيمات. والأكريليك يُظهر خلفية سطح المكتب ضبابية خلفه.",
+  "th.dark": "داكن", "th.light": "فاتح", "th.adark": "أكريليك داكن", "th.alight": "أكريليك فاتح",
+  "files.h1": "ملاحظاتك.", "files.h2": "مجرد ملفات.",
+  "files.p": "كل ملاحظة ملف Markdown عادي في Documents\\NOTYX. افتحه بأي برنامج، واحتفظ به للأبد.",
+  "files.l1": "بلا حساب", "files.l2": "يعمل دون إنترنت", "files.l3": "الصق الصور مباشرة", "files.l4": "بحث بالعربية والإنجليزية",
+  "dl.h1": "NOTYX.", "dl.h2": "مجانًا.",
+  "dl.p": "لويندوز 10 و11. ملف تثبيت صغير، وبلا حساب.", "dl.btn": "تحميل لويندوز",
+  "dl.size": "4.7 ميجابايت", "dl.lang": "الواجهة بالإنجليزية",
+  "dl.how": "ظهر لك تحذير من ويندوز؟",
+  "dl.howp": "NOTYX غير موقَّع بشهادة مدفوعة بعد، لذلك قد يوقفه SmartScreen في المرة الأولى.",
+  "dl.s1": "افتح الملف الذي تم تنزيله.", "dl.s2": "إذا ظهرت رسالة \"Windows protected your PC\"، اضغط <b>More info</b>.", "dl.s3": "اضغط <b>Run anyway</b> وأكمل التثبيت.", "dl.s4": "افتح NOTYX من قائمة Start. أول ملاحظاتك بانتظارك في Documents\\NOTYX.",
+  "foot.made": "تصميم وتطوير NOVU", "foot.home": "الرئيسية", "foot.products": "المنتجات"
+} };
+</script>
+<script src="../js/novu-app-page.js"></script>
+<script>
+(function () {
+  var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Statement: split into words, light them up with scroll progress. */
+  var say = document.querySelector(".dx-say"), words = document.querySelector("[data-words]"), spans = [];
+  function split() {
+    var txt = words.textContent.trim().split(/\s+/);
+    words.innerHTML = txt.map(function (w) { return "<span>" + w.replace(/&/g, "&amp;").replace(/</g, "&lt;") + "</span>"; }).join(" ");
+    spans = words.querySelectorAll("span");
+    paint(say._p || 0);
+  }
+  function paint(p) {
+    var n = reduce ? spans.length : Math.round(Math.min(1, p * 1.25) * spans.length);
+    for (var i = 0; i < spans.length; i++) spans[i].classList.toggle("on", i < n);
+  }
+  say.addEventListener("progress", function (e) { paint(e.detail); });
+
+  /* Editor story: four steps driven by scroll. */
+  var story = document.querySelector(".dx-story");
+  function stepFor(p) {
+    if (p < 0.3) return { s: 1, n: 1 + Math.floor(Math.min(1, p / 0.24) * 6) };
+    if (p < 0.52) return { s: 2, n: 9 };
+    if (p < 0.76) return { s: 3, n: 10 };
+    return { s: 4, n: 10 };
+  }
+  /* drop the HTML line breaks between source lines (the pane keeps spaces with white-space: pre) */
+  (function strip(n) { for (var c = n.firstChild; c; ) { var nx = c.nextSibling; if (c.nodeType === 3 && /\n/.test(c.nodeValue) && !/\S/.test(c.nodeValue)) n.removeChild(c); else if (c.nodeType === 1) strip(c); c = nx; } })(story.querySelector(".dx-src"));
+  var items = story.querySelectorAll("[data-i]");
+  function show(p) {
+    var st = stepFor(p);
+    story.setAttribute("data-step", st.s);
+    for (var i = 0; i < items.length; i++) items[i].classList.toggle("vis", +items[i].getAttribute("data-i") <= st.n);
+  }
+  story.addEventListener("progress", function (e) { show(e.detail); });
+  show(0);
+
+  /* Highlights gallery arrows. */
+  var gal = document.getElementById("dx-gal");
+  document.addEventListener("click", function (ev) {
+    var b = ev.target.closest && ev.target.closest("[data-gal]");
+    if (b) {
+      var card = gal.querySelector(".dx-card"), step = card ? card.getBoundingClientRect().width + 20 : 400;
+      var dir = +b.getAttribute("data-gal") * (document.documentElement.dir === "rtl" ? -1 : 1);
+      gal.scrollBy({ left: dir * step, behavior: reduce ? "auto" : "smooth" });
+    }
+    var t = ev.target.closest && ev.target.closest("[data-theme-btn]");
+    if (t) {
+      var k = t.getAttribute("data-theme-btn");
+      var btns = document.querySelectorAll("[data-theme-btn]"), imgs = document.querySelectorAll("[data-theme-img]");
+      for (var i = 0; i < btns.length; i++) btns[i].setAttribute("aria-checked", btns[i] === t ? "true" : "false");
+      for (var j = 0; j < imgs.length; j++) imgs[j].classList.toggle("on", imgs[j].getAttribute("data-theme-img") === k);
+    }
+  });
+
+
+  /* Live demo: load the real app (web build) on wide screens and scale its 1280 x 800 window to fit. */
+  var demo = document.getElementById("dx-demo");
+  if (demo && window.matchMedia("(min-width: 820px)").matches) {
+    var fr = document.createElement("iframe");
+    fr.src = "devnotes-demo/index.html"; fr.title = "NOTYX, running live. Click a note and type."; fr.loading = "lazy";
+    fr.addEventListener("load", function () { demo.classList.add("ready"); });
+    demo.appendChild(fr); demo.classList.add("live");
+    var fit = function () { fr.style.transform = "scale(" + (demo.clientWidth / 1280) + ")"; };
+    fit(); window.addEventListener("resize", fit);
+  }
+
+  /* Feature clips play only while on screen. */
+  var vids = document.querySelectorAll(".dx-vid");
+  if ("IntersectionObserver" in window && !reduce) {
+    var vio = new IntersectionObserver(function (en) {
+      en.forEach(function (e) { if (e.isIntersecting) { e.target.play().catch(function () {}); } else e.target.pause(); });
+    }, { threshold: 0.45 });
+    vids.forEach(function (v) { vio.observe(v); });
+  }
+  window.APP_ON_LANG = function () { split(); if (window.NOVU_SCENES_UPDATE) window.NOVU_SCENES_UPDATE(); };
+  split();
+})();
+</script>
+</body>
+</html>
