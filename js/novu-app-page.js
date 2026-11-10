@@ -72,6 +72,34 @@
     for (var s = 0; s < rev.length; s++) rev[s].classList.add("in");
   }
 
+  /* Scroll progress for Apple-style scenes.
+     [data-pin]  = tall section with a sticky child: --p runs 0..1 while it is pinned.
+     [data-pass] = element moving into view: --p runs 0..1 from entering the bottom to 25% from the top.
+     Listeners: el.addEventListener("progress", fn) gets ev.detail = p. */
+  var scenes = document.querySelectorAll("[data-pin],[data-pass]");
+  if (scenes.length) {
+    var ticking = false;
+    var update = function () {
+      ticking = false;
+      var vh = window.innerHeight;
+      for (var i = 0; i < scenes.length; i++) {
+        var el = scenes[i], r = el.getBoundingClientRect(), p;
+        if (el.hasAttribute("data-pin")) p = -r.top / Math.max(1, r.height - vh);
+        else p = (vh - r.top) / (vh * 0.75);
+        p = p < 0 ? 0 : p > 1 ? 1 : p;
+        if (el._p === p) continue;
+        el._p = p;
+        el.style.setProperty("--p", p.toFixed(4));
+        if (window.CustomEvent) el.dispatchEvent(new CustomEvent("progress", { detail: p }));
+      }
+    };
+    var req = function () { if (!ticking) { ticking = true; window.requestAnimationFrame(update); } };
+    window.addEventListener("scroll", req, { passive: true });
+    window.addEventListener("resize", req);
+    window.NOVU_SCENES_UPDATE = function () { for (var i = 0; i < scenes.length; i++) scenes[i]._p = -1; update(); };
+    update();
+  }
+
   /* header shadow once scrolled */
   var top = document.querySelector(".ap-top");
   if (top) {

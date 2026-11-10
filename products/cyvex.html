@@ -38,22 +38,28 @@
 
 <main id="top">
 
-  <!-- HERO: centered, status first -->
-  <section class="cx-hero">
-    <div class="cx-grid" aria-hidden="true"></div>
-    <div class="wrap cx-hero-in">
-      <div class="cx-status" data-rv><span class="cx-pulse"></span><span data-i18n="hero.status">Protection on</span><span class="cx-sep"></span><span class="mono">2,063+</span> <span data-i18n="hero.sigs">malware signatures</span></div>
-      <h1 class="cx-title" data-rv="2"><span data-i18n="hero.t1">Quiet protection</span><br /><span class="cx-grad" data-i18n="hero.t2">for Windows.</span></h1>
-      <p class="cx-lede" data-rv="3" data-i18n="hero.sub">CYVEX watches the folders where malware lands, checks every new file with Microsoft Defender and a live malware database, and locks threats away before they run. Then it cleans up what they left behind.</p>
-      <div class="cx-cta" data-rv="4">
-        <a class="btn accent" href="#download"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M10 3v10m0 0 4-4m-4 4-4-4M4 16h12"/></svg><span data-i18n="hero.cta">Download for Windows</span></a>
-        <a class="btn ghost" href="#how" data-i18n="hero.cta2">How it works</a>
+  <!-- HERO: pinned reveal. The headline steps back and the dashboard rises into the shield rings. -->
+  <section class="cx-intro" data-pin>
+    <div class="cx-intro-in">
+      <div class="cx-bloom" aria-hidden="true"></div>
+      <div class="cx-rings" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="cx-intro-text">
+        <p class="cx-name"><img src="../assets/products/cyvex/icon.png" alt="" width="30" height="30" />CYVEX</p>
+        <h1 class="cx-title"><span data-i18n="hero.t1">Quiet protection</span><br /><span class="cx-grad" data-i18n="hero.t2">for Windows.</span></h1>
+        <p class="cx-lede" data-i18n="hero.sub">Stops malware before it runs. Then cleans up after it.</p>
+        <div class="cx-cta">
+          <a class="btn accent cx-pill" href="#download" data-i18n="hero.cta">Download</a>
+          <a class="cx-link" href="#how"><span data-i18n="hero.cta2">How it works</span> <span class="cx-chev" aria-hidden="true">›</span></a>
+        </div>
       </div>
-      <div class="cx-meta mono" data-rv="4"><span>v1.2.0</span><span>·</span><span data-i18n="hero.size">15.8 MB</span><span>·</span><span data-i18n="hero.free">Free</span><span>·</span><span data-i18n="hero.lang">Arabic + English</span></div>
-    </div>
-    <div class="wrap cx-stage" data-rv="3">
-      <div class="cx-radar" aria-hidden="true"><i></i><i></i><i></i><b></b></div>
-      <div class="win cx-tilt"><img src="../assets/products/cyvex/dashboard-dark-en.webp" data-src-ar="../assets/products/cyvex/dashboard-dark-ar.webp" width="1600" height="1006" alt="The CYVEX dashboard: protected status, threat counts, activity chart and protection modules" /></div>
+      <div class="cx-device">
+        <div class="win"><img src="../assets/products/cyvex/dashboard-dark-en.webp" data-src-ar="../assets/products/cyvex/dashboard-dark-ar.webp" width="1600" height="1006" alt="The CYVEX dashboard: protected status, threat counts, activity chart and protection modules" /></div>
+        <div class="cx-landed">
+          <div class="cx-status"><span class="cx-pulse"></span><span data-i18n="hero.status">Protection on</span><span class="cx-sep"></span><span class="mono">2,063+</span> <span data-i18n="hero.sigs">malware signatures</span></div>
+          <div class="cx-meta"><span class="mono">v1.2.0</span><span>·</span><span data-i18n="hero.size">15.8 MB</span><span>·</span><span data-i18n="hero.free">Free</span><span>·</span><span data-i18n="hero.lang">Arabic + English</span></div>
+        </div>
+      </div>
+      <div class="cx-scroll" aria-hidden="true"><i></i></div>
     </div>
   </section>
 
@@ -264,8 +270,8 @@ window.APP_I18N = { ar: {
   "nav.how": "طريقة العمل", "nav.shields": "الدروع", "nav.screens": "الشاشات", "nav.faq": "أسئلة", "nav.get": "تحميل",
   "hero.status": "الحماية مفعّلة", "hero.sigs": "توقيع برمجيات خبيثة",
   "hero.t1": "حماية هادئة", "hero.t2": "لويندوز.",
-  "hero.sub": "يراقب CYVEX المجلدات التي تصل إليها البرمجيات الخبيثة، ويفحص كل ملف جديد بـ Microsoft Defender وقاعدة بيانات حيّة للبرمجيات الخبيثة، ويعزل التهديدات قبل أن تعمل. ثم ينظّف ما تركته خلفها.",
-  "hero.cta": "تحميل لويندوز", "hero.cta2": "طريقة العمل", "hero.size": "15.8 ميجابايت", "hero.free": "مجاني", "hero.lang": "عربي + إنجليزي",
+  "hero.sub": "يوقف البرمجيات الخبيثة قبل أن تعمل، ثم ينظّف ما تركته خلفها.",
+  "hero.cta": "تحميل", "hero.cta2": "طريقة العمل", "hero.size": "15.8 ميجابايت", "hero.free": "مجاني", "hero.lang": "عربي + إنجليزي",
   "how.k": "كيف يتعامل CYVEX مع التهديد", "how.h": "أربع خطوات، في ثوانٍ.",
   "how.1h": "اكتشاف", "how.1p": "يظهر ملف جديد في Downloads أو Desktop أو مجلد مراقَب آخر. يطابق CYVEX بصمته مع MalwareBazaar، ويسأل Microsoft Defender، ويبحث عن السكربتات والماكرو الخطرة.",
   "how.2h": "عزل", "how.2p": "يُنقل الملف إلى الحجر الصحي ويُشوَّش محتواه، فلا يستطيع العمل. وإذا كانت البرمجية الخبيثة تعمل بالفعل، يوقف CYVEX عمليتها أولًا.",
